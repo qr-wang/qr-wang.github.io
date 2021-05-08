@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Publications</title>
+
+<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+
+<style type="text/css">
+    
+body {
+  min-width: 70%;/*wqr*/
+  max-width: 100%;/*wqr*/
+/*  font-family: Helvetica, arial, sans-serif;*/
+  font-family: 'Lato', sans-serif; /*  google font */
+/*  font-size: 14px;/*original*/*/
+  font-size: 5;/*wqr*/
+  line-height: 1.4;/*1.6*/
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px;
+}
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+/*  font-weight: normal;*/
+/*  font-weight: 510;*/
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+/*  font-size: inherit;*/
+}
+
+h2 tt, h2 code {
+/*  font-size: inherit;*/
+}
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+/*  font-size: 28px; */
+  font-family: 'Lato', sans-serif; /*  google font */
+  font-weight: 400;
+  color: rgba(34,110,147,1); /*  google color */
+}
+
+h2 {
+/*  font-size: 24px;*/
+  font-size: 19; /*  google setting */
+  font-family: 'Lato', sans-serif; /*  google font */
+/*  border-bottom: 1px solid #cccccc;*/
+/*  border-top: 1px solid #cccccc;*/
+  color: rgba(34,110,147,1); /*  google color */
+/*  color: black;*/
+}
+h2:before {
+    content:"";
+    display:block;
+    border-top:1px solid #cccccc;
+    height: 40px;
+    width: 120%;
+    position: relative;
+    left: -10%;
+}
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+  body {
+    padding: 2cm; 
+  }
+}
+
+
+
+
+
+/* wqr hyperlink style */
+a:link {
+  color: rgba(34,110,147,1); /*  google color */
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:visited {
+    color: rgba(34,110,147,1); /*  google color */
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:hover {/* mouse-on-text style */
+  color: purple;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+<!-- wqr add begin -->
+<!-- 导航栏 -->
+
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+</style>
+
+
+
+<!-- wqr add end -->
+
+
+</head>
+
+
+
+
+<body>
+
+<!-- wqr add begin -->
+
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+
+<!-- wqr add end -->
+
+
+
+
+
+
+
+
+
+
+<h1 id="h.publi" dir="ltr" class="CDt4Ke zfr3Q duRjpb" style="text-align: center;"><span class=" Rn3Z1b" style="vertical-align: baseline;">
+Publications and Preprints
+</span></h1>
+
+<p><br/></p>
+
+
+
+
+
+
+
+
+<!-- wqr. main text font -->
+<!-- <p><font size=3></p> -->
+
+
+
+
+
+<p>You can also find my publications and preprints at <a href="https://scholar.google.com/citations?user=ObCMQlkAAAAJ" target="_blank">google scholar</a>, <a href="https://www.researchgate.net/profile/Qing-Rui-Wang" target="_blank">research gate</a>, or <a href="https://arxiv.org/a/wang_q_8" target="_blank">arXiv</a>.</p>
+
+<p><br/></p>
+
+
+
+
+
+
+
+
+
+
+<!--Here are the topics:
+-->
+
+<p><a href="#sec_1">1. Description and characterization of general topological phases</a></p>
+
+<p><a href="#sec_2">2. Construction and classification of fermionic symmetry-protected topological (SPT) phases
+</a></p>
+
+<p><a href="#sec_3">3. Symmetry-enriched topological (SET) phases
+</a></p>
+
+<p><a href="#sec_4">4. Sign structure in doped Mott insulator
+</a></p>
+
+<p><br/></p>
+
+
+
+
+
+
+
+
+
+
+<h2 id="sec_1">1. Description and characterization of general topological phases</h2>
+
+<p><br/></p>
+
+<!--<img style="float: left;" width="250" height="400" src="https://qr-wang.github.io/Publications/f7b87df9b56dc77aea04f7c7cd9f4b38.jpg">
+-->
+
+
+
+
+
+
+
+
+
+
+<p><img src="
+https://qr-wang.github.io/Publications/f7b87df9b56dc77aea04f7c7cd9f4b38.jpg
+" style="float: left; object-fit:contain;
+width:250px; height:300px;" /></p>
+
+<h3 id="sec_21b">[21b] Domain wall decorations, anomalies and spectral sequences in bosonic topological phases</h3>
+
+<p>Qing-Rui Wang, Shang-Qiang Ning, and Meng Cheng</p>
+
+<p><a href="https://arxiv.org/abs/2104.13233" target="_blank">arXiv: 2104.13233 (2021)</a></p>
+
+<p>In this work, we showed basically &#39;&#39;<strong>domain wall decorations (in physics) = Atiyah-Hirzebruch spectral sequence (in math)</strong>&#39;&#39;. For the bosonic topological phases described by group cohomology, we also derived <strong>all the differentials at the cochain level in the Lyndon-Hochschild-Serre spectral sequence</strong>. It can be used to unify the anomaly formulas for bosonic topological phases (such as SPT-LSM theorems, anomalous SPT phases, and symmetry-enriched gauge theories). Using <strong>Lyndon&#39;s algorithm</strong> (implemented by this <a href="https://qr-wang.github.io/files/Lyndon_algorithm.nb">Mathematica code</a>), we listed explicit cochains to extract different domain-wall-decoration data for a given cocycle in some low degrees.</p>
+
+<p><br/></p>
+
+
+
+
+
+
+
+
+
+
+<p><img src="
+https://qr-wang.github.io/Publications/ca2e66529213fd4e48763c26c9636181.jpg
+" style="float: left; object-fit:contain;
+width:250px; height:240px;" /></p>
+
+<h3 id="sec_20a">[20a] Computing classification of interacting fermionic symmetry-protected topological phases using topological invariants</h3>
+
+<p>Yunqing Ouyang, Qing-Rui Wang, Zheng-Cheng Gu, and Yang Qi</p>
+
+<p><a href="https://arxiv.org/abs/2005.06572" target="_blank">arXiv: 2005.06572 (2020)</a></p>
+
+<p>Using techniques from homological algebra, we developed an algorithm to calculate the <strong>topological invariants</strong> for a given cocycle of a group. It can be used to accelerate the computation of obstructions (anomalies) for SPT or SET phases. For instance, the classifications of 2D fermion SPT protected by 17 <strong>2D wallpaper groups</strong> are calculated using this algorithm.</p>
+
+<p><br/></p>
+
+
+
+
+
+
+
+
+
+
+<p><img src="
+https://qr-wang.github.io/Publications/cc3c13d215dfc0ba1bb3cda163bf4595.jpg
+" style="float: left; object-fit: contain;
+width:250px; height:240px;" /></p>
+
+<h3 id="sec_19c">[19c] Non-Abelian three-loop braiding statistics for 3D fermionic topological phase</h3>
+
+<p>Jing-Ren Zhou, Qing-Rui Wang, Chenjie Wang, and Zheng-Cheng Gu</p>
+
+<p><a href="https://arxiv.org/abs/1912.13505" target="_blank">arXiv: 1912.13505 (2019)
+</a></p>
+
+<p>We proposed and solved the physical constraints for <strong>loop braiding statistics</strong> in 3+1D fermionic topological phases.  Even for Abelian gauge symmetries, the loop braidings could be <strong>non-Abelian</strong>. The classification of fermionic Abelian SPT phases from the braiding statistics approach is consistent with that of the general group supercohomology theory (see <a href="#sec_17a">[17a]</a> and <a href="#sec_18c">[18c]</a> below).</p>
+
+<p><br/></p>
+
+
+
+
+
+
+
+
+
+
+<p><img src="
+https://qr-wang.github.io/Publications/fb5841c8451e58ef571380aa9d9054ed.jpg
+" style="float: left; object-fit: contain;
+width:250px; height:200px;" /></p>
+
+<h3 id="sec_18b">[18b] Topological quantum field theory for Abelian topological phases and loop braiding statistics in  (3+1)-dimensions</h3>
+
+<p>Qing-Rui Wang, Meng Cheng, Chenjie Wang, and Zheng-Cheng Gu</p>
+
+<p><a href="https://doi.org/10.1103/PhysRevB.99.235137" target="_blank">Phys. Rev. B 99, 235137 (2019)</a>, <a href="https://arxiv.org/abs/1810.13428" target="_blank">arXiv: 1810.13428 (2018)</a></p>
+
+<p>The loop-like excitation in 3+1D may obey the so-called <strong>three-loop-braiding statistics</strong>. In this paper, we established a TQFT framework to understand the quantum statistics of point-like particles and loop-like excitations in 3+1D for Abelian topological phases.</p>
+
+<p><br/></p>
+
+
+
+
+
+
+
+
+
+
+<h2 id="sec_2">2. Construction and classification of fermionic symmetry-protected topological (SPT) phases</h2>
+
+<p><br/></p>
+
+
+
+
+
+
+
+
+
+
+<p><img src="
+https://qr-wang.github.io/Publications/b2e8efce08f5896a1c9198a0a9d37153.jpg
+" style="float: left; object-fit: contain;
+width:250px; height:220px;" /></p>
+
+<h3 id="sec_19b">[19b] Edge theories of 2D fermionic symmetry protected topological phases protected by unitary Abelian symmetries</h3>
+
+<p>Shang-Qiang Ning, Chenjie Wang, Qing-Rui Wang, and Zheng-Cheng Gu</p>
+
+<p><a href="https://arxiv.org/abs/1910.02925" target="_blank">arXiv: 1910.02925 (2019)</a></p>
+
+<p>We utilize the <strong>Abelian Chern-Simons theory</strong> to study the fermionic SPT phases protected by Abelian symmetry. In particular, we discover the construction of Luttinger liquid edge theories with central charge n−1 for Type-III bosonic SPT phases protected by \((\mathbb Z_n)^3\) symmetry.</p>
+
+<p><br/></p>
+
+
+
+
+
+
+
+
+
+
+<p><img src="
+https://qr-wang.github.io/Publications/44e080c96b704db18852cfbd99b7a8ee.jpg
+" style="float: left; object-fit: contain;
+width:250px; height:230px;" /></p>
+
+<h3 id="sec_19a">[19a] Construction and classification of point-group symmetry-protected topological phases in two-dimensional interacting fermionic systems</h3>
+
+<p>Jian-Hao Zhang, Qing-Rui Wang, Shuo Yang, Yang Qi, and Zheng-Cheng Gu</p>
+
+<p><a href="https://doi.org/10.1103/PhysRevB.101.100501" target="_blank">Phys. Rev. B 101, 100501(R) (2020)</a>, <a href="https://arxiv.org/abs/1909.05519" target="_blank">arXiv: 1909.05519 (2019)</a></p>
+
+<p>We constructed and classified <strong>point-group SPT phases</strong> for 2D interacting fermion systems via lower-dimensional block-state decorations.  The crystalline equivalence principle was verified in 2D interacting fermion systems, with spinless and spin-1/2 group extensions switched.</p>
+
+<p><br/></p>
+
+
+
+
+
+
+
+
+
+
+<p><img src="
+https://qr-wang.github.io/Publications/21dd7ed008e8dff44b697f994772632d.jpg
+" style="float: left; object-fit: contain;
+width:250px; height:270px;" /></p>
+
+<h3 id="sec_18c">[18c] Construction and classification of symmetry-protected topological phases in interacting fermion systems</h3>
+
+<p>Qing-Rui Wang and Zheng-Cheng Gu</p>
+
+<p><a href="https://doi.org/10.1103/PhysRevX.10.031055" target="_blank">Phys. Rev. X 10, 031055 (2020)</a>, <a href="https://arxiv.org/abs/1811.00536" target="_blank">arXiv: 1811.00536 (2018)</a></p>
+
+<p>We gave a systematic fixed-point wave function <strong>construction and classification of fermionic SPT states</strong> for generic fermionic symmetry group \(G_f = \mathbb Z_2^f ×_{\omega_2} G_b\), which is a central extension of bosonic symmetry group Gb (may contain time reversal symmetry) by the fermion parity symmetry group \(\mathbb Z_2^f=\{1,P_f\}\). There are in total 4 layers of decoration data: <strong>2+1D \(p+ip\) superconductors, 1+1D Majorana chain, 0+1D complex fermion, and bosonic SPT</strong>. This is an all-inclusive classification work on fermionic SPT with finite onsite symmetry.</p>
+
+<p><br/></p>
+
+
+
+
+
+
+
+
+
+
+<p><img src="
+https://qr-wang.github.io/Publications/0aa5565856f93b7de517f2e9c2046d66.jpg
+" style="float: left; object-fit: contain;
+width:250px; height:240px;" /></p>
+
+<h3 id="sec_18a">[18a] Anomalous symmetry protected topological states in interacting fermion systems</h3>
+
+<p>Qing-Rui Wang, Yang Qi, and Zheng-Cheng Gu</p>
+
+<p><a href="https://dx.doi.org/10.1103/PhysRevLett.123.207003" target="_blank">Phys. Rev. Lett. 123, 207003 (2019)</a>, <a href="https://arxiv.org/abs/1810.12899" target="_blank">arXiv: 1810.12899 (2018)</a></p>
+
+<p>To our surprise, there exists a new class of the so-called <strong>anomalous SPT (ASPT)</strong> states which are only well defined on the boundary of a trivial fermionic bulk system. We demonstrated the essential idea by considering an anomalous topological superconductor with time-reversal symmetry \(T^2=1\) in 2D. The ASPT states are also crucial in the classification of fermionic SPT phases in one dimension higher, known as <strong>trivialization</strong>.</p>
+
+<p><br/></p>
+
+
+
+
+
+
+
+
+
+
+<p><img src="
+https://qr-wang.github.io/Publications/29b9c5b524c84445a0b866a7fe56c160.jpg
+" style="float: left; object-fit: contain;
+width:250px; height:270px;" /></p>
+
+<h3 id="sec_17a">[17a] Towards a complete classification of symmetry-protected topological phases for interacting fermions in three dimensions and a general group supercohomology theory</h3>
+
+<p>Qing-Rui Wang and Zheng-Cheng Gu</p>
+
+<p><a href="https://doi.org/10.1103/PhysRevX.8.011055" target="_blank">Phys. Rev. X 8, 011055 (2018)</a>, <a href="https://arxiv.org/abs/1703.10937" target="_blank">arXiv: 1703.10937 (2017)</a></p>
+
+<p>We established a relation between <strong>discrete spin structure (the Poincaré dual of the trivialization of the 2nd Stiefel-Whitney class \(w_2\))</strong> and <strong>local Kasteleyn orientations</strong> on the dual lattice for arbitrary triangulations in arbitrary dimensions. The <strong>Majorana chains</strong> are then decorated to the intersection lines of domain walls to give rise to a new class of fermionic SPT phases.</p>
+
+<p><br/></p>
+
+
+
+
+
+
+
+
+
+
+<h2 id="sec_3">3. Symmetry-enriched topological (SET) phases</h2>
+
+<p><br/></p>
+
+
+
+
+
+
+
+
+
+
+<p><img src="
+https://qr-wang.github.io/Publications/47c19b7fb6fb2f822623f175b7edb579.jpg
+" style="float: left; object-fit: contain;
+width:250px; height:200px;" /></p>
+
+<h3 id="sec_21a">[21a] Exactly solvable models for U(1) symmetry-enriched topological phases</h3>
+
+<p>Qing-Rui Wang and Meng Cheng</p>
+
+<p><a href="https://arxiv.org/abs/2103.13399" target="_blank">arXiv: 2103.13399 (2021)</a></p>
+
+<p>We proposed general constructions of commuting-projector lattice models for 2D Levin-Wen, 3D Walker-Wang, and 3D Dijkgraaf-Witten topological orders enriched by U(1) symmetry, with finite-dimensional Hilbert space per site. The point-like or loop-like excitations are shown to carry fractional U(1) charges.</p>
+
+<p><br/></p>
+
+<h2 id="sec_4">4. Sign structure in doped Mott insulator</h2>
+
+<p><br/></p>
+
+
+
+
+
+
+
+
+
+
+<p><img src="
+https://qr-wang.github.io/Publications/86fb24cb67e025961a168524b4473faf.jpg
+" style="float: left; object-fit: contain;
+width:250px; height:240px;" /></p>
+
+<h3 id="sec_18d">[18d] Single-hole wave function in two dimensions: A case study of the doped Mott insulator</h3>
+
+<p>Shuai Chen, Qing-Rui Wang, Yang Qi, D. N. Sheng, and Zheng-Yu Weng</p>
+
+<p><a href="https://doi.org/10.1103/PhysRevB.99.205128" target="_blank">Phys. Rev. B 99, 205128 (2019)</a>, <a href="https://arxiv.org/abs/1812.05627" target="_blank">arXiv: 1812.05627 (2018)</a></p>
+
+<p>Using the <strong>variational Monte Carlo</strong> method, we studied a ground-state ansatz for the single-hole doped t-J model in two dimensions. Such a single-hole wave function possesses finite angular momenta generated by hidden spin currents, which give rise to a novel ground state degeneracy in agreement with recent exact diagonalization (ED) and density matrix renormalization group (DMGR) results.</p>
+
+<p><br/></p>
+
+
+
+
+
+
+
+
+
+
+<p><img src="
+https://qr-wang.github.io/Publications/719de36301718a12e5487fc00c91550e.jpg
+" style="float: left; object-fit: contain;
+width:250px; height:230px;" /></p>
+
+<h3 id="sec_15b">[15b] Exact sign structure of the t–J chain and the single hole ground state</h3>
+
+<p>Zheng Zhu, Qing-Rui Wang, D. N. Sheng, and Zheng-Yu Weng</p>
+
+<p><a href="https://doi.org/10.1016/j.nuclphysb.2015.12.004" target="_blank">Nucl. Phys. B 903, 51 (2016)</a>, <a href="https://arxiv.org/abs/1510.07634" target="_blank">arXiv: 1510.07634 (2015)</a></p>
+
+<p>We proposed a single-hole-doped ground state ansatz with the correct <strong>sign structure</strong> of the 1D t-J model (see <a href="#sec_13a">[13a]</a> below). The Monte Carlo simulations of this variational wave function reproduced the key DMRG results of the model (such as the characteristic momentum structure, the Luttinger liquid behavior, and the quantum phase interference of the hole under a periodic boundary condition).</p>
+
+<p><br/></p>
+
+
+
+
+
+
+
+
+
+
+<p><img src="
+https://qr-wang.github.io/Publications/5386260ad9b64dd210606b00d50ced38.jpg
+" style="float: left; object-fit: contain;
+width:250px; height:240px;" /></p>
+
+<h3 id="sec_15a">[15a] Variational wave function for an anisotropic single-hole-doped t-J ladder</h3>
+
+<p>Qing-Rui Wang, Zheng Zhu, Yang Qi, and Zheng-Yu Weng</p>
+
+<p><a href="https://arxiv.org/abs/1509.01260" target="_blank">arXiv: 1509.01260 (2015)</a></p>
+
+<p>Based on three general <strong>guiding principles</strong>, i.e., no double occupancy constraint, accurate description of antiferromagnetism at half-filling, and the precise sign structure of the t-J model, a new ground state wave function has been constructed in [Weng, New J. Phys. 13, 103039 (2011)]. This paper specifically studied such kind of <strong>variational ground state ansatz</strong> for the one-hole-doped anisotropic two-leg t-J ladder using the variational Monte Carlo (VMC) method. An excellent agreement is found between the VMC and DMRG results.</p>
+
+<p><br/></p>
+
+
+
+
+
+
+
+
+
+
+<p><img src="
+https://qr-wang.github.io/Publications/5abfddcb9b2b0d2a397a59b7aeb78b92.jpg
+" style="float: left; object-fit: contain;
+width:250px; height:270px;" /></p>
+
+<h3 id="sec_13a">[13a] Sign structure and ground-state properties for a spin−S t−J chain</h3>
+
+<p>Qing-Rui Wang and Peng Ye</p>
+
+<p><a href="https://doi.org/10.1103/PhysRevB.90.045106" target="_blank">Phys. Rev. B 90, 045106 (2014)</a>, <a href="https://arxiv.org/abs/1310.6496" target="_blank">arXiv: 1310.6496 (2013)</a></p>
+
+<p>We showed that the 1D t-J chain has an <strong>exact sign structure</strong> captured by the <strong>Marshall sign</strong> and the <strong>phase string sign</strong>. Using this sign structure, we proved a <strong>generalized Marshall theorem</strong> and a <strong>generalized Lieb-Mattis theorem</strong> for the t-J chain with arbitrary spin and doping. The large t/J phase supports a gapped spin sector with similar properties (ground-state degeneracy, edge state, and string order parameter) of the Haldane chain (a 1D SO(3) SPT), although the charge sector is gapless. This may be the first example of <strong>SPT in gapless systems</strong>.</p>
+
+<p><br/></p>
+
+
+
+
+
+
+
+
+
+
+<p><img src="
+https://qr-wang.github.io/Publications/567355851a98558f38dafef3ca6daeec.jpg
+" style="float: left; object-fit: contain;
+width:250px; height:250px;" /></p>
+
+<h3 id="sec_12a">[12a] Monopoles, confinement and charge localization in the t–J model with dilute holes</h3>
+
+<p>Peng Ye and Qing-Rui Wang</p>
+
+<p><a href="https://doi.org/10.1016/j.nuclphysb.2013.05.023" target="_blank">Nucl. Phys. B 874, 386 (2013)</a>, <a href="https://arxiv.org/abs/1206.0258" target="_blank">arXiv: 1206.0258 (2012)</a></p>
+
+<p>We present a quantum field theoretic description on the t-J model on a square lattice with dilute holes (i.e. near half-filling), based on the compact <strong>mutual Chern-Simons gauge theory</strong>. Due to the presence of non-perturbative monopole plasma configuration from the antiferromagnetic background, holons (carrying electric charge) are linearly confined and strongly localized even without extrinsic disorder taken into account.</p>
+
+<p></font></p>
+
+
+
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+(function () {
+
+MathJax.Hub.Config({
+	'showProcessingMessages': false,
+	'messageStyle': 'none'
+});
+
+if (typeof MathJaxListener !== 'undefined') {
+	MathJax.Hub.Register.StartupHook('End', function () {
+		MathJaxListener.invokeCallbackForKey_('End');
+	});
+}
+
+})();
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+</body>
+
+</html>
