@@ -7,19 +7,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Publications</title>
 
+<link rel="icon" href="b68d17058ff9c5e83908776059574705.jpg">
+
+<!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet"> -->
 <!-- <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'> -->
-<link href="https://fonts.font.im/css?family=Lato:400,700" rel="stylesheet">
+<link href="https://fonts.font.im/css?family=Lato:300,400,700" rel="stylesheet">
 
 <style type="text/css">
-    
 body {
-  min-width: 70%;/*wqr*/
-  max-width: 100%;/*wqr*/
+  min-width: 70%; /*wqr*/
+  max-width: 100%; /*wqr*/
 /*  font-family: Helvetica, arial, sans-serif;*/
-  font-family: 'Lato', sans-serif; /*  google font */
-/*  font-size: 14px;/*original*/*/
-  font-size: 5;/*wqr*/
-  line-height: 1.4;/*1.6*/
+  font-family: 'Lato', sans-serif; /*wqr*/
+/*  font-size: 14px;*/
+  font-size: 5; /*wqr*/
+  line-height: 1.5;/*1.6*/
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: white;
@@ -48,7 +51,7 @@ a.anchor {
 h1, h2, h3, h4, h5, h6 {
   margin: 20px 0 10px;
   padding: 0;
-  font-weight: bold;
+  font-weight: bold; /*wqr*/
 /*  font-weight: normal;*/
 /*  font-weight: 510;*/
   -webkit-font-smoothing: antialiased;
@@ -80,29 +83,29 @@ h6 tt, h6 code {
   font-size: inherit; }
 
 h1 {
-/*  font-size: 28px; */
-  font-family: 'Lato', sans-serif; /*  google font */
-  font-weight: 400;
-  color: rgba(34,110,147,1); /*  google color */
+  font-size: 33pt;
+  font-family: 'Lato', sans-serif; /* g font */
+  font-weight: 300;
+  color: rgba(34,110,147,1); /* g color */
 }
 
 h2 {
 /*  font-size: 24px;*/
-  font-size: 19; /*  google setting */
-  font-family: 'Lato', sans-serif; /*  google font */
+  font-size: 19;
+  font-family: 'Lato', sans-serif;
 /*  border-bottom: 1px solid #cccccc;*/
 /*  border-top: 1px solid #cccccc;*/
-  color: rgba(34,110,147,1); /*  google color */
+  color: rgba(34,110,147,1);
 /*  color: black;*/
 }
 h2:before {
-    content:"";
-    display:block;
-    border-top:1px solid #cccccc;
-    height: 40px;
-    width: 120%;
-    position: relative;
-    left: -10%;
+  content:"";
+  display:block;
+  border-top:1px solid #cccccc;
+  height: 40px;
+  width: 120%;
+  position: relative;
+  left: -10%;
 }
 
 h3 {
@@ -360,12 +363,12 @@ kbd {
 
 /* wqr hyperlink style */
 a:link {
-  color: rgba(34,110,147,1); /*  google color */
+  color: rgba(34,110,147,1); /*  g color */
   background-color: transparent;
   text-decoration: underline;
 }
 a:visited {
-    color: rgba(34,110,147,1); /*  google color */
+  color: rgba(34,110,147,1); /*  g color */
   background-color: transparent;
   text-decoration: underline;
 }
@@ -382,88 +385,137 @@ a:hover {/* mouse-on-text style */
 
 
 
-</style>
 
 
-
-
-
-<!-- wqr add begin -->
-<!-- 导航栏 -->
-
-<style>
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+/* Navigation Bar style (white) */
+/* . -> #, class -> id */
+#topnav {
+  position: fixed;
   overflow: hidden;
-  background-color: #333;
+  background-color: white;
+  width: 100%; left: 0%;
+  top: 0;
+  font-size: 21px;/*left text*/
+/*  border: 1.5px solid #e7e7e7;*/
 }
-
-li {
+#topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 11px 16px;
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+#topnav a.active {/*name this page*/
+  font-weight: 400;
+  color: black;
+}
+#topnav-right {/*right text*/
+  font-size: 16px;
   float: right;
+  line-height: 200%;
+}
+#topnav-right a:hover {/*mouse-on color*/
+  color: rgba(73,170,212,1); /* g nav bar text color */
 }
 
-li a {
-  display: block;
+
+
+
+
+
+
+
+
+
+/* Navigation Bar style (black) */
+/* . -> #, class -> id */
+#topnavB {
+  position: fixed;
+  overflow: hidden;
+  background-color: rgb(33,33,33,1); /*g navi bar background*/
+  width: 100%; left: 0%;
+  top: -60px;
+  font-size: 21px;/*left text*/
+/*  border: 1.5px solid #e7e7e7;*/
+}
+#topnavB a {
+  float: left;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 11px 16px;
   text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+#topnavB a.active {/*name of this page*/
+  font-weight: 400;
+  color: rgba(73,170,212,1); /* g nav bar text color */
+}
+#topnavB-right {/*right text*/
+  font-size: 16px;
+  float: right;
+  line-height: 200%;
+}
+#topnavB-right a:hover {/*mouse-on color*/
+  color: rgba(73,170,212,1); /* g nav bar text color */
 }
 
-li a:hover {
-  background-color: #111;
-}
+
+
+
+
 </style>
 
 
 
-<!-- wqr add end -->
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZGEEX4TG1X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZGEEX4TG1X');
+</script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?7194d52193520b17df893d9d8b58d2d3";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 
 
 </head>
 
 
-
-
 <body>
 
-<!-- wqr add begin -->
-
-<ul>
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
-</ul>
-
-<!-- wqr add end -->
 
 
 
 
 
 
-
-
-
+<p><br/></p>
 
 <h1 id="h.publi" dir="ltr" class="CDt4Ke zfr3Q duRjpb" style="text-align: center;"><span class=" Rn3Z1b" style="vertical-align: baseline;">
 Publications and Preprints
 </span></h1>
 
 <p><br/></p>
+<p><br/></p>
 
 
 
 
 
-
-
-
-<!-- wqr. main text font -->
-<!-- <p><font size=3></p> -->
 
 
 
@@ -511,9 +563,6 @@ Publications and Preprints
 
 <p><br/></p>
 
-<!--<img style="float: left;" width="250" height="400" src="https://qr-wang.github.io/Publications/f7b87df9b56dc77aea04f7c7cd9f4b38.jpg">
--->
-
 
 
 
@@ -526,7 +575,7 @@ Publications and Preprints
 <p><img src="
 https://qr-wang.github.io/Publications/f7b87df9b56dc77aea04f7c7cd9f4b38.jpg
 " style="float: left; object-fit:contain;
-width:250px; height:300px;" /></p>
+width:250px; height:330px;" /></p>
 
 <h3 id="sec_21b">[21b] Domain wall decorations, anomalies and spectral sequences in bosonic topological phases</h3>
 
@@ -550,7 +599,7 @@ width:250px; height:300px;" /></p>
 <p><img src="
 https://qr-wang.github.io/Publications/ca2e66529213fd4e48763c26c9636181.jpg
 " style="float: left; object-fit:contain;
-width:250px; height:240px;" /></p>
+width:250px; height:260px;" /></p>
 
 <h3 id="sec_20a">[20a] Computing classification of interacting fermionic symmetry-protected topological phases using topological invariants</h3>
 
@@ -574,7 +623,7 @@ width:250px; height:240px;" /></p>
 <p><img src="
 https://qr-wang.github.io/Publications/cc3c13d215dfc0ba1bb3cda163bf4595.jpg
 " style="float: left; object-fit: contain;
-width:250px; height:240px;" /></p>
+width:250px; height:260px;" /></p>
 
 <h3 id="sec_19c">[19c] Non-Abelian three-loop braiding statistics for 3D fermionic topological phase</h3>
 
@@ -599,7 +648,7 @@ width:250px; height:240px;" /></p>
 <p><img src="
 https://qr-wang.github.io/Publications/fb5841c8451e58ef571380aa9d9054ed.jpg
 " style="float: left; object-fit: contain;
-width:250px; height:200px;" /></p>
+width:250px; height:220px;" /></p>
 
 <h3 id="sec_18b">[18b] Topological quantum field theory for Abelian topological phases and loop braiding statistics in  (3+1)-dimensions</h3>
 
@@ -636,7 +685,7 @@ width:250px; height:200px;" /></p>
 <p><img src="
 https://qr-wang.github.io/Publications/b2e8efce08f5896a1c9198a0a9d37153.jpg
 " style="float: left; object-fit: contain;
-width:250px; height:220px;" /></p>
+width:250px; height:240px;" /></p>
 
 <h3 id="sec_19b">[19b] Edge theories of 2D fermionic symmetry protected topological phases protected by unitary Abelian symmetries</h3>
 
@@ -660,7 +709,7 @@ width:250px; height:220px;" /></p>
 <p><img src="
 https://qr-wang.github.io/Publications/44e080c96b704db18852cfbd99b7a8ee.jpg
 " style="float: left; object-fit: contain;
-width:250px; height:230px;" /></p>
+width:250px; height:240px;" /></p>
 
 <h3 id="sec_19a">[19a] Construction and classification of point-group symmetry-protected topological phases in two-dimensional interacting fermionic systems</h3>
 
@@ -684,7 +733,7 @@ width:250px; height:230px;" /></p>
 <p><img src="
 https://qr-wang.github.io/Publications/21dd7ed008e8dff44b697f994772632d.jpg
 " style="float: left; object-fit: contain;
-width:250px; height:270px;" /></p>
+width:250px; height:290px;" /></p>
 
 <h3 id="sec_18c">[18c] Construction and classification of symmetry-protected topological phases in interacting fermion systems</h3>
 
@@ -708,7 +757,7 @@ width:250px; height:270px;" /></p>
 <p><img src="
 https://qr-wang.github.io/Publications/0aa5565856f93b7de517f2e9c2046d66.jpg
 " style="float: left; object-fit: contain;
-width:250px; height:240px;" /></p>
+width:250px; height:260px;" /></p>
 
 <h3 id="sec_18a">[18a] Anomalous symmetry protected topological states in interacting fermion systems</h3>
 
@@ -732,7 +781,7 @@ width:250px; height:240px;" /></p>
 <p><img src="
 https://qr-wang.github.io/Publications/29b9c5b524c84445a0b866a7fe56c160.jpg
 " style="float: left; object-fit: contain;
-width:250px; height:270px;" /></p>
+width:250px; height:290px;" /></p>
 
 <h3 id="sec_17a">[17a] Towards a complete classification of symmetry-protected topological phases for interacting fermions in three dimensions and a general group supercohomology theory</h3>
 
@@ -769,7 +818,7 @@ width:250px; height:270px;" /></p>
 <p><img src="
 https://qr-wang.github.io/Publications/47c19b7fb6fb2f822623f175b7edb579.jpg
 " style="float: left; object-fit: contain;
-width:250px; height:200px;" /></p>
+width:250px; height:220px;" /></p>
 
 <h3 id="sec_21a">[21a] Exactly solvable models for U(1) symmetry-enriched topological phases</h3>
 
@@ -797,7 +846,7 @@ width:250px; height:200px;" /></p>
 <p><img src="
 https://qr-wang.github.io/Publications/86fb24cb67e025961a168524b4473faf.jpg
 " style="float: left; object-fit: contain;
-width:250px; height:240px;" /></p>
+width:250px; height:260px;" /></p>
 
 <h3 id="sec_18d">[18d] Single-hole wave function in two dimensions: A case study of the doped Mott insulator</h3>
 
@@ -821,7 +870,7 @@ width:250px; height:240px;" /></p>
 <p><img src="
 https://qr-wang.github.io/Publications/719de36301718a12e5487fc00c91550e.jpg
 " style="float: left; object-fit: contain;
-width:250px; height:230px;" /></p>
+width:250px; height:240px;" /></p>
 
 <h3 id="sec_15b">[15b] Exact sign structure of the t–J chain and the single hole ground state</h3>
 
@@ -845,7 +894,7 @@ width:250px; height:230px;" /></p>
 <p><img src="
 https://qr-wang.github.io/Publications/5386260ad9b64dd210606b00d50ced38.jpg
 " style="float: left; object-fit: contain;
-width:250px; height:240px;" /></p>
+width:250px; height:260px;" /></p>
 
 <h3 id="sec_15a">[15a] Variational wave function for an anisotropic single-hole-doped t-J ladder</h3>
 
@@ -869,7 +918,7 @@ width:250px; height:240px;" /></p>
 <p><img src="
 https://qr-wang.github.io/Publications/5abfddcb9b2b0d2a397a59b7aeb78b92.jpg
 " style="float: left; object-fit: contain;
-width:250px; height:270px;" /></p>
+width:250px; height:290px;" /></p>
 
 <h3 id="sec_13a">[13a] Sign structure and ground-state properties for a spin−S t−J chain</h3>
 
@@ -893,7 +942,7 @@ width:250px; height:270px;" /></p>
 <p><img src="
 https://qr-wang.github.io/Publications/567355851a98558f38dafef3ca6daeec.jpg
 " style="float: left; object-fit: contain;
-width:250px; height:250px;" /></p>
+width:250px; height:260px;" /></p>
 
 <h3 id="sec_12a">[12a] Monopoles, confinement and charge localization in the t–J model with dilute holes</h3>
 
@@ -904,6 +953,63 @@ width:250px; height:250px;" /></p>
 <p>We present a quantum field theoretic description on the t-J model on a square lattice with dilute holes (i.e. near half-filling), based on the compact <strong>mutual Chern-Simons gauge theory</strong>. Due to the presence of non-perturbative monopole plasma configuration from the antiferromagnetic background, holons (carrying electric charge) are linearly confined and strongly localized even without extrinsic disorder taken into account.</p>
 
 <p></font></p>
+
+
+
+
+
+
+
+
+
+
+<!-- Navigation Bar (white) -->
+<div id="topnav"> <!-- class= -->
+  <a> </a>
+  <a> </a>
+  <a href="Homepage.html">Qing-Rui Wang (王晴睿)</a>
+  <div id="topnav-right">
+    <a href="Homepage.html">Homepage</a>
+    <a class="active" href="Publications.html">Publications</a>
+    <a> </a>
+    <a> </a>
+  </div>
+</div>
+
+<!-- Navigation Bar (black) -->
+<div id="topnavB"> <!-- class= -->
+  <a> </a>
+  <a> </a>
+  <a href="Homepage.html">Qing-Rui Wang (王晴睿)</a>
+  <div id="topnavB-right">
+    <a href="Homepage.html">Homepage</a>
+    <a class="active" href="Publications.html">Publications</a>
+    <a> </a>
+    <a> </a>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<script>
+// When the user scrolls down 30px from the top of the document, slide down the black navbar
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+    document.getElementById("topnavB").style.top = "0";
+  } else {
+    document.getElementById("topnavB").style.top = "-60px";
+  }
+}
+</script>
 
 
 
