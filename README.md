@@ -1,1 +1,1 @@
-# https://qr-wang.github.io
+https://qr-wang.github.io
