@@ -592,20 +592,49 @@ Statistical Mechanics
 
 
 
+<h2>A quote from Albert Einstein</h2>
+<p>A theory is the more impressive the greater the simplicity of its premises, the more diﬀerent kinds of things it relates, and the more extended its area of applicability. Therefore the deep impression that classical thermodynamics made upon me. <strong>It is the only physical theory of universal content which I am convinced will never be overthrown</strong>, within the framework of applicability of its basic concepts.
+</p>
 
 
 
+<h2>热力学第二定律</h2>
 <!-- <h3>Figures and movies:</h3> -->
-<h3>上邪</h3>
-
+<h3>上邪（佚名）</h3>
 <p>上邪！我欲与君相知，长命无绝衰。</p>
 <p>山无陵，江水为竭，冬雷震震，夏雨雪，天地合，乃敢与君绝！</p>
 
-
-<h3>热律</h3>
-
+<h3>热律（deepseek）</h3>
 <p>热律！熵增不可逆，时空永无衰。</p>
 <p>热自冰传火，气自聚成埃，老返童，水归山，机永动，乃敢言此律乖！</p>
+
+
+
+<h2>布朗运动模拟</h2>
+<p>考虑二维平面上的随机游走模型（醉汉行走问题）。每个粒子从坐标原点出发，以等概率向四个基本方向（上、下、左、右）随机运动。下图模拟了不同粒子数目（N = 10, 100, 1000）的随机游走过程，宏观上表现为粒子的扩散行为。在连续极限下，粒子数密度分布函数 <img src="teaching/2025F_SM/eq/rho.svg" style="vertical-align:middle; height:1.2em;"/> 满足经典的扩散方程 <img src="teaching/2025F_SM/eq/diffeq.svg" style="vertical-align:middle; height:2.2em;"/>。随着粒子数目N的增加，粒子的位移和均方位移的统计平均值均逐渐收敛于扩散方程的解（图中虚线所示），验证了微观随机过程与宏观扩散现象的联系。（<a href="teaching/2025F_SM/随机游走,扩散方程.py" target="_blank">python代码下载</a>）</p>
+
+<p><img src="teaching/2025F_SM/随机游走,扩散方程N=10.gif" style="float: middle; object-fit:contain; width:500px; height:273px;" /></p>
+<p><img src="teaching/2025F_SM/随机游走,扩散方程N=100.gif" style="float: middle; object-fit:contain; width:500px; height:273px;" /></p>
+<p><img src="teaching/2025F_SM/随机游走,扩散方程N=1000.gif" style="float: middle; object-fit:contain; width:500px; height:273px;" /></p>
+
+
+
+
+<h2>粒子扩散、状态数与熵</h2>
+<p>考虑一滴墨水在水中的扩散过程。初始时，墨汁颗粒聚集于容器左侧，因水分子撞击而做布朗运动。由于颗粒间存在体积排斥作用，它们的运动并非完全独立，而是相互制约的随机行走。为简化建模，考虑 N 个粒子（图中黑点）初始集中于边长为L的正方形区域左侧，每个粒子以等概率向四个方向随机移动（目标格点需未被其他粒子占据）。</p>
+
+<p>从宏观角度来看，粒子将逐渐向右扩散，密度分布 ρ(x) 从初始的δ函数渐演化均匀分布。若定义 t 时刻第 x 列的粒子数为 N<sub>x</sub>(t)，则作为宏观可观测量的粒子密度分布为 ρ(x,t)=N<sub>x</sub>(t)/L。系统对应的微观状态数为 <img src="teaching/2025F_SM/eq/Omega(t).svg" style="vertical-align:middle; height:2.5em;"/>，相应的Boltzmann熵为 S(t) = k<sub>b</sub> ln Ω(t)。</p>
+
+<p>当 t → ∞ 时，粒子达到完全均匀分布，此时 N<sub>x</sub> = N/L，可以根据上面公式计算出相应的状态数 Ω<sub>0</sub> 和熵 S<sub>0</sub>，模拟结果展示了熵随时间单调增长的过程，并在 t → ∞ 时渐近趋近于虚线表示的平衡态熵值。</p>
+
+图中的模拟参数为 N=20 和 L=10。初始时刻状态数Ω=1，熵为0；虚线对应平衡态状态数 Ω<sub>0</sub> = 34050628916015625 ≈ 3.4 × 10<sup>16</sup>，熵 S<sub>0</sub> = k<sub>b</sub> ln Ω<sub>0</sub> ≈ 38k<sub>b</sub>。
+
+<p><img src="teaching/2025F_SM/粒子扩散T=1000.gif" style="float: middle; object-fit:contain; width:700px; height:273px;" /></p>
+
+
+
+
+
 
 
 
