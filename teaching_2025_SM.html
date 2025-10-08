@@ -623,11 +623,11 @@ Statistical Mechanics
 <h2>粒子扩散、状态数与熵</h2>
 <p>考虑一滴墨水在水中的扩散过程。初始时，墨汁颗粒聚集于容器左侧，因水分子撞击而做布朗运动。由于颗粒间存在体积排斥作用，它们的运动并非完全独立，而是相互制约的随机行走。为简化建模，考虑 N 个粒子（图中黑点）初始集中于边长为L的正方形区域左侧，每个粒子以等概率向四个方向随机移动（目标格点需未被其他粒子占据）。</p>
 
-<p>从宏观角度来看，粒子将逐渐向右扩散，密度分布 ρ(x) 从初始的δ函数渐演化均匀分布。若定义 t 时刻第 x 列的粒子数为 N<sub>x</sub>(t)，则作为宏观可观测量的粒子密度分布为 ρ(x,t)=N<sub>x</sub>(t)/L。系统对应的微观状态数为 <img src="teaching/2025F_SM/eq/Omega(t).svg" style="vertical-align:middle; height:2.5em;"/>，相应的Boltzmann熵为 S(t) = k<sub>b</sub> ln Ω(t)。</p>
+<p>从宏观角度来看，粒子将逐渐向右扩散，密度分布 ρ(x) 从初始的δ函数渐演化均匀分布。若定义 t 时刻第 x 列的粒子数为 N<sub>x</sub>(t)，则作为宏观可观测量的粒子密度分布为 ρ(x,t)=N<sub>x</sub>(t)/L。系统对应的微观状态数为 <img src="teaching/2025F_SM/eq/Omega(t).svg" style="vertical-align:middle; height:2.5em;"/>，相应的Boltzmann熵为 S(t) = k<sub>B</sub> ln Ω(t)。</p>
 
 <p>当 t → ∞ 时，粒子达到完全均匀分布，此时 N<sub>x</sub> = N/L，可以根据上面公式计算出相应的状态数 Ω<sub>0</sub> 和熵 S<sub>0</sub>，模拟结果展示了熵随时间单调增长的过程，并在 t → ∞ 时渐近趋近于虚线表示的平衡态熵值。</p>
 
-图中的模拟参数为 N=20 和 L=10。初始时刻状态数Ω=1，熵为0；虚线对应平衡态状态数 Ω<sub>0</sub> = 34050628916015625 ≈ 3.4 × 10<sup>16</sup>，熵 S<sub>0</sub> = k<sub>b</sub> ln Ω<sub>0</sub> ≈ 38k<sub>b</sub>。
+图中的模拟参数为 N=20 和 L=10。初始时刻状态数Ω=1，熵为0；虚线对应平衡态状态数 Ω<sub>0</sub> = 34050628916015625 ≈ 3.4 × 10<sup>16</sup>，熵 S<sub>0</sub> = k<sub>B</sub> ln Ω<sub>0</sub> ≈ 38k<sub>B</sub>。
 
 <p><img src="teaching/2025F_SM/粒子扩散T=1000.gif" style="float: middle; object-fit:contain; width:700px; height:273px;" /></p>
 
