@@ -1935,7 +1935,7 @@ Section 6. The Theory of Gravitation
  }
  document.addEventListener('fullscreenchange',()=>{if(!document.fullscreenElement)fullscreenExitTime=Date.now();syncFullscreen();});
  root.prepend(toolbar);
- const directory=$('details');directory.id='sm-directory';directory.append($('summary','','课程目录 · 人物故事'));
+ const directory=$('details');directory.id='sm-directory';directory.append($('summary','','课程目录 · 人物'));
  const intro=Array.from(root.children).filter(e=>e.tagName==='P'&&e.id!=='sm-release-status').slice(0,2);
  intro.forEach(e=>directory.append(e));
  const index=document.getElementById('sm-story-index');const table=index.nextElementSibling;
