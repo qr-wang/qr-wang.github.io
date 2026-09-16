@@ -9,8 +9,10 @@
 <script id="sm-release-config">
 const SHOW_ALL_CONTENT = true;
 // 人物显示范围：null 显示全部可用人物；数组仅显示指定日期的人物。
-const VISIBLE_STORY_DATES = ['09-16'];
-window.SM_RELEASE_CONFIG = { showAll: SHOW_ALL_CONTENT, visibleStoryDates: VISIBLE_STORY_DATES, timeZone: 'Asia/Shanghai' };
+const VISIBLE_STORY_DATES = null;
+// 暂时隐藏 Perrin、Pockels、van ’t Hoff、Ulam、Tsingou、Szilard、Ising；材料保留，方便后续替换。
+const HIDDEN_STORY_DATES = ['09-21', '09-28', '09-30', '10-12', '10-14', '10-19', '10-26'];
+window.SM_RELEASE_CONFIG = { showAll: SHOW_ALL_CONTENT, visibleStoryDates: VISIBLE_STORY_DATES, hiddenStoryDates: HIDDEN_STORY_DATES, timeZone: 'Asia/Shanghai' };
 </script>
 <style id="sm-release-style">
 /* 未完成日期筛选或未启用 JavaScript 时，课程材料默认隐藏，避免先闪现未来内容。 */
@@ -570,7 +572,8 @@ var _hmt = _hmt || [];
 .sm-enhanced #sm-stories > h2:before {display:none;}
 .sm-enhanced #top_outline1 {display:none;}
 .sm-enhanced #sm-stories .sm-story {margin:0;}
-.sm-enhanced #sm-stories .sm-story:not(.is-active) {display:none;}
+.sm-enhanced.sm-project #sm-stories .sm-story:not(.is-active) {display:none;}
+.sm-enhanced:not(.sm-project) #sm-stories > .sm-story + .sm-story {margin-top:48px;padding-top:32px;border-top:1px solid #ccc;}
 .sm-enhanced .sm-story > summary, .sm-enhanced .sm-reading > summary, .sm-enhanced .sm-story > p:last-child {display:none;}
 .sm-enhanced .sm-reading {display:block;}
 .sm-story-hero {display:flex;align-items:flex-start;justify-content:space-between;gap:28px;margin:22px 0 28px;}
@@ -1029,8 +1032,8 @@ Section 6. The Theory of Gravitation
 <span id="sm-story-index" hidden></span>
 <table><thead><tr><th scope="col">周次与日期</th><th scope="col">上课内容</th><th scope="col">人物与材料</th></tr></thead><tbody>
 <tr data-sm-release="2026-09-14" hidden><td>第 1 周周一，9 月 14 日</td><td><a href="teaching/2026F_SM/intro.pdf" target="_blank" rel="noopener noreferrer">统计力学导论</a></td><td></td></tr>
-<tr data-sm-release="2026-09-16" hidden><td>第 1 周周三，9 月 16 日</td><td>微观态、宏观态与热平衡；微正则系综；态数、熵与温度</td><td>Ludwig Boltzmann<br><a href="#sm-reading-09-16">课后阅读</a> · <a href="#sm-story-09-16" data-sm-project>全屏投影</a></td></tr>
-<tr data-sm-release="2026-09-21" hidden><td>第 2 周周一，9 月 21 日</td><td>微正则系综续；热容、稳定性与熵</td><td>Jean Perrin<br><a href="#sm-reading-09-21">课后阅读</a> · <a href="#sm-story-09-21" data-sm-project>全屏投影</a></td></tr>
+<tr data-sm-release="2026-09-16" hidden><td>第 1 周周三，9 月 16 日</td><td>微观态、宏观态与热平衡；微正则系综；微观状态数与熵</td><td>Ludwig Boltzmann<br><a href="#sm-reading-09-16">课后阅读</a> · <a href="#sm-story-09-16" data-sm-project>全屏投影</a></td></tr>
+<tr data-sm-release="2026-09-21" hidden><td>第 2 周周一，9 月 21 日</td><td>温度；微正则系综续；热容、稳定性与熵</td><td>Jean Perrin<br><a href="#sm-reading-09-21">课后阅读</a> · <a href="#sm-story-09-21" data-sm-project>全屏投影</a></td></tr>
 <tr data-sm-release="2026-09-23" hidden><td>第 2 周周三，9 月 23 日</td><td>正则系综；热库、Boltzmann 因子与配分函数</td><td>Josiah Willard Gibbs<br><a href="#sm-reading-09-23">课后阅读</a> · <a href="#sm-story-09-23" data-sm-project>全屏投影</a></td></tr>
 <tr data-sm-release="2026-09-28" hidden><td>第 3 周周一，9 月 28 日</td><td>自由能、能量涨落与二能级系统</td><td>Agnes Pockels<br><a href="#sm-reading-09-28">课后阅读</a> · <a href="#sm-story-09-28" data-sm-project>全屏投影</a></td></tr>
 <tr data-sm-release="2026-09-30" hidden><td>第 3 周周三，9 月 30 日</td><td>化学势、巨正则系综与粒子数涨落</td><td>Jacobus Henricus van ’t Hoff<br><a href="#sm-reading-09-30">课后阅读</a> · <a href="#sm-story-09-30" data-sm-project>全屏投影</a></td></tr>
@@ -1042,7 +1045,7 @@ Section 6. The Theory of Gravitation
 <tr data-sm-release="2026-10-21" hidden><td>第 6 周周三，10 月 21 日</td><td>分子运动论、Maxwell–Boltzmann 分布与双原子气体</td><td>James Clerk Maxwell<br><a href="#sm-reading-10-21">课后阅读</a> · <a href="#sm-story-10-21" data-sm-project>全屏投影</a></td></tr>
 <tr data-sm-release="2026-10-26" hidden><td>第 7 周周一，10 月 26 日</td><td>相互作用气体导论；Mayer 函数与维里展开</td><td>Ernst Ising<br><a href="#sm-reading-10-26">课后阅读</a> · <a href="#sm-story-10-26" data-sm-project>全屏投影</a></td></tr>
 <tr data-sm-release="2026-10-28" hidden><td>第 7 周周三，10 月 28 日</td><td>van der Waals 修正与真实气体状态方程</td><td>Johannes Diderik van der Waals<br><a href="#sm-reading-10-28">课后阅读</a> · <a href="#sm-story-10-28" data-sm-project>全屏投影</a></td></tr>
-<tr data-sm-release="2026-11-02" hidden><td>第 8 周周一，11 月 2 日</td><td>簇展开、逸度与巨正则处理</td><td>Chen-Ning Yang、Tsung-Dao Lee<br><a href="#sm-reading-11-02">课后阅读</a> · <a href="#sm-story-11-02" data-sm-project>全屏投影</a></td></tr>
+<tr data-sm-release="2026-11-02" hidden><td>第 8 周周一，11 月 2 日</td><td>簇展开、逸度与巨正则处理</td><td>杨振宁、李政道<br><a href="#sm-reading-11-02">课后阅读</a> · <a href="#sm-story-11-02" data-sm-project>全屏投影</a></td></tr>
 <tr data-sm-release="2026-11-04" hidden><td>第 8 周周三，11 月 4 日</td><td>Debye 屏蔽；前半学期小结</td><td>Peter Debye<br><a href="#sm-reading-11-04">课后阅读</a> · <a href="#sm-story-11-04" data-sm-project>全屏投影</a></td></tr>
 <tr data-sm-release="2026-11-09" hidden><td>第 9 周周一，11 月 9 日</td><td>期中考试</td><td></td></tr>
 <tr data-sm-release="2026-11-11" hidden><td>第 9 周周三，11 月 11 日</td><td>期中讲评；量子气体、态密度与求和变积分</td><td>Wolfgang Pauli<br><a href="#sm-reading-11-11">课后阅读</a> · <a href="#sm-story-11-11" data-sm-project>全屏投影</a></td></tr>
@@ -1064,7 +1067,7 @@ Section 6. The Theory of Gravitation
 <details id="sm-story-09-16" class="sm-story" data-sm-release="2026-09-16" hidden>
 <summary>01 · 9 月 16 日（周三） · Ludwig Boltzmann</summary>
 <h3>从原子运动到熵：统计力学的奠基者</h3>
-<p><strong>本次课程：</strong>微观态、宏观态与热平衡；微正则系综；态数、熵与温度</p>
+<p><strong>本次课程：</strong>微观态、宏观态与热平衡；微正则系综；微观状态数与熵</p>
 <div class="sm-classroom" id="sm-classroom-09-16">
 <h4>课堂共看</h4>
 <blockquote><p>微观运动可以逆转，宏观热现象为什么有明确的方向？</p></blockquote>
@@ -1831,11 +1834,18 @@ Section 6. The Theory of Gravitation
  const today=todayInShanghai();
  const allCards=Array.from(root.querySelectorAll(':scope > .sm-story'));
  const visibleDates=Array.isArray(config.visibleStoryDates)?new Set(config.visibleStoryDates):null;
- const isVisible=date=>(!visibleDates||visibleDates.has(date.slice(-5)))&&(config.showAll||date<=today);
+ const hiddenDates=new Set(config.hiddenStoryDates||[]);
+ const isVisible=date=>!hiddenDates.has(date.slice(-5))&&(!visibleDates||visibleDates.has(date.slice(-5)))&&(config.showAll||date<=today);
  const blocked=new Set(allCards.filter(c=>!isVisible(c.dataset.smRelease)).map(c=>c.id.slice(-5)));
  document.querySelectorAll('[data-sm-release]').forEach(el=>{
-  const firstLesson=el.tagName==='TR'&&el.dataset.smRelease==='2026-09-14';
-  if(isVisible(el.dataset.smRelease)||(firstLesson&&(config.showAll||el.dataset.smRelease<=today)))el.hidden=false;
+  // Keep the complete course directory visible while filtering story content separately.
+  if(el.tagName==='TR'){
+   el.hidden=false;
+   if(hiddenDates.has(el.dataset.smRelease.slice(-5))&&el.cells[2]){
+    const materials=el.cells[2];const content=document.createElement('span');content.hidden=true;
+    content.append(...materials.childNodes);materials.append(content);
+   }
+  }else if(isVisible(el.dataset.smRelease))el.hidden=false;
   else el.remove();
  });
  // Remove hidden lessons from navigation, including fallback links used without the reader UI.
@@ -1872,7 +1882,7 @@ Section 6. The Theory of Gravitation
  const imageMap=JSON.parse(document.getElementById('sm-portrait-data').textContent);
  const $=(tag,cls,text)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e;};
  const button=(text,fn)=>{const e=$('button','',text);e.type='button';e.addEventListener('click',fn);return e;};
- let current=cards.length-1,mode='read',step=0;
+ let current=0,mode='read',step=0;
  const projectionMap=JSON.parse(document.getElementById('sm-projection-data').textContent);
  const toolbar=$('div','sm-toolbar');toolbar.id='sm-toolbar';
  const selector=$('div','sm-selector');const label=$('label','','选择课程与人物');label.htmlFor='sm-lesson';
@@ -2008,7 +2018,7 @@ Section 6. The Theory of Gravitation
   classroom.after(stage);classroom.hidden=true;
   card._slideData=slideData;card._headingTitle=title;card._readingTitle=title.textContent;reading.open=true;card.open=true;
  });
- const footer=$('nav','sm-footer');footer.setAttribute('aria-label','人物故事导航');footer.hidden=cards.length<2;
+ const footer=$('nav','sm-footer');footer.setAttribute('aria-label','人物故事导航');footer.hidden=true;
  const prev=button('← 上一次故事',()=>choose(current-1,true));const count=$('span','sm-count');const next=button('下一次故事 →',()=>choose(current+1,true));footer.append(prev,count,next);root.append(footer);
  const controls=$('nav','sm-step-controls');controls.setAttribute('aria-label','故事翻页');
  const prevStep=button('← 上一页',()=>move(-1));const nextStep=button('下一页 →',()=>move(1));
