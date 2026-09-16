@@ -559,6 +559,7 @@ var _hmt = _hmt || [];
 @media(max-width:700px) {#sm-stories .sm-lesson-picker {font-size:14px;}}
 
 .sm-mode-buttons {display:flex;flex-wrap:wrap;gap:6px;align-self:flex-end;}
+.sm-project .sm-fragment-pending {visibility:hidden;pointer-events:none;}
 .sm-fullscreen-status {flex-basis:100%;margin:0;font-size:16px;}
 #sm-directory {margin:16px 0 28px;}
 #sm-directory > h3 {font:inherit;color:rgba(34,110,147,1);margin:0 0 12px;}
@@ -1882,7 +1883,7 @@ Section 6. The Theory of Gravitation
  const imageMap=JSON.parse(document.getElementById('sm-portrait-data').textContent);
  const $=(tag,cls,text)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e;};
  const button=(text,fn)=>{const e=$('button','',text);e.type='button';e.addEventListener('click',fn);return e;};
- let current=0,mode='read',step=0;
+ let current=0,mode='read',step=0,revealed=1;
  const projectionMap=JSON.parse(document.getElementById('sm-projection-data').textContent);
  const toolbar=$('div','sm-toolbar');toolbar.id='sm-toolbar';
  const selector=$('div','sm-selector');const label=$('label','','选择课程与人物');label.htmlFor='sm-lesson';
@@ -1919,7 +1920,7 @@ Section 6. The Theory of Gravitation
  document.addEventListener('click',event=>{if(!selector.contains(event.target))setMenuOpen(false);});
  selector.addEventListener('focusout',event=>{if(!selector.contains(event.relatedTarget))setMenuOpen(false);});
  const modeButtons=$('div','sm-mode-buttons');modeButtons.setAttribute('role','group');modeButtons.setAttribute('aria-label','阅读方式');
- const readButton=button('课后阅读',()=>switchMode('read'));const projectButton=button('全屏投影',()=>{if(!document.fullscreenElement)switchMode('project');toggleFullscreen();});projectButton.id='sm-fullscreen';
+ const readButton=button('课后阅读',()=>switchMode('read'));const projectButton=button('全屏投影',()=>{if(mode!=='project')switchMode('project');toggleFullscreen();});projectButton.id='sm-fullscreen';
  const fullscreenStatus=$('p','sm-fullscreen-status');fullscreenStatus.setAttribute('role','alert');fullscreenStatus.hidden=true;
  let fullscreenExitTime=0;
  modeButtons.append(readButton,projectButton);toolbar.append(modeButtons,fullscreenStatus);
@@ -1944,7 +1945,7 @@ Section 6. The Theory of Gravitation
   }catch(error){fullscreenStatus.textContent='暂时无法切换全屏，请使用浏览器菜单中的全屏功能。';fullscreenStatus.hidden=false;}
   syncFullscreen();
  }
- document.addEventListener('fullscreenchange',()=>{if(!document.fullscreenElement)fullscreenExitTime=Date.now();syncFullscreen();});
+ document.addEventListener('fullscreenchange',()=>{if(!document.fullscreenElement)fullscreenExitTime=Date.now();else revealed=initialReveal();update();});
  root.prepend(toolbar);
  const directory=$('section');directory.id='sm-directory';directory.setAttribute('aria-labelledby','sm-directory-title');
  const directoryTitle=$('h3','','课程目录 · 人物');directoryTitle.id='sm-directory-title';directory.append(directoryTitle);
@@ -2013,6 +2014,8 @@ Section 6. The Theory of Gravitation
      caption.append(credit);img.addEventListener('error',()=>{img.hidden=true;caption.prepend(document.createTextNode('图像暂不可用 · '));});f.append(img,caption);gallery.append(f);
     });panel.append(gallery);
    }
+   // Keep unrevealed content in the layout so text and images do not jump.
+   panel._fragments=card.id==='sm-story-09-16'?Array.from(copy.querySelectorAll((n===1||n===2)?'.sm-slide-block':'.sm-story-lead, .sm-boltzmann-equation, .sm-story-inline-formula, .sm-story-beats > p')):[];
    stage.append(panel);return panel;
   });
   classroom.after(stage);classroom.hidden=true;
@@ -2020,7 +2023,7 @@ Section 6. The Theory of Gravitation
  });
  const footer=$('nav','sm-footer');footer.setAttribute('aria-label','人物故事导航');footer.hidden=true;
  const prev=button('← 上一次故事',()=>choose(current-1,true));const count=$('span','sm-count');const next=button('下一次故事 →',()=>choose(current+1,true));footer.append(prev,count,next);root.append(footer);
- const controls=$('nav','sm-step-controls');controls.setAttribute('aria-label','故事翻页');
+ const controls=$('nav','sm-step-controls');controls.setAttribute('aria-label','逐条展示与翻页');
  const prevStep=button('← 上一页',()=>move(-1));const nextStep=button('下一页 →',()=>move(1));
  const info=$('span','sm-step-info');const progress=$('span');progress.setAttribute('aria-live','polite');info.append(progress);controls.append(prevStep,info,nextStep);root.append(controls);
  select.addEventListener('change',()=>choose(Number(select.value),true));
@@ -2030,7 +2033,20 @@ Section 6. The Theory of Gravitation
   fullscreenStatus.hidden=true;syncFullscreen();
   readButton.setAttribute('aria-pressed',String(mode==='read'));
   cards.forEach((card,i)=>{card.classList.toggle('is-active',i===current);card.open=true;
-   const page=i===current?step:0;card._stages.forEach((el,n)=>el.hidden=n!==page);
+   const page=i===current?step:0;card._stages.forEach((el,n)=>{
+    el.hidden=n!==page;
+    el._fragments.forEach((fragment,j)=>{
+     const pending=incremental()&&j>=(i===current&&n===step?revealed:1);
+     fragment.classList.toggle('sm-fragment-pending',pending);
+     if(pending)fragment.setAttribute('aria-hidden','true');else fragment.removeAttribute('aria-hidden');
+    });
+    el.querySelectorAll('.sm-slide-block').forEach(block=>{
+     const title=block.querySelector('.sm-slide-block-title');
+     const first=el._fragments.find(fragment=>block.contains(fragment));
+     const pending=!!first&&first.classList.contains('sm-fragment-pending');
+     if(title){title.classList.toggle('sm-fragment-pending',pending);if(pending)title.setAttribute('aria-hidden','true');else title.removeAttribute('aria-hidden');}
+    });
+   });
    card._headingTitle.textContent=mode==='project'?card._slideData[page].title:card._readingTitle;
    if(card.id==='sm-story-09-16')card.classList.toggle('sm-intro-portrait',mode==='project'&&!!card._slideData[page].titlePortrait);
   });
@@ -2038,14 +2054,26 @@ Section 6. The Theory of Gravitation
   Array.from(lessonList.children).forEach((row,i)=>row.setAttribute('aria-selected',String(i===current)));
   select.value=String(current);prev.disabled=current===0;next.disabled=current===cards.length-1;
   count.textContent=(current+1)+' / '+cards.length+' · '+(mode==='read'?'课后阅读':'上课投影');
-  const pages=cards[current]._stages.length;controls.hidden=mode!=='project'||pages===1;prevStep.disabled=step===0;nextStep.disabled=step===pages-1;progress.textContent=(step+1)+' / '+pages;
+  const pages=cards[current]._stages.length;const total=cards[current]._stages[step]._fragments.length;
+  controls.hidden=mode!=='project'||(pages===1&&total<=1);
+  prevStep.disabled=step===0&&(!incremental()||revealed<=initialReveal());nextStep.disabled=step===pages-1&&(!incremental()||revealed>=total);
+  prevStep.textContent=incremental()&&revealed>initialReveal()?'← 上一条':'← 上一页';nextStep.textContent=incremental()&&revealed<total?'下一条 →':'下一页 →';
+  progress.textContent=(step+1)+' / '+pages;
  }
  function setHash(){const date=cards[current].id.replace('sm-story-','');history.pushState(null,'','#sm-'+(mode==='project'?'story-':'reading-')+date);}
  function scrollStart(){requestAnimationFrame(()=>{if(mode==='project')window.scrollTo(0,0);else {const nav=document.getElementById('topnavB');window.scrollTo(0,Math.max(0,window.scrollY+cards[current].getBoundingClientRect().top-(nav?nav.offsetHeight:60)-16));}});}
  function remember(){try{localStorage.setItem('sm-2026-lesson',cards[current].id);}catch(e){}}
- function choose(i,push){if(i<0||i>=cards.length)return;current=i;step=0;cards[i].scrollTop=0;remember();update();if(push)setHash();scrollStart();}
- function switchMode(m){setMenuOpen(false);if(m==='read'&&document.fullscreenElement)document.exitFullscreen().catch(()=>{});mode=m;step=0;update();setHash();scrollStart();}
- function move(delta){step=Math.max(0,Math.min(cards[current]._stages.length-1,step+delta));update();cards[current].scrollTop=0;}
+ function choose(i,push){if(i<0||i>=cards.length)return;current=i;step=0;revealed=initialReveal();cards[i].scrollTop=0;remember();update();if(push)setHash();scrollStart();}
+ function switchMode(m){setMenuOpen(false);if(m==='read'&&document.fullscreenElement)document.exitFullscreen().catch(()=>{});mode=m;step=0;revealed=initialReveal();update();setHash();scrollStart();}
+ function incremental(){return mode==='project'&&Boolean(document.fullscreenElement);}
+ function initialReveal(){return cards[current].id==='sm-story-09-16'?0:1;}
+ function move(delta){
+  const stages=cards[current]._stages;const total=stages[step]._fragments.length;
+  if(!incremental()){step=Math.max(0,Math.min(stages.length-1,step+delta));revealed=initialReveal();}
+  else if(delta>0){if(revealed<total)revealed++;else if(step<stages.length-1){step++;revealed=initialReveal();}}
+  else if(revealed>initialReveal())revealed--;else if(step>0){step--;revealed=Math.max(1,stages[step]._fragments.length);}
+  update();cards[current].scrollTop=0;
+ }
  function readHash(){const hash=location.hash;const match=hash.match(/^#sm-(story|reading|classroom)-(\d\d-\d\d)$/);if(match){const i=cards.findIndex(e=>e.id==='sm-story-'+match[2]);if(i>=0){mode=match[1]==='reading'?'read':'project';choose(i,false);return;}}
   if(hash==='#sm-story-index'||hash==='#sm-stories'){mode='read';update();requestAnimationFrame(()=>directory.scrollIntoView({block:'center'}));}
  }
@@ -2054,7 +2082,8 @@ Section 6. The Theory of Gravitation
  document.addEventListener('keydown',event=>{if(mode!=='project'||event.altKey||event.ctrlKey||event.metaKey)return;
   if(event.key==='Escape'){if(document.fullscreenElement||Date.now()-fullscreenExitTime<300)return;event.preventDefault();switchMode('read');return;}
   if(!lessonList.hidden||/INPUT|TEXTAREA|SELECT/.test(event.target.tagName)||event.target.isContentEditable)return;
-  if(event.key==='ArrowRight'){event.preventDefault();move(1);}else if(event.key==='ArrowLeft'){event.preventDefault();move(-1);}});
+  if(event.key===' '&&event.target.closest('button,a'))return;
+  if(['ArrowRight','PageDown',' '].includes(event.key)){event.preventDefault();move(1);}else if(['ArrowLeft','PageUp'].includes(event.key)){event.preventDefault();move(-1);}});
  document.body.classList.add('sm-enhanced');
  try{const saved=localStorage.getItem('sm-2026-lesson');const i=cards.findIndex(c=>c.id===saved);if(i>=0)current=i;}catch(e){}
  update();readHash();
