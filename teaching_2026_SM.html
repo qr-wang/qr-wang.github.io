@@ -7,7 +7,7 @@
 <!-- 教师开关：SHOW_ALL_CONTENT = true 显示全部；false 只显示北京时间今天及以前的课程。
      此开关不显示在页面上。静态页面隐藏不是权限验证，源码中仍保留完整材料。 -->
 <script id="sm-release-config">
-const SHOW_ALL_CONTENT = true;
+const SHOW_ALL_CONTENT = false;
 // 人物显示范围：null 显示全部可用人物；数组仅显示指定日期的人物。
 const VISIBLE_STORY_DATES = null;
 // 暂时隐藏 Perrin、Pockels、van ’t Hoff、Ulam、Tsingou、Szilard、Ising；材料保留，方便后续替换。
@@ -1838,9 +1838,9 @@ Section 6. The Theory of Gravitation
  const isVisible=date=>!hiddenDates.has(date.slice(-5))&&(!visibleDates||visibleDates.has(date.slice(-5)))&&(config.showAll||date<=today);
  const blocked=new Set(allCards.filter(c=>!isVisible(c.dataset.smRelease)).map(c=>c.id.slice(-5)));
  document.querySelectorAll('[data-sm-release]').forEach(el=>{
-  // Keep the complete course directory visible while filtering story content separately.
+  // Release course rows by date; manually hidden people do not hide their course rows.
   if(el.tagName==='TR'){
-   el.hidden=false;
+   el.hidden=!(config.showAll||el.dataset.smRelease<=today);
    if(hiddenDates.has(el.dataset.smRelease.slice(-5))&&el.cells[2]){
     const materials=el.cells[2];const content=document.createElement('span');content.hidden=true;
     content.append(...materials.childNodes);materials.append(content);
