@@ -1,495 +1,183 @@
 <!DOCTYPE html>
-<html id="top_page">
-
+<html lang="en" id="top_page">
 <head>
-
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Qing-Rui Wang - Publications</title>
 
 <link rel="icon" href="wqr.jpg">
 
-<!-- <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet"> -->
-<!-- <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'> -->
-<!-- <link href="https://fonts.font.im/css?family=Lato:300,400,700" rel="stylesheet"> -->
-
-<style type="text/css">
-
+<style>
 @font-face {
-    font-family: Lato;
-    src: url('font/Lato-Light.ttf');
-    font-weight: 300;
-}
-@font-face {
-    font-family: Lato;
-    src: url('font/Lato-Regular.ttf');
-    font-weight: 400;
-}
-@font-face {
-    font-family: Lato;
-    src: url('font/Lato-Bold.ttf');
-    font-weight: 700;
-}
-
-body {
-  min-width: 70%; /*wqr*/
-  max-width: 100%; /*wqr*/
-  font-family: 'Lato', sans-serif; /*Helvetica, arial, sans-serif. wqr*/
-  font-size: 16px;
-  line-height: 1.5;/*1.6*/
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: white;
-  padding: 30px;
-}
-
-body > *:first-child {
-  margin-top: 0 !important; }
-body > *:last-child {
-  margin-bottom: 0 !important; }
-
-a {
-  color: #4183C4; }
-a.absent {
-  color: #cc0000; }
-a.anchor {
-  display: block;
-  padding-left: 30px;
-  margin-left: -30px;
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0; }
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 20px 0 10px;
-  padding: 0;
-/*  font-weight: normal;*/
-  -webkit-font-smoothing: antialiased;
-  cursor: text;
-  position: relative; }
-
-h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
-  text-decoration: none; }
-
-h1 tt, h1 code {
-/*  font-size: inherit;*/
-}
-
-h2 tt, h2 code {
-/*  font-size: inherit;*/
-}
-
-h3 tt, h3 code {
-  font-size: inherit; }
-
-h4 tt, h4 code {
-  font-size: inherit; }
-
-h5 tt, h5 code {
-  font-size: inherit; }
-
-h6 tt, h6 code {
-  font-size: inherit; }
-
-h1 {
-  font-size: 33pt;
-  font-family: 'Lato', sans-serif; /* g font */
+  font-family: Lato;
+  src: url('font/Lato-Light.ttf');
   font-weight: 300;
-  color: rgba(34,110,147,1); /* g color */
+  font-display: swap;
 }
-
-h2 {
-  font-size: 25px;
-  font-family: 'Lato', sans-serif;
+@font-face {
+  font-family: Lato;
+  src: url('font/Lato-Regular.ttf');
   font-weight: 400;
-/*  border-bottom: 1px solid #cccccc;*/
-/*  border-top: 1px solid #cccccc;*/
-  color: rgba(34,110,147,1);
-/*  color: black;*/
+  font-display: swap;
 }
-h2:before {
-  content:"";
-  display:block;
-  border-top:1px solid #cccccc;
-  height: 50px;
-  width: 120%;
-  position: relative;
-  left: -10%;
+@font-face {
+  font-family: Lato;
+  src: url('font/Lato-Bold.ttf');
+  font-weight: 700;
+  font-display: swap;
 }
-
-h3 {
-  font-weight: 400;
-  font-size: 20px;
+:root {
+  --accent: rgb(34, 110, 147);
+  --nav-height: 58px;
 }
-
-h4 {
-  font-size: 16px; }
-
-h5 {
-  font-size: 14px; }
-
-h6 {
-  color: #777777;
-  font-size: 14px; }
-
-p, blockquote, ul, ol, dl, li, table, pre {
-  margin: 15px 0; }
-
-hr {
-  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
-  border: 0 none;
-  color: #cccccc;
-  height: 4px;
-  padding: 0;
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  color: #202020;
+  background: white;
+  font-family: Lato, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
 }
-
-body > h2:first-child {
-  margin-top: 0;
-  padding-top: 0; }
-body > h1:first-child {
-  margin-top: 0;
-  padding-top: 0; }
-  body > h1:first-child + h2 {
-    margin-top: 0;
-    padding-top: 0; }
-body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
-  margin-top: 0;
-  padding-top: 0; }
-
-a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
-  margin-top: 0;
-  padding-top: 0; }
-
-h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
-  margin-top: 0; }
-
-li p.first {
-  display: inline-block; }
-li {
-  margin: 0; }
-ul, ol {
-  padding-left: 30px; }
-
-ul :first-child, ol :first-child {
-  margin-top: 0; }
-
-dl {
-  padding: 0; }
-  dl dt {
-    font-size: 14px;
-    font-weight: bold;
-    font-style: italic;
-    padding: 0;
-    margin: 15px 0 5px; }
-    dl dt:first-child {
-      padding: 0; }
-    dl dt > :first-child {
-      margin-top: 0; }
-    dl dt > :last-child {
-      margin-bottom: 0; }
-  dl dd {
-    margin: 0 0 15px;
-    padding: 0 15px; }
-    dl dd > :first-child {
-      margin-top: 0; }
-    dl dd > :last-child {
-      margin-bottom: 0; }
-
-blockquote {
-  border-left: 4px solid #dddddd;
-  padding: 0 15px;
-  color: #777777; }
-  blockquote > :first-child {
-    margin-top: 0; }
-  blockquote > :last-child {
-    margin-bottom: 0; }
-
-table {
-  padding: 0;border-collapse: collapse; }
-  table tr {
-    border-top: 1px solid #cccccc;
-    background-color: white;
-    margin: 0;
-    padding: 0; }
-    table tr:nth-child(2n) {
-      background-color: #f8f8f8; }
-    table tr th {
-      font-weight: bold;
-      border: 1px solid #cccccc;
-      margin: 0;
-      padding: 6px 13px; }
-    table tr td {
-      border: 1px solid #cccccc;
-      margin: 0;
-      padding: 6px 13px; }
-    table tr th :first-child, table tr td :first-child {
-      margin-top: 0; }
-    table tr th :last-child, table tr td :last-child {
-      margin-bottom: 0; }
-
-img {
-  max-width: 100%; }
-
-span.frame {
-  display: block;
-  overflow: hidden; }
-  span.frame > span {
-    border: 1px solid #dddddd;
-    display: block;
-    float: left;
-    overflow: hidden;
-    margin: 13px 0 0;
-    padding: 7px;
-    width: auto; }
-  span.frame span img {
-    display: block;
-    float: left; }
-  span.frame span span {
-    clear: both;
-    color: #333333;
-    display: block;
-    padding: 5px 0 0; }
-span.align-center {
-  display: block;
-  overflow: hidden;
-  clear: both; }
-  span.align-center > span {
-    display: block;
-    overflow: hidden;
-    margin: 13px auto 0;
-    text-align: center; }
-  span.align-center span img {
-    margin: 0 auto;
-    text-align: center; }
-span.align-right {
-  display: block;
-  overflow: hidden;
-  clear: both; }
-  span.align-right > span {
-    display: block;
-    overflow: hidden;
-    margin: 13px 0 0;
-    text-align: right; }
-  span.align-right span img {
-    margin: 0;
-    text-align: right; }
-span.float-left {
-  display: block;
-  margin-right: 13px;
-  overflow: hidden;
-  float: left; }
-  span.float-left span {
-    margin: 13px 0 0; }
-span.float-right {
-  display: block;
-  margin-left: 13px;
-  overflow: hidden;
-  float: right; }
-  span.float-right > span {
-    display: block;
-    overflow: hidden;
-    margin: 13px auto 0;
-    text-align: right; }
-
-code, tt {
-  margin: 0 2px;
-  padding: 0 5px;
-  white-space: nowrap;
-  border: 1px solid #eaeaea;
-  background-color: #f8f8f8;
-  border-radius: 3px; }
-
-pre code {
+a { color: var(--accent); text-underline-offset: 3px; }
+a:visited { color: #684480; }
+a:hover { color: #684480; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+img { max-width: 100%; }
+h1, h2, h3 { font-weight: 400; }
+h2[id], h3[id], #top_outline1, #main-content {
+  scroll-margin-top: calc(var(--nav-height) + 24px);
+}
+.skip-link {
+  position: fixed;
+  top: 8px;
+  left: 16px;
+  z-index: 200;
+  padding: 8px 16px;
+  background: white;
+  transform: translateY(-200%);
+}
+.skip-link:focus { transform: translateY(0); }
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: white;
+}
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 12px 32px;
+}
+.site-nav a { color: #202020; text-decoration: none; }
+.site-brand { font-size: 21px; font-weight: 300; }
+.site-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 24px;
   margin: 0;
   padding: 0;
-  white-space: pre;
-  border: none;
-  background: transparent; }
-
-.highlight pre {
-  background-color: #f8f8f8;
-  border: 1px solid #cccccc;
-  font-size: 13px;
-  line-height: 19px;
-  overflow: auto;
-  padding: 6px 10px;
-  border-radius: 3px; }
-
-pre {
-  background-color: #f8f8f8;
-  border: 1px solid #cccccc;
-  font-size: 13px;
-  line-height: 19px;
-  overflow: auto;
-  padding: 6px 10px;
-  border-radius: 3px; }
-  pre code, pre tt {
-    background-color: transparent;
-    border: none; }
-
-sup {
-    font-size: 0.83em;
-    vertical-align: super;
-    line-height: 0;
+  list-style: none;
 }
-
-kbd {
-  display: inline-block;
-  padding: 3px 5px;
-  font-size: 11px;
-  line-height: 10px;
-  color: #555;
-  vertical-align: middle;
-  background-color: #fcfcfc;
-  border: solid 1px #ccc;
-  border-bottom-color: #bbb;
-  border-radius: 3px;
-  box-shadow: inset 0 -1px 0 #bbb
+.site-links a { display: block; }
+.site-links a:hover { color: var(--accent); }
+.site-links [aria-current="page"] { font-weight: 700; }
+.site-header.is-scrolled { background: #212121; }
+.site-header.is-scrolled a { color: white; }
+.site-header.is-scrolled a:hover,
+.site-header.is-scrolled [aria-current="page"] { color: #73c8ed; }
+.site-header.is-scrolled a:focus-visible { outline-color: #73c8ed; }
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 44px 32px 40px;
 }
-
-* {
-	-webkit-print-color-adjust: exact;
+.page-title {
+  margin: 0 0 30px;
+  color: var(--accent);
+  font-size: clamp(32px, 4.5vw, 44px);
+  font-weight: 300;
+  line-height: 1.25;
+  text-align: center;
 }
-@media screen and (min-width: 914px) {
-    body {
-        width: 854px;
-        margin:0 auto;
-    }
+.page-intro { margin: 0 0 28px; }
+.topic-nav ol { margin: 0; padding-left: 25px; }
+.topic-nav li { margin: 8px 0; padding-left: 3px; }
+.topic-nav li::marker { color: var(--accent); }
+.topic-nav a { color: var(--accent); }
+.publication-section { margin-top: 56px; }
+.publication-section h2 {
+  margin: 0 0 32px;
+  border-top: 1px solid #d4d4d4;
+  padding-top: 30px;
+  color: var(--accent);
+  font-size: 25px;
+  line-height: 1.4;
+}
+.publication-section h2 a { color: inherit; text-decoration: none; }
+.publication-section h2 a:hover { text-decoration: underline; }
+.publication-entry {
+  display: grid;
+  grid-template-columns: 251px minmax(0, 1fr);
+  align-items: start;
+  gap: 24px 28px;
+}
+.publication-entry + .publication-entry { margin-top: 48px; }
+.publication-figure {
+  width: 100%;
+  margin: 4px 0 0;
+}
+.publication-figure > a { display: block; }
+.publication-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.publication-figure a { cursor: zoom-in; }
+.publication-text { min-width: 0; }
+.publication-text h3 {
+  margin: 0 0 12px;
+  font-size: 20px;
+  line-height: 1.4;
+  overflow-wrap: break-word;
+}
+.publication-text p { margin: 12px 0 0; }
+.publication-text .publication-authors { margin-top: 0; color: #4b4b4b; font-size: 15px; }
+.publication-text .publication-citation { font-size: 15px; }
+.publication-text p a { overflow-wrap: anywhere; }
+.page-footer {
+  margin-top: 56px;
+  border-top: 1px solid #d4d4d4;
+  padding-top: 20px;
+  font-size: 14px;
+  text-align: right;
+}
+@media (max-width: 720px) {
+  :root { --nav-height: 94px; }
+  .site-nav { flex-direction: column; gap: 6px; padding: 10px 20px; }
+  .site-links { column-gap: 22px; font-size: 15px; }
+  main { padding: 32px 22px; }
+  .publication-entry { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+  .publication-figure { width: min(100%, 320px); justify-self: center; }
+  .publication-figure img { width: auto; max-height: 380px; margin-inline: auto; }
+  .publication-section { margin-top: 42px; }
+  .publication-section h2 { font-size: 23px; padding-top: 24px; }
 }
 @media print {
-	table, pre {
-		page-break-inside: avoid;
-	}
-	pre {
-		word-wrap: break-word;
-	}
-  body {
-    padding: 2cm; 
-  }
+  .site-header, .skip-link, .topic-nav, .page-footer { display: none; }
+  main { max-width: none; padding: 0; }
+  .publication-entry { break-inside: avoid; }
+  .publication-section h2, .publication-text h3 { break-after: avoid; }
 }
-
-
-
-
-
-/* wqr hyperlink style */
-a:link {
-  color: rgba(34,110,147,1); /*  g color */
-  background-color: transparent;
-  text-decoration: underline;
-}
-a:visited {
-  color: purple;
-  background-color: transparent;
-  text-decoration: underline;
-}
-a:hover {/* mouse-on-text style */
-  color: purple;
-  background-color: rgb(220,220,220);
-  text-decoration: underline;
-}
-
-
-
-
-
-
-
-
-
-
-/* Navigation Bar style (white) */
-/* . -> #, class -> id */
-#topnav {
-  position: fixed;
-  overflow: hidden;
-  background-color: white;
-  width: 100%; left: 0%;
-  top: 0;
-  font-size: 21px;/*left text*/
-/*  border: 1.5px solid #e7e7e7;*/
-}
-#topnav a {
-  float: left;
-  color: black;
-  text-align: center;
-  padding: 11px 16px;
-  text-decoration: none;
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
-  background-color: white;
-}
-#topnav a.active {/*name this page*/
-  font-weight: 400;
-  color: black;
-}
-#topnav-right {/*right text*/
-  font-size: 16px;
-  float: right;
-  line-height: 200%;
-}
-#topnav-right a:hover {/*mouse-on color*/
-  color: rgba(73,170,212,1); /* g nav bar text color */
-  background-color: white;
-}
-
-
-
-
-
-
-
-
-
-
-/* Navigation Bar style (black) */
-/* . -> #, class -> id */
-#topnavB {
-  position: fixed;
-  overflow: hidden;
-  background-color: rgb(33,33,33,1); /*g navi bar background*/
-  width: 100%; left: 0%;
-  top: -150px;
-  font-size: 21px;/*left text*/
-/*  border: 1.5px solid #e7e7e7;*/
-}
-#topnavB a {
-  float: left;
-  color: white;
-  text-align: center;
-  padding: 11px 16px;
-  text-decoration: none;
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
-  background-color: rgb(33,33,33,1);
-}
-#topnavB a.active {/*name of this page*/
-  font-weight: 400;
-  color: rgba(73,170,212,1); /* g nav bar text color */
-}
-#topnavB-right {/*right text*/
-  font-size: 16px;
-  float: right;
-  line-height: 200%;
-}
-#topnavB-right a:hover {/*mouse-on color*/
-  color: rgba(73,170,212,1); /* g nav bar text color */
-  background-color: rgb(33,33,33,1);
-}
-
-
-
-
-
+/* LaTeX source and SVG formulas follow the course-biography convention. */
+mjx-container.publication-rendered-math { overflow: visible; }
+.publication-text mjx-container[display="true"] { margin: 1em 0; overflow-x: auto; overflow-y: hidden; }
 </style>
-
-
-
-
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZGEEX4TG1X"></script>
 <script>
@@ -510,615 +198,490 @@ var _hmt = _hmt || [];
 })();
 </script>
 
-
-</head>
-
-
-<body>
-
-<a name="top_body"></a>
-
-
-
-
-
-
-
-<p><br/></p>
-
-<h1 id="h.publications" dir="ltr" class="CDt4Ke zfr3Q duRjpb" style="text-align: center;"><span class=" Rn3Z1b" style="vertical-align: baseline;">
-Publications and Preprints
-</span></h1>
-
-<p id="top_outline1"><br/></p>
-<p><br/></p>
-
-
-
-
-
-
-
-
-
-
-<p id="top_outline2">Here is a list of my papers with brief explanations. You can also find my publications and preprints at <a href="https://scholar.google.com/citations?user=ObCMQlkAAAAJ" target="_blank">google scholar</a>, <a href="https://www.researchgate.net/profile/Qing-Rui-Wang" target="_blank">research gate</a>, or <a href="https://arxiv.org/a/wang_q_8" target="_blank">arXiv</a>.</p>
-
-<p><br/></p>
-
-
-
-
-
-
-
-
-
-
-<!--Here are the topics:
--->
-
-<p><a href="#sec_1" style="color: rgba(34,110,147,1);">1. Description and characterization of general topological phases</a></p>
-
-<p><a href="#sec_2" style="color: rgba(34,110,147,1);">2. Construction and classification of fermionic symmetry-protected topological (SPT) phases
-</a></p>
-
-<p><a href="#sec_3" style="color: rgba(34,110,147,1);">3. Symmetry-enriched topological (SET) phases
-</a></p>
-
-<p><a href="#sec_4" style="color: rgba(34,110,147,1);">4. Sign structure in doped Mott insulator
-</a></p>
-
-<p><br/></p>
-
-
-
-
-
-
-
-
-
-
-<h2 id="sec_1"><a href="#top_outline1" style="color: rgba(34,110,147,1); text-decoration: none;">1. Description and characterization of general topological phases</a></h2>
-
-<p><br/></p>
-
-
-
-
-
-
-
-
-
-
-<p><img src="publications/22a.jpg" style="float: left; object-fit:contain;
-width:251px; height:245px;" /></p>
-
-<h3 id="22a">[22a] Wilson Operators, Non-Abelian Fusion Rules, and Loop Shrinking Rules of Borromean Rings Topological Order</h3>
-
-<p>Zhi-Feng Zhang, Qing-Rui Wang, and Peng Ye</p>
-
-<p><a href="https://arxiv.org/abs/2208.09228" target="_blank">arXiv: 2208.09228 (2022)</a></p>
-
-<p>We calculate the <strong>fusion rules</strong> and <strong>loop-shrinking rules</strong> of the excitations in a 3+1D topological order with Borromean rings braiding statistics. The fusion rule is non-Abelian even though the gauge group is Abelian.</p>
-
-<p><br/></p>
-
-
-
-
-
-
-
-
-
-
-<p><img src="publications/21c.jpg" style="float: left; object-fit:contain;
-width:251px; height:345px;" /></p>
-
-<h3 id="21c">[21c] Towards a complete classification of non-chiral topological phases in 2D fermion systems</h3>
-
-<p>Jing-Ren Zhou, Qing-Rui Wang, and Zheng-Cheng Gu</p>
-
-<p><a href="https://arxiv.org/abs/2112.06124" target="_blank">arXiv: 2112.06124 (2021)</a></p>
-
-<p>A large class of 2D non-chiral bosonic topological orders are described by <strong>Turaev-Viro-Levin-Wen string-net models</strong>. In this paper, we generalize the <strong>Gu-Wang-Wen construction of fermionic string-net models</strong> to include those <strong>fermionic topological phases with q-type anyon excitations</strong>. Several examples with q-type anyon excitations are discussed, including the Fermionic topological phase from Tambara-Yamagami category, which can be regarded as the parafermion generalization of Ising fermionic topological phase.</p>
-
-<p><br/></p>
-
-
-
-
-
-
-
-
-
-
-<p><img src="publications/21b.jpg" style="float: left; object-fit:contain;
-width:251px; height:345px;" /></p>
-
-<h3 id="21b">[21b] Domain wall decorations, anomalies and spectral sequences in bosonic topological phases</h3>
-
-<p>Qing-Rui Wang, Shang-Qiang Ning, and Meng Cheng</p>
-
-<p><a href="https://arxiv.org/abs/2104.13233" target="_blank">arXiv: 2104.13233 (2021)</a></p>
-
-<p>In this work, we showed basically &#39;&#39;<strong>domain wall decorations (in physics) = Atiyah-Hirzebruch spectral sequence (in math)</strong>&#39;&#39;. For the bosonic topological phases classified by group cohomology theory, we derived <strong>all the differentials (anomalies in physics) at the cochain level in the Lyndon-Hochschild-Serre spectral sequence</strong>. It can be used to unify the anomaly or obstruction formulas for bosonic topological phases (such as SPT-LSM theorems, anomalous SPT phases, and symmetry-enriched gauge theories). Using the <strong>Lyndon&#39;s algorithm</strong> (implemented by this <a href="files/Lyndon_algorithm.nb">Mathematica code</a>), we listed explicit expressions to extract different domain-wall-decoration data for a given cocycle.</p>
-
-<p><br/></p>
-
-
-
-
-
-
-
-
-
-
-<p><img src="publications/20a.jpg" style="float: left; object-fit:contain;
-width:251px; height:273px;" /></p>
-
-<h3 id="20a">[20a] Computing classification of interacting fermionic symmetry-protected topological phases using topological invariants</h3>
-
-<p>Yunqing Ouyang, Qing-Rui Wang, Zheng-Cheng Gu, and Yang Qi</p>
-
-<p><a href="https://doi.org/10.1088/0256-307X/38/12/127101" target="_blank">Chinese Phys. Lett. 38 127101 (2021)</a>, <a href="https://arxiv.org/abs/2005.06572" target="_blank">arXiv: 2005.06572 (2020)</a></p>
-
-<p>Using techniques from homological algebra, we developed an algorithm to calculate the <strong>topological invariants</strong> for a given cocycle of a group. It can be used to accelerate the computation of obstructions (anomalies) for SPT or SET phases. For instance, the classifications of 2D fermion SPT protected by 17 <strong>2D wallpaper groups</strong> are calculated using this algorithm.</p>
-
-<p><br/></p>
-
-
-
-
-
-
-
-
-
-
-<p><img src="publications/19c.jpg" style="float: left; object-fit: contain;
-width:251px; height:290px;" /></p>
-
-<h3 id="19c">[19c] Non-Abelian three-loop braiding statistics for 3D fermionic topological phase</h3>
-
-<p>Jing-Ren Zhou, Qing-Rui Wang, Chenjie Wang, and Zheng-Cheng Gu</p>
-
-<p><a href="https://doi.org/10.1038/s41467-021-23309-3" target="_blank">Nat. Commun. 12, 3191 (2021)</a>, <a href="https://arxiv.org/abs/1912.13505" target="_blank">arXiv: 1912.13505 (2019)</a></p>
-
-<p>We proposed and solved the physical constraints for <strong>loop braiding statistics</strong> in 3+1D fermionic topological phases.  Even for Abelian gauge symmetries, the loop braidings could be <strong>non-Abelian</strong>. The classification of fermionic Abelian SPT phases from the braiding statistics approach is consistent with that of the general group supercohomology theory (see <a href="#17a">[17a]</a> and <a href="#18c">[18c]</a> below).</p>
-
-<p><br/></p>
-
-
-
-
-
-
-
-
-
-
-<p><img src="publications/18b.jpg" style="float: left; object-fit: contain;
-width:251px; height:226px;" /></p>
-
-<h3 id="18b">[18b] Topological quantum field theory for Abelian topological phases and loop braiding statistics in  (3+1)-dimensions</h3>
-
-<p>Qing-Rui Wang, Meng Cheng, Chenjie Wang, and Zheng-Cheng Gu</p>
-
-<p><a href="https://doi.org/10.1103/PhysRevB.99.235137" target="_blank">Phys. Rev. B 99, 235137 (2019)</a>, <a href="https://arxiv.org/abs/1810.13428" target="_blank">arXiv: 1810.13428 (2018)</a></p>
-
-<p>The loop-like excitation in 3+1D may obey the so-called <strong>three-loop-braiding statistics</strong>. In this paper, we established a TQFT framework to understand the quantum statistics of point-like particles and loop-like excitations in 3+1D for Abelian topological phases.</p>
-
-<p><br/></p>
-
-
-
-
-
-
-
-
-
-
-<h2 id="sec_2"><a href="#top_outline1" style="color: rgba(34,110,147,1); text-decoration: none;">2. Construction and classification of fermionic symmetry-protected topological (SPT) phases</a></h2>
-
-<p><br/></p>
-
-
-
-
-
-
-
-
-
-
-<p><img src="publications/21d.jpg" style="float: left; object-fit: contain;
-width:251px; height:270px;" /></p>
-
-<h3 id="21d">[21d] Exactly solvable lattice models for interacting electronic insulators in two dimensions</h3>
-
-<p>Qing-Rui Wang, Yang Qi, Chen Fang, Meng Cheng, and Zheng-Cheng Gu
-</p>
-
-<p><a href="https://arxiv.org/abs/2112.15533" target="_blank">arXiv: 2112.15533 (2021)</a></p>
-
-<p>Based on the physical picture of <img src="publications/U1f.png" style="vertical-align:middle; height:1.2em;"/>-charge decorations, we illustrate the key idea by considering the well known 2D interacting topological insulator. Then we generalize our construction to an <strong>arbitrary 2D interacting electronic insulator</strong> with symmetry <img src="publications/GfU1f.png" style="vertical-align:middle; height:1.2em;"/>. Finally we study more examples, including the full interacting classification of 2D crystalline topological insulators.</p>
-
-<p><br/></p>
-
-
-
-
-
-
-
-
-
-
-<p><img src="publications/19b.jpg" style="float: left; object-fit: contain;
-width:251px; height:270px;" /></p>
-
-<h3 id="19b">[19b] Edge theories of 2D fermionic symmetry protected topological phases protected by unitary Abelian symmetries</h3>
-
-<p>Shang-Qiang Ning, Chenjie Wang, Qing-Rui Wang, and Zheng-Cheng Gu</p>
-
-<p><a href="https://doi.org/10.1103/PhysRevB.104.075151" target="_blank">Phys. Rev. B 104, 075151 (2021)</a>, <a href="https://arxiv.org/abs/1910.02925" target="_blank">arXiv: 1910.02925 (2019)</a></p>
-
-<p>We utilize the <strong>Abelian Chern-Simons theory</strong> to study the fermionic SPT phases protected by Abelian symmetry. In particular, we discover the construction of Luttinger liquid edge theories with central charge n−1 for Type-III bosonic SPT phases protected by <!-- \((\mathbb Z_n)^3\) --> <img src="publications/Zn3.gif" style="vertical-align:text-top; height:1.1em;"/> symmetry.</p>
-
-<p><br/></p>
-
-
-
-
-
-
-
-
-
-
-<p><img src="publications/19a.jpg" style="float: left; object-fit: contain;
-width:251px; height:270px;" /></p>
-
-<h3 id="19a">[19a] Construction and classification of point-group symmetry-protected topological phases in two-dimensional interacting fermionic systems</h3>
-
-<p>Jian-Hao Zhang, Qing-Rui Wang, Shuo Yang, Yang Qi, and Zheng-Cheng Gu</p>
-
-<p><a href="https://doi.org/10.1103/PhysRevB.101.100501" target="_blank">Phys. Rev. B 101, 100501(R) (2020)</a>, <a href="https://arxiv.org/abs/1909.05519" target="_blank">arXiv: 1909.05519 (2019)</a></p>
-
-<p>We constructed and classified <strong>point-group SPT phases</strong> for 2D interacting fermion systems via lower-dimensional block-state decorations.  The crystalline equivalence principle was verified in 2D interacting fermion systems, with spinless and spin-1/2 group extensions switched.</p>
-
-<p><br/></p>
-
-
-
-
-
-
-
-
-
-
-<p><img src="publications/18c.jpg" style="float: left; object-fit: contain;
-width:251px; height:320px;" /></p>
-
-<h3 id="18c">[18c] Construction and classification of symmetry-protected topological phases in interacting fermion systems</h3>
-
-<p>Qing-Rui Wang and Zheng-Cheng Gu</p>
-
-<p><a href="https://doi.org/10.1103/PhysRevX.10.031055" target="_blank">Phys. Rev. X 10, 031055 (2020)</a>, <a href="https://arxiv.org/abs/1811.00536" target="_blank">arXiv: 1811.00536 (2018)</a></p>
-
-<p>We gave a systematic fixed-point wave function <strong>construction and classification of fermionic SPT states</strong> for generic fermionic symmetry group  <!-- \(G_f = \mathbb Z_2^f ×_{\omega_2} G_b\) --> <img src="publications/Gf.gif" style="vertical-align:middle; height:1.2em;"/> , which is a central extension of bosonic symmetry group Gb (may contain time reversal symmetry) by the fermion parity symmetry group <!-- \(\mathbb Z_2^f=\{1,P_f\}\) --> <img src="publications/Z2f.gif" style="vertical-align:middle; height:1.2em;"/> . There are in total 4 layers of decoration data: <strong>2+1D <!-- \(p+ip\) --> <img src="publications/pip.gif" style="vertical-align:middle; height:1em;"/>  chiral superconductors, 1+1D Majorana chain, 0+1D complex fermion, and bosonic SPT</strong>. This is an all-inclusive classification work on fermionic SPT with finite onsite symmetry in physical dimensions.</p>
-
-<p><br/></p>
-
-
-
-
-
-
-
-
-
-
-<p><img src="publications/18a.jpg" style="float: left; object-fit: contain;
-width:251px; height:290px;" /></p>
-
-<h3 id="18a">[18a] Anomalous symmetry protected topological states in interacting fermion systems</h3>
-
-<p>Qing-Rui Wang, Yang Qi, and Zheng-Cheng Gu</p>
-
-<p><a href="https://dx.doi.org/10.1103/PhysRevLett.123.207003" target="_blank">Phys. Rev. Lett. 123, 207003 (2019)</a>, <a href="https://arxiv.org/abs/1810.12899" target="_blank">arXiv: 1810.12899 (2018)</a></p>
-
-<p>To our surprise, there exists a new class of the so-called <strong>anomalous SPT (ASPT)</strong> states which are only well defined on the boundary of a trivial fermionic bulk system. We demonstrated the essential idea by considering an anomalous topological superconductor with time-reversal symmetry <!-- \(T^2=1\) --> <img src="publications/T2.gif" style="height:1em;"/> in 2D. The ASPT states are also crucial in the classification of fermionic SPT phases in one dimension higher, known as <strong>trivialization</strong>.</p>
-
-<p><br/></p>
-
-
-
-
-
-
-
-
-
-
-<p><img src="publications/17a.jpg" style="float: left; object-fit: contain;
-width:251px; height:305px;" /></p>
-
-<h3 id="17a">[17a] Towards a complete classification of symmetry-protected topological phases for interacting fermions in three dimensions and a general group supercohomology theory</h3>
-
-<p>Qing-Rui Wang and Zheng-Cheng Gu</p>
-
-<p><a href="https://doi.org/10.1103/PhysRevX.8.011055" target="_blank">Phys. Rev. X 8, 011055 (2018)</a>, <a href="https://arxiv.org/abs/1703.10937" target="_blank">arXiv: 1703.10937 (2017)</a></p>
-
-<p>We established a relation between <strong>discrete spin structure (the Poincaré dual of the trivialization of the 2nd Stiefel-Whitney class <!-- \(w_2\) --> <img src="publications/w2.gif" style="vertical-align:middle; height:.8em;"/></strong> ) and <strong>local Kasteleyn orientations</strong> on the dual lattice for arbitrary triangulations in arbitrary dimensions. The <strong>Majorana chains</strong> are then decorated to the intersection lines of domain walls to give rise to a new class of fermionic SPT phases.</p>
-
-<p><br/></p>
-
-
-
-
-
-
-
-
-
-
-<h2 id="sec_3"><a href="#top_outline1" style="color: rgba(34,110,147,1); text-decoration: none;">3. Symmetry-enriched topological (SET) phases</a></h2>
-
-<p><br/></p>
-
-
-
-
-
-
-
-
-
-
-<p><img src="publications/21a.jpg" style="float: left; object-fit: contain;
-width:251px; height:249px;" /></p>
-
-<h3 id="21a">[21a] Exactly solvable models for U(1) symmetry-enriched topological phases</h3>
-
-<p>Qing-Rui Wang and Meng Cheng</p>
-
-<p><a href="https://doi.org/10.1103/PhysRevB.106.115104" target="_blank">Phys. Rev. B 106, 115104 (2022)</a>, <a href="https://arxiv.org/abs/2103.13399" target="_blank">arXiv: 2103.13399 (2021)</a></p>
-
-<p>We proposed general constructions of commuting-projector lattice models for 2D Levin-Wen, 3D Walker-Wang, and 3D Dijkgraaf-Witten topological orders enriched by U(1) symmetry, with finite-dimensional Hilbert space per site. The point-like or loop-like excitations are shown to carry fractional U(1) charges.</p>
-
-<p><br/></p>
-
-
-
-
-
-
-
-
-
-
-<h2 id="sec_4"><a href="#top_outline1" style="color: rgba(34,110,147,1); text-decoration: none;">4. Sign structure in doped Mott insulator</a></h2>
-
-<p><br/></p>
-
-
-
-
-
-
-
-
-
-
-<p><img src="publications/18d.jpg" style="float: left; object-fit: contain;
-width:251px; height:273px;" /></p>
-
-<h3 id="18d">[18d] Single-hole wave function in two dimensions: A case study of the doped Mott insulator</h3>
-
-<p>Shuai Chen, Qing-Rui Wang, Yang Qi, D. N. Sheng, and Zheng-Yu Weng</p>
-
-<p><a href="https://doi.org/10.1103/PhysRevB.99.205128" target="_blank">Phys. Rev. B 99, 205128 (2019)</a>, <a href="https://arxiv.org/abs/1812.05627" target="_blank">arXiv: 1812.05627 (2018)</a></p>
-
-<p>Using the <strong>variational Monte Carlo</strong> method, we studied a ground-state ansatz for the single-hole doped t-J model in two dimensions. Such a single-hole wave function possesses finite angular momenta generated by hidden spin currents, which give rise to a novel ground state degeneracy in agreement with recent exact diagonalization (ED) and density matrix renormalization group (DMGR) results.</p>
-
-<p><br/></p>
-
-
-
-
-
-
-
-
-
-
-<p><img src="publications/15b.jpg" style="float: left; object-fit: contain;
-width:251px; height:280px;" /></p>
-
-<h3 id="15b">[15b] Exact sign structure of the t–J chain and the single hole ground state</h3>
-
-<p>Zheng Zhu, Qing-Rui Wang, D. N. Sheng, and Zheng-Yu Weng</p>
-
-<p><a href="https://doi.org/10.1016/j.nuclphysb.2015.12.004" target="_blank">Nucl. Phys. B 903, 51 (2016)</a>, <a href="https://arxiv.org/abs/1510.07634" target="_blank">arXiv: 1510.07634 (2015)</a></p>
-
-<p>We proposed a single-hole-doped ground state ansatz with the correct <strong>sign structure</strong> of the 1D t-J model (see <a href="#13a">[13a]</a> below). The Monte Carlo simulations of this variational wave function reproduced the key DMRG results of the model (such as the characteristic momentum structure, the Luttinger liquid behavior, and the quantum phase interference of the hole under a periodic boundary condition).</p>
-
-<p><br/></p>
-
-
-
-
-
-
-
-
-
-
-<p><img src="publications/15a.jpg" style="float: left; object-fit: contain;
-width:251px; height:310px;" /></p>
-
-<h3 id="15a">[15a] Variational wave function for an anisotropic single-hole-doped t-J ladder</h3>
-
-<p>Qing-Rui Wang, Zheng Zhu, Yang Qi, and Zheng-Yu Weng</p>
-
-<p><a href="https://arxiv.org/abs/1509.01260" target="_blank">arXiv: 1509.01260 (2015)</a></p>
-
-<p>Based on three general <strong>guiding principles</strong>, i.e., no double occupancy constraint, accurate description of antiferromagnetism at half-filling, and the precise sign structure of the t-J model, a new ground state wave function has been constructed in [Weng, New J. Phys. 13, 103039 (2011)]. This paper specifically studied such kind of <strong>variational ground state ansatz</strong> for the one-hole-doped anisotropic two-leg t-J ladder using the variational Monte Carlo (VMC) method. An excellent agreement is found between the VMC and DMRG results.</p>
-
-<p><br/></p>
-
-
-
-
-
-
-
-
-
-
-<p><img src="publications/13a.jpg" style="float: left; object-fit: contain;
-width:251px; height:310px;" /></p>
-
-<h3 id="13a">[13a] Sign structure and ground-state properties for a spin−S t−J chain</h3>
-
-<p>Qing-Rui Wang and Peng Ye</p>
-
-<p><a href="https://doi.org/10.1103/PhysRevB.90.045106" target="_blank">Phys. Rev. B 90, 045106 (2014)</a>, <a href="https://arxiv.org/abs/1310.6496" target="_blank">arXiv: 1310.6496 (2013)</a></p>
-
-<p>We showed that the 1D t-J chain has an <strong>exact sign structure</strong> captured by the <strong>Marshall sign</strong> and the <strong>phase string sign</strong>. Using this sign structure, we proved a <strong>generalized Marshall theorem</strong> and a <strong>generalized Lieb-Mattis theorem</strong> for the t-J chain with arbitrary spin and doping. The large t/J phase supports a gapped spin sector with similar properties (ground-state degeneracy, edge state, and string order parameter) of the Haldane chain (a 1D SO(3) SPT), although the charge sector is gapless. This may be the first example of <strong>SPT in gapless systems</strong>.</p>
-
-<p><br/></p>
-
-
-
-
-
-
-
-
-
-
-<p><img src="publications/12a.jpg" style="float: left; object-fit: contain;
-width:251px; height:310px;" /></p>
-
-<h3 id="12a">[12a] Monopoles, confinement and charge localization in the t–J model with dilute holes</h3>
-
-<p>Peng Ye and Qing-Rui Wang</p>
-
-<p><a href="https://doi.org/10.1016/j.nuclphysb.2013.05.023" target="_blank">Nucl. Phys. B 874, 386 (2013)</a>, <a href="https://arxiv.org/abs/1206.0258" target="_blank">arXiv: 1206.0258 (2012)</a></p>
-
-<p>We present a quantum field theoretic description on the t-J model on a square lattice with dilute holes (i.e. near half-filling), based on the compact <strong>mutual Chern-Simons gauge theory</strong>. Due to the presence of non-perturbative monopole plasma configuration from the antiferromagnetic background, holons (carrying electric charge) are linearly confined and strongly localized even without extrinsic disorder taken into account.</p>
-
-<p><br/></p>
-
-
-
-
-
-
-
-
-
-
-<h2 id="sec_4"> </h2>
-
-
-
-
-
-
-
-
-
-
-<!-- Navigation Bar (white) -->
-<div id="topnav"> <!-- class= -->
-  <a> </a>
-  <a> </a>
-  <a href="https://qr-wang.github.io">Qing-Rui Wang (王晴睿)</a>
-  <div id="topnav-right">
-    <a href="index.html">Homepage</a>
-    <a class="active" href="publications.html">Publications</a>
-    <a href="teaching.html">Teachings</a>
-    <a> </a>
-    <a> </a>
-  </div>
-</div>
-
-<!-- Navigation Bar (black) -->
-<div id="topnavB"> <!-- class= -->
-  <a> </a>
-  <a> </a>
-  <a href="https://qr-wang.github.io">Qing-Rui Wang (王晴睿)</a>
-  <div id="topnavB-right">
-    <a href="index.html">Homepage</a>
-    <a class="active" href="publications.html">Publications</a>
-    <a href="teaching.html">Teachings</a>
-    <a> </a>
-    <a> </a>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
 <script>
-// When the user scrolls down 30px from the top of the document, slide down the black navbar
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
-    document.getElementById("topnavB").style.top = "0";
-  } else {
-    document.getElementById("topnavB").style.top = "-150px";
+// Store every formula as LaTeX and render it with the local MathJax engine,
+// following the convention used in the statistical-mechanics biographies.
+window.renderPublicationMath = async function(root = document) {
+  for (const source of root.querySelectorAll('span.publication-math[data-tex]')) {
+    try {
+      const output = await MathJax.tex2svgPromise(source.dataset.tex, {
+        display: source.getAttribute('display') === 'block'
+      });
+      if (output.querySelector('[data-mml-node="merror"]')) throw new Error('Invalid LaTeX');
+      output.classList.add('publication-rendered-math');
+      output.dataset.tex = source.dataset.tex;
+      if (source.id) output.id = source.id;
+      source.replaceWith(output);
+    } catch (error) {
+      console.warn('Formula could not be rendered:', source.dataset.tex, error);
+    }
   }
-}
+  MathJax.startup.document.updateDocument();
+};
+window.MathJax = {
+  tex: { packages: ['base', 'ams', 'newcommand'] },
+  svg: { fontCache: 'local', scale: 1 },
+  options: { enableMenu: false },
+  startup: {
+    typeset: false,
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(() => window.renderPublicationMath());
+    }
+  }
+};
 </script>
+<script defer src="teaching/2026F_SM/vendor/mathjax-3.2.2/tex-svg.js"></script>
+</head>
+<body id="top_body">
+<a class="skip-link" href="#main-content">Skip to publications</a>
+<header class="site-header" id="topnav">
+  <nav class="site-nav" aria-label="Main navigation">
+    <a class="site-brand" href="https://qr-wang.github.io">Qing-Rui Wang (王晴睿)</a>
+    <ul class="site-links">
+      <li><a href="index.html">Homepage</a></li>
+      <li><a href="publications.html" aria-current="page">Publications</a></li>
+      <li><a href="teaching.html">Teachings</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="main-content">
+  <header class="page-header">
+    <h1 class="page-title" id="h.publications">Publications and Preprints</h1>
+    <p id="top_outline2" class="page-intro">Here is a list of my papers with brief explanations. You can also find my publications and preprints at <a href="https://scholar.google.com/citations?user=ObCMQlkAAAAJ" target="_blank" rel="noopener">google scholar</a>, <a href="https://www.researchgate.net/profile/Qing-Rui-Wang" target="_blank" rel="noopener">research gate</a>, or <a href="https://arxiv.org/a/wang_q_8" target="_blank" rel="noopener">arXiv</a>.</p>
+    <nav class="topic-nav" id="top_outline1" aria-label="Research topics">
+      <ol>
+        <li><a href="#sec_1">Topological order and quantum information</a></li>
+        <li><a href="#sec_2">Generalized symmetries and quantum criticality</a></li>
+        <li><a href="#sec_3">Fermionic symmetry-protected topological phases</a></li>
+        <li><a href="#sec_4">Sign structures in doped Mott insulators</a></li>
+      </ol>
+    </nav>
+  </header>
 
+  <section class="publication-section" aria-labelledby="sec_1">
+    <h2 id="sec_1"><a href="#top_outline1" title="Back to research topics">1. Topological order and quantum information</a></h2>
 
+    <article class="publication-entry" aria-labelledby="26b">
+      <figure class="publication-figure">
+        <a href="publications/26b.png" target="_blank" rel="noopener" aria-label="Open full-size figure for paper [26b]" title="View full-size figure">
+          <img src="publications/26b.png" alt="Figure 1: matrix-product-state quantum transistor" loading="eager" width="770" height="175" decoding="async">
+        </a>
+      </figure>
+      <div class="publication-text">
+        <h3 id="26b">[26b] Towards transistor-based quantum computing</h3>
+        <p class="publication-authors">Yuan-Dong Liu, Xiang Xu, Qing-Rui Wang, and Dong-Sheng Wang</p>
+        <p class="publication-citation"><a href="https://arxiv.org/abs/2605.21045" target="_blank" rel="noopener">arXiv: 2605.21045 (2026)</a></p>
+        <p>We propose a <strong>modular quantum computing architecture based on quantum transistors</strong>, called “telesistors.” Quantum gates are stored in <strong>symmetry-protected topological ground states</strong> and executed through measurement-induced gate teleportation, with edge modes serving as input and output ports. These transistors can be interconnected to build programmable quantum circuits. We show how <strong>symmetry protection of Clifford gates</strong>, together with magic-state injection for non-Clifford gates, supports universal quantum computation, and discuss additional coding schemes to enhance fault tolerance.</p>
+      </div>
+    </article>
 
+    <article class="publication-entry" aria-labelledby="25a">
+      <figure class="publication-figure">
+        <a href="publications/25a.png" target="_blank" rel="noopener" aria-label="Open full-size figure for paper [25a]" title="View full-size figure">
+          <img src="publications/25a.png" alt="Figure 14: lattice fusion of loop excitations" loading="lazy" width="840" height="1200" decoding="async">
+        </a>
+      </figure>
+      <div class="publication-text">
+        <h3 id="25a">[25a] Bridging Microscopic Constructions and Continuum Topological Field Theory of Three-Dimensional Non-Abelian Topological Order</h3>
+        <p class="publication-authors">Yizhou Huang, Zhi-Feng Zhang, Qing-Rui Wang, and Peng Ye</p>
+        <p class="publication-citation"><a href="https://arxiv.org/abs/2512.21148" target="_blank" rel="noopener">arXiv: 2512.21148 (2025)</a></p>
+        <p>We construct <strong>microscopic lattice operators for creating, fusing, shrinking, and braiding particle and loop excitations</strong> in three-dimensional quantum double models. By matching the excitation spectrum, fusion, shrinking, and braiding data, we establish a correspondence between the <strong><span class="publication-math" data-tex="\mathbb{D}_4">\mathbb{D}_4</span> quantum double model</strong> and the <strong><span class="publication-math" data-tex="BF">BF</span> field theory with an <span class="publication-math" data-tex="AAB">AAB</span> twist and gauge group <span class="publication-math" data-tex="(\mathbb{Z}_2)^3">(\mathbb{Z}_2)^3</span></strong>. We also demonstrate how to control individual non-Abelian shrinking channels and verify <strong>fusion–shrinking consistency</strong> directly on the lattice, providing a microscopic foundation for the continuum description.</p>
+      </div>
+    </article>
 
+    <article class="publication-entry" aria-labelledby="23b">
+      <figure class="publication-figure">
+        <a href="publications/23b.png" target="_blank" rel="noopener" aria-label="Open full-size figure for paper [23b]" title="View full-size figure">
+          <img src="publications/23b.png" alt="Figure 2(b): worldlines for particle exchange and a full spin rotation" loading="lazy" width="2245" height="714" decoding="async">
+        </a>
+      </figure>
+      <div class="publication-text">
+        <h3 id="23b">[23b] Continuum field theory of three-dimensional topological orders with emergent fermions and braiding statistics</h3>
+        <p class="publication-authors">Zhi-Feng Zhang, Qing-Rui Wang, and Peng Ye</p>
+        <p class="publication-citation"><a href="https://doi.org/10.1103/PhysRevResearch.5.043111" target="_blank" rel="noopener">Phys. Rev. Research 5, 043111 (2023)</a>, <a href="https://arxiv.org/abs/2307.09983" target="_blank" rel="noopener">arXiv: 2307.09983 (2023)</a></p>
+        <p>We develop a <strong>continuum field-theoretical framework for three-dimensional topological orders with emergent fermions</strong>, combining twisted <span class="publication-math" data-tex="BF">BF</span> theories with a <strong><span class="publication-math" data-tex="K">K</span>-matrix <span class="publication-math" data-tex="BB">BB</span> term</strong>. We derive general formulas for excitation confinement and <strong>boson–fermion statistical transmutation</strong>, using framed Wilson loops to determine particle self-statistics. Within this framework, gauge invariance constrains how emergent fermions can coexist with particle–loop, multiloop, and Borromean-rings braiding. We calculate the associated topological data, including fusion and shrinking rules, and examine how emergent fermions modify fusion processes.</p>
+      </div>
+    </article>
 
+    <article class="publication-entry" aria-labelledby="22a">
+      <figure class="publication-figure">
+        <a href="publications/22a.jpg" target="_blank" rel="noopener" aria-label="Open full-size figure for paper [22a]" title="View full-size figure">
+          <img src="publications/22a.jpg" alt="Loop shrinking into vacuum, particle, and loop excitation channels" width="684" height="382" loading="lazy" decoding="async">
+        </a>
+      </figure>
+      <div class="publication-text">
+        <h3 id="22a">[22a] Non-Abelian fusion, shrinking, and quantum dimensions of Abelian gauge fluxes</h3>
+        <p class="publication-authors">Zhi-Feng Zhang, Qing-Rui Wang, and Peng Ye</p>
+        <p class="publication-citation"><a href="https://doi.org/10.1103/PhysRevB.107.165117" target="_blank" rel="noopener">Phys. Rev. B 107, 165117 (2023)</a>, <a href="https://arxiv.org/abs/2208.09228" target="_blank" rel="noopener">arXiv: 2208.09228 (2022)</a></p>
+        <p>We calculate the <strong>fusion rules</strong> and <strong>loop-shrinking rules</strong> of the excitations in a <span class="publication-math" data-tex="(3+1)\mathrm{D}">(3+1)\mathrm{D}</span> topological order with Borromean rings braiding statistics. The fusion rule is non-Abelian even though the gauge group is Abelian.</p>
+      </div>
+    </article>
 
+    <article class="publication-entry" aria-labelledby="21c">
+      <figure class="publication-figure">
+        <a href="publications/21c.jpg" target="_blank" rel="noopener" aria-label="Open full-size figure for paper [21c]" title="View full-size figure">
+          <img src="publications/21c.jpg" alt="Associativity transformation of fermionic fusion diagrams" width="796" height="326" loading="lazy" decoding="async">
+        </a>
+      </figure>
+      <div class="publication-text">
+        <h3 id="21c">[21c] Towards a complete classification of nonchiral topological phases in two-dimensional fermion systems</h3>
+        <p class="publication-authors">Jing-Ren Zhou, Qing-Rui Wang, and Zheng-Cheng Gu</p>
+        <p class="publication-citation"><a href="https://doi.org/10.1103/PhysRevB.106.245120" target="_blank" rel="noopener">Phys. Rev. B 106, 245120 (2022)</a>, <a href="https://arxiv.org/abs/2112.06124" target="_blank" rel="noopener">arXiv: 2112.06124 (2021)</a></p>
+        <p>A large class of <span class="publication-math" data-tex="2\mathrm{D}">2\mathrm{D}</span> non-chiral bosonic topological orders are described by <strong>Turaev-Viro-Levin-Wen string-net models</strong>. In this paper, we generalize the <strong>Gu-Wang-Wen construction of fermionic string-net models</strong> to include those <strong>fermionic topological phases with <span class="publication-math" data-tex="q">q</span>-type anyon excitations</strong>. Several examples with <span class="publication-math" data-tex="q">q</span>-type anyon excitations are discussed, including the Fermionic topological phase from Tambara-Yamagami category, which can be regarded as the parafermion generalization of Ising fermionic topological phase.</p>
+      </div>
+    </article>
 
+    <article class="publication-entry" aria-labelledby="21b">
+      <figure class="publication-figure">
+        <a href="publications/21b_0.jpg" target="_blank" rel="noopener" aria-label="Open full-size figure for paper [21b]" title="View full-size figure">
+          <img src="publications/21b.jpg" alt="Domain-wall decoration diagrams for a spectral-sequence differential" width="500" height="286" loading="lazy" decoding="async">
+        </a>
+      </figure>
+      <div class="publication-text">
+        <h3 id="21b">[21b] Domain wall decorations, anomalies and spectral sequences in bosonic topological phases</h3>
+        <p class="publication-authors">Qing-Rui Wang, Shang-Qiang Ning, and Meng Cheng</p>
+        <p class="publication-citation"><a href="https://arxiv.org/abs/2104.13233" target="_blank" rel="noopener">arXiv: 2104.13233 (2021)</a></p>
+        <p>In this work, we showed basically ''<strong>domain wall decorations (in physics) <span class="publication-math" data-tex="=">=</span> Atiyah-Hirzebruch spectral sequence (in math)</strong>''. For the bosonic topological phases classified by group cohomology theory, we derived <strong>all the differentials (anomalies in physics) at the cochain level in the Lyndon-Hochschild-Serre spectral sequence</strong>. It can be used to unify the anomaly or obstruction formulas for bosonic topological phases (such as SPT-LSM theorems, anomalous SPT phases, and symmetry-enriched gauge theories). Using the <strong>Lyndon's algorithm</strong> (implemented by this <a href="files/Lyndon_algorithm.nb">Mathematica code</a>), we listed explicit expressions to extract different domain-wall-decoration data for a given cocycle.</p>
+      </div>
+    </article>
 
+    <article class="publication-entry" aria-labelledby="21a">
+      <figure class="publication-figure">
+        <a href="publications/21a_0.jpg" target="_blank" rel="noopener" aria-label="Open full-size figure for paper [21a]" title="View full-size figure">
+          <img src="publications/21a.jpg" alt="A local string-net configuration carrying fractional U(1) charge" width="500" height="417" loading="lazy" decoding="async">
+        </a>
+      </figure>
+      <div class="publication-text">
+        <h3 id="21a">[21a] Exactly solvable models for <span class="publication-math" data-tex="\mathrm{U}(1)">\mathrm{U}(1)</span> symmetry-enriched topological phases</h3>
+        <p class="publication-authors">Qing-Rui Wang and Meng Cheng</p>
+        <p class="publication-citation"><a href="https://doi.org/10.1103/PhysRevB.106.115104" target="_blank" rel="noopener">Phys. Rev. B 106, 115104 (2022)</a>, <a href="https://arxiv.org/abs/2103.13399" target="_blank" rel="noopener">arXiv: 2103.13399 (2021)</a></p>
+        <p>We proposed general constructions of commuting-projector lattice models for <span class="publication-math" data-tex="2\mathrm{D}">2\mathrm{D}</span> Levin-Wen, <span class="publication-math" data-tex="3\mathrm{D}">3\mathrm{D}</span> Walker-Wang, and <span class="publication-math" data-tex="3\mathrm{D}">3\mathrm{D}</span> Dijkgraaf-Witten topological orders enriched by <span class="publication-math" data-tex="\mathrm{U}(1)">\mathrm{U}(1)</span> symmetry, with finite-dimensional Hilbert space per site. The point-like or loop-like excitations are shown to carry fractional <span class="publication-math" data-tex="\mathrm{U}(1)">\mathrm{U}(1)</span> charges.</p>
+      </div>
+    </article>
 
-<!-- <script type="text/x-mathjax-config">
-(function () {
+    <article class="publication-entry" aria-labelledby="20a">
+      <figure class="publication-figure">
+        <a href="publications/20a_0.jpg" target="_blank" rel="noopener" aria-label="Open full-size figure for paper [20a]" title="View full-size figure">
+          <img src="publications/20a.jpg" alt="Geometric cycles and triangulations used to evaluate topological invariants" width="600" height="324" loading="lazy" decoding="async">
+        </a>
+      </figure>
+      <div class="publication-text">
+        <h3 id="20a">[20a] Computing classification of interacting fermionic symmetry-protected topological phases using topological invariants</h3>
+        <p class="publication-authors">Yunqing Ouyang, Qing-Rui Wang, Zheng-Cheng Gu, and Yang Qi</p>
+        <p class="publication-citation"><a href="https://doi.org/10.1088/0256-307X/38/12/127101" target="_blank" rel="noopener">Chinese Phys. Lett. 38 127101 (2021)</a>, <a href="https://arxiv.org/abs/2005.06572" target="_blank" rel="noopener">arXiv: 2005.06572 (2020)</a></p>
+        <p>Using techniques from homological algebra, we developed an algorithm to calculate the <strong>topological invariants</strong> for a given cocycle of a group. It can be used to accelerate the computation of obstructions (anomalies) for SPT or SET phases. For instance, the classifications of <span class="publication-math" data-tex="2\mathrm{D}">2\mathrm{D}</span> fermion SPT protected by 17 <strong><span class="publication-math" data-tex="2\mathrm{D}">2\mathrm{D}</span> wallpaper groups</strong> are calculated using this algorithm.</p>
+      </div>
+    </article>
 
-MathJax.Hub.Config({
-    'showProcessingMessages': false,
-    'messageStyle': 'none'
-});
+    <article class="publication-entry" aria-labelledby="19c">
+      <figure class="publication-figure">
+        <a href="publications/19c_0.jpg" target="_blank" rel="noopener" aria-label="Open full-size figure for paper [19c]" title="View full-size figure">
+          <img src="publications/19c.jpg" alt="Non-Abelian braiding of two loops linked to a base loop" width="600" height="421" loading="lazy" decoding="async">
+        </a>
+      </figure>
+      <div class="publication-text">
+        <h3 id="19c">[19c] Non-Abelian three-loop braiding statistics for <span class="publication-math" data-tex="3\mathrm{D}">3\mathrm{D}</span> fermionic topological phase</h3>
+        <p class="publication-authors">Jing-Ren Zhou, Qing-Rui Wang, Chenjie Wang, and Zheng-Cheng Gu</p>
+        <p class="publication-citation"><a href="https://doi.org/10.1038/s41467-021-23309-3" target="_blank" rel="noopener">Nat. Commun. 12, 3191 (2021)</a>, <a href="https://arxiv.org/abs/1912.13505" target="_blank" rel="noopener">arXiv: 1912.13505 (2019)</a></p>
+        <p>We proposed and solved the physical constraints for <strong>loop braiding statistics</strong> in <span class="publication-math" data-tex="(3+1)\mathrm{D}">(3+1)\mathrm{D}</span> fermionic topological phases.  Even for Abelian gauge symmetries, the loop braidings could be <strong>non-Abelian</strong>. The classification of fermionic Abelian SPT phases from the braiding statistics approach is consistent with that of the general group supercohomology theory (see <a href="#17a">[17a]</a> and <a href="#18c">[18c]</a> below).</p>
+      </div>
+    </article>
 
-if (typeof MathJaxListener !== 'undefined') {
-    MathJax.Hub.Register.StartupHook('End', function () {
-        MathJaxListener.invokeCallbackForKey_('End');
-    });
+    <article class="publication-entry" aria-labelledby="18b">
+      <figure class="publication-figure">
+        <a href="publications/18b_0.jpg" target="_blank" rel="noopener" aria-label="Open full-size figure for paper [18b]" title="View full-size figure">
+          <img src="publications/18b.jpg" alt="Three-loop braiding of loops alpha and beta linked to loop gamma" width="700" height="540" loading="lazy" decoding="async">
+        </a>
+      </figure>
+      <div class="publication-text">
+        <h3 id="18b">[18b] Topological quantum field theory for Abelian topological phases and loop braiding statistics in  <span class="publication-math" data-tex="(3+1)">(3+1)</span>-dimensions</h3>
+        <p class="publication-authors">Qing-Rui Wang, Meng Cheng, Chenjie Wang, and Zheng-Cheng Gu</p>
+        <p class="publication-citation"><a href="https://doi.org/10.1103/PhysRevB.99.235137" target="_blank" rel="noopener">Phys. Rev. B 99, 235137 (2019)</a>, <a href="https://arxiv.org/abs/1810.13428" target="_blank" rel="noopener">arXiv: 1810.13428 (2018)</a></p>
+        <p>The loop-like excitation in <span class="publication-math" data-tex="(3+1)\mathrm{D}">(3+1)\mathrm{D}</span> may obey the so-called <strong>three-loop-braiding statistics</strong>. In this paper, we established a TQFT framework to understand the quantum statistics of point-like particles and loop-like excitations in <span class="publication-math" data-tex="(3+1)\mathrm{D}">(3+1)\mathrm{D}</span> for Abelian topological phases.</p>
+      </div>
+    </article>
+  </section>
+
+  <section class="publication-section" aria-labelledby="sec_2">
+    <h2 id="sec_2"><a href="#top_outline1" title="Back to research topics">2. Generalized symmetries and quantum criticality</a></h2>
+
+    <article class="publication-entry" aria-labelledby="26c">
+      <figure class="publication-figure">
+        <a href="publications/26c.png" target="_blank" rel="noopener" aria-label="Open full-size figure for paper [26c]" title="View full-size figure">
+          <img src="publications/26c.png" alt="Figure 2(b): SPT-decorated domain walls and boundary projective representations" loading="lazy" width="945" height="580" decoding="async">
+        </a>
+      </figure>
+      <div class="publication-text">
+        <h3 id="26c">[26c] <span class="publication-math" data-tex="E_\infty^{1,2}">E_\infty^{1,2}</span>-type Lieb-Schultz-Mattis anomalies, deconfined quantum critical points, and non-invertible symmetry breaking</h3>
+        <p class="publication-authors">Hao-Ran Zhang, Hanlin Lin, Shuo Yang, and Qing-Rui Wang</p>
+        <p class="publication-citation"><a href="https://arxiv.org/abs/2606.06343" target="_blank" rel="noopener">arXiv: 2606.06343 (2026)</a></p>
+        <p>We show that <strong><span class="publication-math" data-tex="E_\infty^{1,2}">E_\infty^{1,2}</span>-type Lieb-Schultz-Mattis anomalies force non-invertible dual symmetries</strong> when a gaugeable Abelian normal internal symmetry is gauged. This provides a general mechanism for <strong>type-II deconfined quantum critical points</strong>, which are dual to spontaneous breaking of non-invertible symmetries. We illustrate this mechanism in a spin-<span class="publication-math" data-tex="1/2">1/2</span> chain with anomalous <span class="publication-math" data-tex="D_8">D_8</span> symmetry: a dimer-to-ferromagnet transition has numerical evidence for a critical theory with <strong><span class="publication-math" data-tex="c\approx1">c\approx1</span></strong>, while gauging the internal symmetry produces the non-invertible <strong><span class="publication-math" data-tex="\mathrm{Rep}(H_8)">\mathrm{Rep}(H_8)</span></strong> dual symmetry.</p>
+      </div>
+    </article>
+
+    <article class="publication-entry" aria-labelledby="26a">
+      <figure class="publication-figure">
+        <a href="publications/26a.png" target="_blank" rel="noopener" aria-label="Open full-size figure for paper [26a]" title="View full-size figure">
+          <img src="publications/26a.png" alt="Table III: mixed anomalies between generalized symmetry background couplings" loading="lazy" width="1790" height="580" decoding="async">
+        </a>
+      </figure>
+      <div class="publication-text">
+        <h3 id="26a">[26a] Non-invertible symmetries and mixed anomalies from conserved current construction in <span class="publication-math" data-tex="(3+1)\mathrm{D}">(3+1)\mathrm{D}</span> twisted <span class="publication-math" data-tex="BF">BF</span> topological quantum field theories</h3>
+        <p class="publication-authors">Zhi-Feng Zhang, Yizhou Huang, Qing-Rui Wang, and Peng Ye</p>
+        <p class="publication-citation"><a href="https://arxiv.org/abs/2601.01523" target="_blank" rel="noopener">arXiv: 2601.01523 (2026)</a></p>
+        <p>We develop a <strong>conserved-current construction of generalized symmetries</strong> in <span class="publication-math" data-tex="(3+1)\mathrm{D}">(3+1)\mathrm{D}</span> twisted <span class="publication-math" data-tex="BF">BF</span> theories describing non-Abelian topological orders with Borromean-rings braiding. Starting from the equations of motion, we obtain both invertible and <strong>intrinsically non-invertible higher-form symmetry operators</strong>. The latter require projector constraints, which lead to multi-channel fusion. We derive their <strong>fusion rules</strong> and diagnose <strong>mixed anomalies</strong> by coupling the conserved currents to background gauge fields, providing a systematic route from continuum actions to symmetry operators and gauging obstructions.</p>
+      </div>
+    </article>
+
+    <article class="publication-entry" aria-labelledby="23c">
+      <figure class="publication-figure">
+        <a href="publications/23c.png" target="_blank" rel="noopener" aria-label="Open full-size figure for paper [23c]" title="View full-size figure">
+          <img src="publications/23c.png" alt="Equation (2.45): exchange of parafermionic operators" loading="lazy" width="1000" height="360" decoding="async">
+        </a>
+      </figure>
+      <div class="publication-text">
+        <h3 id="23c">[23c] Para-fusion Category and Topological Defect Lines in <span class="publication-math" data-tex="\mathbb{Z}_N">\mathbb{Z}_N</span>-parafermionic CFTs</h3>
+        <p class="publication-authors">Jin Chen, Babak Haghighat, and Qing-Rui Wang</p>
+        <p class="publication-citation"><a href="https://arxiv.org/abs/2309.01914" target="_blank" rel="noopener">arXiv: 2309.01914 (2023)</a></p>
+        <p>We introduce <strong>para-fusion categories</strong> to describe topological defect lines in two-dimensional <span class="publication-math" data-tex="\mathbb{Z}_N">\mathbb{Z}_N</span>-parafermionic CFTs, generalizing super-fusion categories in fermionic theories. Parafermionic operators living on defect lines obey <strong>fractional statistics</strong>, leading to generalized <span class="publication-math" data-tex="q">q</span>-type objects and <strong>para-pentagon consistency equations</strong>. We construct these structures through <strong>parafermionic anyon condensation</strong>, relating their fusion data to those of parent bosonic theories. We illustrate the framework with explicit CFT examples and fully classify the family of para-fusion categories obtained by condensing the <span class="publication-math" data-tex="\mathbb{Z}_N">\mathbb{Z}_N</span> Tambara–Yamagami categories.</p>
+      </div>
+    </article>
+
+    <article class="publication-entry" aria-labelledby="23a">
+      <figure class="publication-figure">
+        <a href="publications/23a.png" target="_blank" rel="noopener" aria-label="Open full-size figure for paper [23a]" title="View full-size figure">
+          <img src="publications/23a.png" alt="Equation (2.54): fusion of symmetry defects Ug and Uh into Ugh" loading="lazy" width="510" height="240" decoding="async">
+        </a>
+      </figure>
+      <div class="publication-text">
+        <h3 id="23a">[23a] Lecture Notes on Generalized Symmetries and Applications</h3>
+        <p class="publication-authors">Ran Luo, Qing-Rui Wang, and Yi-Nan Wang</p>
+        <p class="publication-citation"><a href="https://doi.org/10.1016/j.physrep.2024.02.002" target="_blank" rel="noopener">Physics Reports 1065, 1–43 (2024)</a>, <a href="https://arxiv.org/abs/2307.09215" target="_blank" rel="noopener">arXiv: 2307.09215 (2023)</a></p>
+        <p>We provide a pedagogical introduction to <strong>generalized symmetries</strong>, connecting perspectives from high-energy and condensed-matter physics. We emphasize <strong>higher-form and higher-group symmetries</strong>, explaining their descriptions through topological defects, background gauge fields, and classifying spaces. We discuss gauging, <strong>’t Hooft anomalies and their relation to SPT phases</strong>, including group-cohomology and cobordism classifications. Examples range from Maxwell and Chern–Simons theories to the Haldane chain, toric code, and higher-form SPT phases. We also introduce applications to the <strong>geometric engineering of quantum field theories in string/M-theory</strong>, and briefly discuss non-invertible symmetries.</p>
+      </div>
+    </article>
+  </section>
+
+  <section class="publication-section" aria-labelledby="sec_3">
+    <h2 id="sec_3"><a href="#top_outline1" title="Back to research topics">3. Fermionic symmetry-protected topological phases</a></h2>
+
+    <article class="publication-entry" aria-labelledby="25b">
+      <figure class="publication-figure">
+        <a href="publications/25b.png" target="_blank" rel="noopener" aria-label="Open full-size figure for paper [25b]" title="View full-size figure">
+          <img src="publications/25b.png" alt="Figure 11: crystalline decorations for space group No. 1" loading="lazy" width="2134" height="2134" decoding="async">
+        </a>
+      </figure>
+      <div class="publication-text">
+        <h3 id="25b">[25b] Classification of Interacting Topological Crystalline Superconductors in Three Dimensions and Beyond</h3>
+        <p class="publication-authors">Shang-Qiang Ning, Xing-Yu Ren, Qing-Rui Wang, Yang Qi, and Zheng-Cheng Gu</p>
+        <p class="publication-citation"><a href="https://arxiv.org/abs/2512.25069" target="_blank" rel="noopener">arXiv: 2512.25069 (2025)</a></p>
+        <p>We develop a <strong>domain-wall-decoration framework for classifying three-dimensional interacting topological superconductors</strong>, incorporating four layers: <span class="publication-math" data-tex="p+ip">p+ip</span> superconductors, Kitaev chains, complex fermions, and bosonic SPT states. We determine the allowed <strong><span class="publication-math" data-tex="p+ip">p+ip</span> decorations</strong> and derive a computable <strong><span class="publication-math" data-tex="O_5">O_5</span> obstruction formula incorporating antiunitary symmetries</strong>, completing the consistency conditions for the remaining decoration layers. Combining this framework with the <strong>fermionic crystalline equivalence principle</strong>, we obtain interacting topological crystalline superconductor classifications for <strong>all 230 space groups</strong> in electronic systems.</p>
+      </div>
+    </article>
+
+    <article class="publication-entry" aria-labelledby="24a">
+      <figure class="publication-figure">
+        <a href="publications/24a.png" target="_blank" rel="noopener" aria-label="Open full-size figure for paper [24a]" title="View full-size figure">
+          <img src="publications/24a.png" alt="Figure 2: triangulated regions and interfaces" loading="lazy" width="1200" height="533" decoding="async">
+        </a>
+      </figure>
+      <div class="publication-text">
+        <h3 id="24a">[24a] Systematic Construction of Interfaces and Anomalous Boundaries for Fermionic Symmetry-Protected Topological Phases</h3>
+        <p class="publication-authors">Kevin Loo and Qing-Rui Wang</p>
+        <p class="publication-citation"><a href="https://doi.org/10.1103/PhysRevB.111.205102" target="_blank" rel="noopener">Phys. Rev. B 111, 205102 (2025)</a>, <a href="https://arxiv.org/abs/2412.18528" target="_blank" rel="noopener">arXiv: 2412.18528 (2024)</a></p>
+        <p>We develop a <strong>symmetry-extension approach to constructing gapped interfaces and anomalous boundaries</strong> for interacting fermionic SPT phases. Using pullback trivialization, we remove <strong>Majorana-chain and complex-fermion decorations layer by layer</strong>, tracking the nontrivial corrections induced in the remaining decoration data. We derive explicit <strong>cochain-level consistency formulas in <span class="publication-math" data-tex="(2+1)\mathrm{D}">(2+1)\mathrm{D}</span> and <span class="publication-math" data-tex="(3+1)\mathrm{D}">(3+1)\mathrm{D}</span></strong> and illustrate the construction with a <span class="publication-math" data-tex="(3+1)\mathrm{D}">(3+1)\mathrm{D}</span> phase protected by <span class="publication-math" data-tex="\mathbb{Z}_2^f\times\mathbb{Z}_4\times\mathbb{Z}_4">\mathbb{Z}_2^f\times\mathbb{Z}_4\times\mathbb{Z}_4</span>, including Majorana-chain decorations. Collapsing the intermediate layers yields a gapped boundary with extended symmetry.</p>
+      </div>
+    </article>
+
+    <article class="publication-entry" aria-labelledby="23d">
+      <figure class="publication-figure">
+        <a href="publications/23d.png" target="_blank" rel="noopener" aria-label="Open full-size figure for paper [23d]" title="View full-size figure">
+          <img src="publications/23d.png" alt="Figure 11: closed procedure for the pure Majorana phase" loading="lazy" width="1100" height="735" decoding="async">
+        </a>
+      </figure>
+      <div class="publication-text">
+        <h3 id="23d">[23d] Stacking Group Structure of Fermionic Symmetry-Protected Topological Phases</h3>
+        <p class="publication-authors">Xing-Yu Ren, Shang-Qiang Ning, Yang Qi, Qing-Rui Wang, and Zheng-Cheng Gu</p>
+        <p class="publication-citation"><a href="https://doi.org/10.1103/PhysRevB.110.235117" target="_blank" rel="noopener">Phys. Rev. B 110, 235117 (2024)</a>, <a href="https://arxiv.org/abs/2310.19058" target="_blank" rel="noopener">arXiv: 2310.19058 (2023)</a></p>
+        <p>We derive <strong>explicit stacking rules for interacting fermionic SPT phases up to <span class="publication-math" data-tex="(2+1)\mathrm{D}">(2+1)\mathrm{D}</span></strong>, including both unitary and antiunitary symmetries. Using fermionic symmetric local unitary transformations, we combine two layers into a single effective layer and determine the resulting decoration data, including <strong>fermion-parity and Majorana-phase corrections</strong>. These rules resolve the <strong>stacking group extensions</strong> between different decoration layers. Applying the fermionic crystalline equivalence principle, we compute the stacking groups for <strong>all 17 wallpaper groups</strong>, as well as wallpaper symmetries combined with onsite time-reversal symmetry.</p>
+      </div>
+    </article>
+
+    <article class="publication-entry" aria-labelledby="21d">
+      <figure class="publication-figure">
+        <a href="publications/21d.jpg" target="_blank" rel="noopener" aria-label="Open full-size figure for paper [21d]" title="View full-size figure">
+          <img src="publications/21d.jpg" alt="Charge decorations on a triangular lattice" width="624" height="392" loading="lazy" decoding="async">
+        </a>
+      </figure>
+      <div class="publication-text">
+        <h3 id="21d">[21d] Exactly solvable lattice models for interacting electronic insulators in two dimensions</h3>
+        <p class="publication-authors">Qing-Rui Wang, Yang Qi, Chen Fang, Meng Cheng, and Zheng-Cheng Gu
+</p>
+        <p class="publication-citation"><a href="https://doi.org/10.1103/PhysRevB.108.L121104" target="_blank" rel="noopener">Phys. Rev. B 108, L121104 (2023)</a>, <a href="https://arxiv.org/abs/2112.15533" target="_blank" rel="noopener">arXiv: 2112.15533 (2021)</a></p>
+        <p>Based on the physical picture of <span class="publication-math" data-tex="\mathrm{U}(1)_f">\mathrm{U}(1)_f</span>-charge decorations, we illustrate the key idea by considering the well known <span class="publication-math" data-tex="2\mathrm{D}">2\mathrm{D}</span> interacting topological insulator. Then we generalize our construction to an <strong>arbitrary <span class="publication-math" data-tex="2\mathrm{D}">2\mathrm{D}</span> interacting electronic insulator</strong> with symmetry <span class="publication-math" data-tex="G_f=\mathrm{U}(1)_f\rtimes_{\rho_1,\omega_2}G">G_f=\mathrm{U}(1)_f\rtimes_{\rho_1,\omega_2}G</span>. Finally we study more examples, including the full interacting classification of <span class="publication-math" data-tex="2\mathrm{D}">2\mathrm{D}</span> crystalline topological insulators.</p>
+      </div>
+    </article>
+
+    <article class="publication-entry" aria-labelledby="19b">
+      <figure class="publication-figure">
+        <a href="publications/19b_0.jpg" target="_blank" rel="noopener" aria-label="Open full-size figure for paper [19b]" title="View full-size figure">
+          <img src="publications/19b.jpg" alt="Bulk and edge excitations in an Abelian Chern-Simons description" width="600" height="293" loading="lazy" decoding="async">
+        </a>
+      </figure>
+      <div class="publication-text">
+        <h3 id="19b">[19b] Edge theories of <span class="publication-math" data-tex="2\mathrm{D}">2\mathrm{D}</span> fermionic symmetry protected topological phases protected by unitary Abelian symmetries</h3>
+        <p class="publication-authors">Shang-Qiang Ning, Chenjie Wang, Qing-Rui Wang, and Zheng-Cheng Gu</p>
+        <p class="publication-citation"><a href="https://doi.org/10.1103/PhysRevB.104.075151" target="_blank" rel="noopener">Phys. Rev. B 104, 075151 (2021)</a>, <a href="https://arxiv.org/abs/1910.02925" target="_blank" rel="noopener">arXiv: 1910.02925 (2019)</a></p>
+        <p>We utilize the <strong>Abelian Chern-Simons theory</strong> to study the fermionic SPT phases protected by Abelian symmetry. In particular, we discover the construction of Luttinger liquid edge theories with central charge <span class="publication-math" data-tex="n-1">n-1</span> for Type-III bosonic SPT phases protected by <span class="publication-math" data-tex="(\mathbb{Z}_n)^3">(\mathbb{Z}_n)^3</span> symmetry.</p>
+      </div>
+    </article>
+
+    <article class="publication-entry" aria-labelledby="19a">
+      <figure class="publication-figure">
+        <a href="publications/19a_0.jpg" target="_blank" rel="noopener" aria-label="Open full-size figure for paper [19a]" title="View full-size figure">
+          <img src="publications/19a.jpg" alt="Fermionic block-state decorations around a rotation center" width="536" height="600" loading="lazy" decoding="async">
+        </a>
+      </figure>
+      <div class="publication-text">
+        <h3 id="19a">[19a] Construction and classification of point-group symmetry-protected topological phases in two-dimensional interacting fermionic systems</h3>
+        <p class="publication-authors">Jian-Hao Zhang, Qing-Rui Wang, Shuo Yang, Yang Qi, and Zheng-Cheng Gu</p>
+        <p class="publication-citation"><a href="https://doi.org/10.1103/PhysRevB.101.100501" target="_blank" rel="noopener">Phys. Rev. B 101, 100501(R) (2020)</a>, <a href="https://arxiv.org/abs/1909.05519" target="_blank" rel="noopener">arXiv: 1909.05519 (2019)</a></p>
+        <p>We constructed and classified <strong>point-group SPT phases</strong> for <span class="publication-math" data-tex="2\mathrm{D}">2\mathrm{D}</span> interacting fermion systems via lower-dimensional block-state decorations.  The crystalline equivalence principle was verified in <span class="publication-math" data-tex="2\mathrm{D}">2\mathrm{D}</span> interacting fermion systems, with spinless and spin-<span class="publication-math" data-tex="1/2">1/2</span> group extensions switched.</p>
+      </div>
+    </article>
+
+    <article class="publication-entry" aria-labelledby="18c">
+      <figure class="publication-figure">
+        <a href="publications/18c_0.jpg" target="_blank" rel="noopener" aria-label="Open full-size figure for paper [18c]" title="View full-size figure">
+          <img src="publications/18c.jpg" alt="Majorana-chain and fermion decorations on a tetrahedron" width="700" height="378" loading="lazy" decoding="async">
+        </a>
+      </figure>
+      <div class="publication-text">
+        <h3 id="18c">[18c] Construction and classification of symmetry-protected topological phases in interacting fermion systems</h3>
+        <p class="publication-authors">Qing-Rui Wang and Zheng-Cheng Gu</p>
+        <p class="publication-citation"><a href="https://doi.org/10.1103/PhysRevX.10.031055" target="_blank" rel="noopener">Phys. Rev. X 10, 031055 (2020)</a>, <a href="https://arxiv.org/abs/1811.00536" target="_blank" rel="noopener">arXiv: 1811.00536 (2018)</a></p>
+        <p>We gave a systematic fixed-point wave function <strong>construction and classification of fermionic SPT states</strong> for generic fermionic symmetry group  <span class="publication-math" data-tex="G_f=\mathbb{Z}_2^f\times_{\omega_2}G_b">G_f=\mathbb{Z}_2^f\times_{\omega_2}G_b</span>, which is a central extension of bosonic symmetry group <span class="publication-math" data-tex="G_b">G_b</span> (may contain time reversal symmetry) by the fermion parity symmetry group <span class="publication-math" data-tex="\mathbb{Z}_2^f=\{1,P_f\}">\mathbb{Z}_2^f=\{1,P_f\}</span>. There are in total 4 layers of decoration data: <strong><span class="publication-math" data-tex="(2+1)\mathrm{D}">(2+1)\mathrm{D}</span> <span class="publication-math" data-tex="p+ip">p+ip</span>  chiral superconductors, <span class="publication-math" data-tex="(1+1)\mathrm{D}">(1+1)\mathrm{D}</span> Majorana chain, <span class="publication-math" data-tex="(0+1)\mathrm{D}">(0+1)\mathrm{D}</span> complex fermion, and bosonic SPT</strong>. This is an all-inclusive classification work on fermionic SPT with finite onsite symmetry in physical dimensions.</p>
+      </div>
+    </article>
+
+    <article class="publication-entry" aria-labelledby="18a">
+      <figure class="publication-figure">
+        <a href="publications/18a_0.jpg" target="_blank" rel="noopener" aria-label="Open full-size figure for paper [18a]" title="View full-size figure">
+          <img src="publications/18a.jpg" alt="Local transformation of Majorana decorations in an anomalous SPT state" width="700" height="300" loading="lazy" decoding="async">
+        </a>
+      </figure>
+      <div class="publication-text">
+        <h3 id="18a">[18a] Anomalous symmetry protected topological states in interacting fermion systems</h3>
+        <p class="publication-authors">Qing-Rui Wang, Yang Qi, and Zheng-Cheng Gu</p>
+        <p class="publication-citation"><a href="https://dx.doi.org/10.1103/PhysRevLett.123.207003" target="_blank" rel="noopener">Phys. Rev. Lett. 123, 207003 (2019)</a>, <a href="https://arxiv.org/abs/1810.12899" target="_blank" rel="noopener">arXiv: 1810.12899 (2018)</a></p>
+        <p>To our surprise, there exists a new class of the so-called <strong>anomalous SPT (ASPT)</strong> states which are only well defined on the boundary of a trivial fermionic bulk system. We demonstrated the essential idea by considering an anomalous topological superconductor with time-reversal symmetry <span class="publication-math" data-tex="T^2=1">T^2=1</span> in <span class="publication-math" data-tex="2\mathrm{D}">2\mathrm{D}</span>. The ASPT states are also crucial in the classification of fermionic SPT phases in one dimension higher, known as <strong>trivialization</strong>.</p>
+      </div>
+    </article>
+
+    <article class="publication-entry" aria-labelledby="17a">
+      <figure class="publication-figure">
+        <a href="publications/17a_0.jpg" target="_blank" rel="noopener" aria-label="Open full-size figure for paper [17a]" title="View full-size figure">
+          <img src="publications/17a.jpg" alt="Three-dimensional local transformation of decorated Majorana chains" width="700" height="465" loading="lazy" decoding="async">
+        </a>
+      </figure>
+      <div class="publication-text">
+        <h3 id="17a">[17a] Towards a complete classification of symmetry-protected topological phases for interacting fermions in three dimensions and a general group supercohomology theory</h3>
+        <p class="publication-authors">Qing-Rui Wang and Zheng-Cheng Gu</p>
+        <p class="publication-citation"><a href="https://doi.org/10.1103/PhysRevX.8.011055" target="_blank" rel="noopener">Phys. Rev. X 8, 011055 (2018)</a>, <a href="https://arxiv.org/abs/1703.10937" target="_blank" rel="noopener">arXiv: 1703.10937 (2017)</a></p>
+        <p>We established a relation between <strong>discrete spin structure (the Poincaré dual of the trivialization of the 2nd Stiefel-Whitney class <span class="publication-math" data-tex="w_2">w_2</span></strong> ) and <strong>local Kasteleyn orientations</strong> on the dual lattice for arbitrary triangulations in arbitrary dimensions. The <strong>Majorana chains</strong> are then decorated to the intersection lines of domain walls to give rise to a new class of fermionic SPT phases.</p>
+      </div>
+    </article>
+  </section>
+
+  <section class="publication-section" aria-labelledby="sec_4">
+    <h2 id="sec_4"><a href="#top_outline1" title="Back to research topics">4. Sign structures in doped Mott insulators</a></h2>
+
+    <article class="publication-entry" aria-labelledby="18d">
+      <figure class="publication-figure">
+        <a href="publications/18d_0.jpg" target="_blank" rel="noopener" aria-label="Open full-size figure for paper [18d]" title="View full-size figure">
+          <img src="publications/18d.jpg" alt="Spin currents around a doped hole on a square lattice" width="700" height="544" loading="lazy" decoding="async">
+        </a>
+      </figure>
+      <div class="publication-text">
+        <h3 id="18d">[18d] Single-hole wave function in two dimensions: A case study of the doped Mott insulator</h3>
+        <p class="publication-authors">Shuai Chen, Qing-Rui Wang, Yang Qi, D. N. Sheng, and Zheng-Yu Weng</p>
+        <p class="publication-citation"><a href="https://doi.org/10.1103/PhysRevB.99.205128" target="_blank" rel="noopener">Phys. Rev. B 99, 205128 (2019)</a>, <a href="https://arxiv.org/abs/1812.05627" target="_blank" rel="noopener">arXiv: 1812.05627 (2018)</a></p>
+        <p>Using the <strong>variational Monte Carlo</strong> method, we studied a ground-state ansatz for the single-hole doped <span class="publication-math" data-tex="t\text{-}J">t\text{-}J</span> model in two dimensions. Such a single-hole wave function possesses finite angular momenta generated by hidden spin currents, which give rise to a novel ground state degeneracy in agreement with recent exact diagonalization (ED) and density matrix renormalization group (DMGR) results.</p>
+      </div>
+    </article>
+
+    <article class="publication-entry" aria-labelledby="15b">
+      <figure class="publication-figure">
+        <a href="publications/15b_0.jpg" target="_blank" rel="noopener" aria-label="Open full-size figure for paper [15b]" title="View full-size figure">
+          <img src="publications/15b.jpg" alt="Ground-state spin as a function of the modified hopping parameter" width="600" height="431" loading="lazy" decoding="async">
+        </a>
+      </figure>
+      <div class="publication-text">
+        <h3 id="15b">[15b] Exact sign structure of the <span class="publication-math" data-tex="t\text{-}J">t\text{-}J</span> chain and the single hole ground state</h3>
+        <p class="publication-authors">Zheng Zhu, Qing-Rui Wang, D. N. Sheng, and Zheng-Yu Weng</p>
+        <p class="publication-citation"><a href="https://doi.org/10.1016/j.nuclphysb.2015.12.004" target="_blank" rel="noopener">Nucl. Phys. B 903, 51 (2016)</a>, <a href="https://arxiv.org/abs/1510.07634" target="_blank" rel="noopener">arXiv: 1510.07634 (2015)</a></p>
+        <p>We proposed a single-hole-doped ground state ansatz with the correct <strong>sign structure</strong> of the <span class="publication-math" data-tex="1\mathrm{D}">1\mathrm{D}</span> <span class="publication-math" data-tex="t\text{-}J">t\text{-}J</span> model (see <a href="#13a">[13a]</a> below). The Monte Carlo simulations of this variational wave function reproduced the key DMRG results of the model (such as the characteristic momentum structure, the Luttinger liquid behavior, and the quantum phase interference of the hole under a periodic boundary condition).</p>
+      </div>
+    </article>
+
+    <article class="publication-entry" aria-labelledby="15a">
+      <figure class="publication-figure">
+        <a href="publications/15a_0.jpg" target="_blank" rel="noopener" aria-label="Open full-size figure for paper [15a]" title="View full-size figure">
+          <img src="publications/15a.jpg" alt="Spin and hole worldlines on a two-leg ladder" width="500" height="353" loading="lazy" decoding="async">
+        </a>
+      </figure>
+      <div class="publication-text">
+        <h3 id="15a">[15a] Variational wave function for an anisotropic single-hole-doped <span class="publication-math" data-tex="t\text{-}J">t\text{-}J</span> ladder</h3>
+        <p class="publication-authors">Qing-Rui Wang, Zheng Zhu, Yang Qi, and Zheng-Yu Weng</p>
+        <p class="publication-citation"><a href="https://arxiv.org/abs/1509.01260" target="_blank" rel="noopener">arXiv: 1509.01260 (2015)</a></p>
+        <p>Based on three general <strong>guiding principles</strong>, i.e., no double occupancy constraint, accurate description of antiferromagnetism at half-filling, and the precise sign structure of the <span class="publication-math" data-tex="t\text{-}J">t\text{-}J</span> model, a new ground state wave function has been constructed in [Weng, New J. Phys. 13, 103039 (2011)]. This paper specifically studied such kind of <strong>variational ground state ansatz</strong> for the one-hole-doped anisotropic two-leg <span class="publication-math" data-tex="t\text{-}J">t\text{-}J</span> ladder using the variational Monte Carlo (VMC) method. An excellent agreement is found between the VMC and DMRG results.</p>
+      </div>
+    </article>
+
+    <article class="publication-entry" aria-labelledby="13a">
+      <figure class="publication-figure">
+        <a href="publications/13a_0.jpg" target="_blank" rel="noopener" aria-label="Open full-size figure for paper [13a]" title="View full-size figure">
+          <img src="publications/13a.jpg" alt="Singlet and triplet energies as a function of chain length" width="500" height="294" loading="lazy" decoding="async">
+        </a>
+      </figure>
+      <div class="publication-text">
+        <h3 id="13a">[13a] Sign structure and ground-state properties for a spin−<span class="publication-math" data-tex="S">S</span> <span class="publication-math" data-tex="t\text{-}J">t\text{-}J</span> chain</h3>
+        <p class="publication-authors">Qing-Rui Wang and Peng Ye</p>
+        <p class="publication-citation"><a href="https://doi.org/10.1103/PhysRevB.90.045106" target="_blank" rel="noopener">Phys. Rev. B 90, 045106 (2014)</a>, <a href="https://arxiv.org/abs/1310.6496" target="_blank" rel="noopener">arXiv: 1310.6496 (2013)</a></p>
+        <p>We showed that the <span class="publication-math" data-tex="1\mathrm{D}">1\mathrm{D}</span> <span class="publication-math" data-tex="t\text{-}J">t\text{-}J</span> chain has an <strong>exact sign structure</strong> captured by the <strong>Marshall sign</strong> and the <strong>phase string sign</strong>. Using this sign structure, we proved a <strong>generalized Marshall theorem</strong> and a <strong>generalized Lieb-Mattis theorem</strong> for the <span class="publication-math" data-tex="t\text{-}J">t\text{-}J</span> chain with arbitrary spin and doping. The large <span class="publication-math" data-tex="t/J">t/J</span> phase supports a gapped spin sector with similar properties (ground-state degeneracy, edge state, and string order parameter) of the Haldane chain (a <span class="publication-math" data-tex="1\mathrm{D}">1\mathrm{D}</span> <span class="publication-math" data-tex="\mathrm{SO}(3)">\mathrm{SO}(3)</span> SPT), although the charge sector is gapless. This may be the first example of <strong>SPT in gapless systems</strong>.</p>
+      </div>
+    </article>
+
+    <article class="publication-entry" aria-labelledby="12a">
+      <figure class="publication-figure">
+        <a href="publications/12a_0.jpg" target="_blank" rel="noopener" aria-label="Open full-size figure for paper [12a]" title="View full-size figure">
+          <img src="publications/12a.jpg" alt="Temperature-doping phase diagram with metallic and confined insulating regimes" width="500" height="434" loading="lazy" decoding="async">
+        </a>
+      </figure>
+      <div class="publication-text">
+        <h3 id="12a">[12a] Monopoles, confinement and charge localization in the <span class="publication-math" data-tex="t\text{-}J">t\text{-}J</span> model with dilute holes</h3>
+        <p class="publication-authors">Peng Ye and Qing-Rui Wang</p>
+        <p class="publication-citation"><a href="https://doi.org/10.1016/j.nuclphysb.2013.05.023" target="_blank" rel="noopener">Nucl. Phys. B 874, 386 (2013)</a>, <a href="https://arxiv.org/abs/1206.0258" target="_blank" rel="noopener">arXiv: 1206.0258 (2012)</a></p>
+        <p>We present a quantum field theoretic description on the <span class="publication-math" data-tex="t\text{-}J">t\text{-}J</span> model on a square lattice with dilute holes (i.e. near half-filling), based on the compact <strong>mutual Chern-Simons gauge theory</strong>. Due to the presence of non-perturbative monopole plasma configuration from the antiferromagnetic background, holons (carrying electric charge) are linearly confined and strongly localized even without extrinsic disorder taken into account.</p>
+      </div>
+    </article>
+  </section>
+
+  <footer class="page-footer"><a href="#top_page">Back to top</a></footer>
+</main>
+<script>
+const navigation = document.getElementById('topnav');
+function updateNavigation() {
+  navigation.classList.toggle('is-scrolled', window.scrollY > 40);
 }
-
-})();
-</script> -->
-
-<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
-<!-- <script   id="MathJax-script" async src="https://cdn.bootcss.com/mathjax/3.0.5/es5/tex-mml-chtml.js"></script> -->
-
-
+function updateNavigationHeight() {
+  document.documentElement.style.setProperty('--nav-height', navigation.offsetHeight + 'px');
+}
+window.addEventListener('scroll', updateNavigation, { passive: true });
+window.addEventListener('resize', updateNavigationHeight);
+if ('ResizeObserver' in window) new ResizeObserver(updateNavigationHeight).observe(navigation);
+updateNavigation();
+updateNavigationHeight();
+</script>
 </body>
-
 </html>
