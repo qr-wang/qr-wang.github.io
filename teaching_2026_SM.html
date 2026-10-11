@@ -1016,7 +1016,7 @@ section.sm-attendance img {position:absolute;left:-41%;top:-53%;display:block;wi
 Statistical Mechanics
 </span></h1>
 
-<section id="sm-attendance" class="sm-attendance" aria-labelledby="sm-attendance-title" data-class-start="2026-09-30T08:00:00+08:00" data-class-end="2026-09-30T09:35:00+08:00" hidden>
+<section id="sm-attendance" class="sm-attendance" aria-labelledby="sm-attendance-title" data-check-in-start="2026-09-30T07:50:00+08:00" data-check-in-end="2026-09-30T09:40:00+08:00" hidden>
  <div class="sm-attendance-copy">
   <h2 id="sm-attendance-title"><span class="sm-attendance-date">9 月 30 日</span><span class="sm-attendance-heading">课堂签到</span></h2>
   <p>请用微信扫码。</p>
@@ -1027,7 +1027,7 @@ Statistical Mechanics
   </div>
  </figure>
 </section>
-<section id="sm-attendance-2026-10-12" class="sm-attendance" aria-labelledby="sm-attendance-title-2026-10-12" data-class-start="2026-10-12T09:50:00+08:00" data-class-end="2026-10-12T11:25:00+08:00" hidden>
+<section id="sm-attendance-2026-10-12" class="sm-attendance" aria-labelledby="sm-attendance-title-2026-10-12" data-check-in-start="2026-10-12T09:40:00+08:00" data-check-in-end="2026-10-12T11:35:00+08:00" hidden>
  <div class="sm-attendance-copy">
   <h2 id="sm-attendance-title-2026-10-12"><span class="sm-attendance-date">10 月 12 日（周一）</span><span class="sm-attendance-heading">课堂签到</span></h2>
   <p>请在 9:40–11:35 用微信扫码签到。</p>
@@ -1041,13 +1041,12 @@ Statistical Mechanics
 <script id="sm-attendance-script">
 (function () {
  'use strict';
- // Show each card from 10 minutes before class until 10 minutes after class.
+ // Show each card only during its permitted check-in window.
  // Explicit UTC+08:00 timestamps keep the schedule fixed to Beijing time.
- const attendanceBuffer=10*60*1000;
  const sessions=Array.from(document.querySelectorAll('.sm-attendance'),panel=>({
   panel,
-  start:Date.parse(panel.dataset.classStart)-attendanceBuffer,
-  end:Date.parse(panel.dataset.classEnd)+attendanceBuffer
+  start:Date.parse(panel.dataset.checkInStart),
+  end:Date.parse(panel.dataset.checkInEnd)
  }));
  if(!sessions.length)return;
  let timer;
