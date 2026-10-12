@@ -668,6 +668,42 @@ body:not(.sm-project) .sm-reading .sm-reference-list li {text-align:justify;text
 .sm-reading ul {font-size:16px;overflow-wrap:anywhere;}
 .sm-reading .sm-boltzmann-contributions {font-size:18px;}
 .sm-reading .sm-reference-list li {margin-bottom:8px;}
+/* Lieb: consistent bilingual typography for the reading view. */
+body:not(.sm-project) #sm-story-10-12 {
+ font-family:'Lato','PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif;
+}
+body:not(.sm-project) #week5-1-Lieb {
+ font-size:18px;line-height:1.85;color:#292d32;
+}
+body:not(.sm-project) #sm-story-10-12 :is(h2,h3,h4) {font-family:inherit;}
+body:not(.sm-project) #week5-1-Lieb h3 {
+ font-size:26px;line-height:1.5;margin:42px 0 18px;text-wrap:pretty;
+}
+body:not(.sm-project) #week5-1-Lieb h4 {
+ font-size:21px;line-height:1.6;margin:30px 0 12px;text-wrap:pretty;
+}
+body:not(.sm-project) #week5-1-Lieb h3 + h4 {margin-top:16px;}
+body:not(.sm-project) #week5-1-Lieb p {margin:16px 0;}
+body:not(.sm-project) #week5-1-Lieb :is(ul,ol) {
+ font-size:inherit;line-height:inherit;padding-left:1.5em;margin:16px 0 24px;
+ overflow-wrap:break-word;
+}
+body:not(.sm-project) #week5-1-Lieb li {margin:12px 0;padding-left:0.15em;}
+body:not(.sm-project) #week5-1-Lieb .sm-reference-list {
+ font-size:16px;line-height:1.8;
+}
+body:not(.sm-project) #week5-1-Lieb .sm-reference-list li {text-align:left;}
+body:not(.sm-project) #week5-1-Lieb a {text-underline-offset:0.18em;overflow-wrap:anywhere;}
+body:not(.sm-project) #week5-1-Lieb .sm-boltzmann-equation {margin:24px 0;}
+@media(max-width:700px) {
+ body:not(.sm-project) #week5-1-Lieb {font-size:17px;line-height:1.85;}
+ body:not(.sm-project) #week5-1-Lieb h3 {font-size:23px;margin-top:34px;}
+ body:not(.sm-project) #week5-1-Lieb h4 {font-size:20px;margin-top:26px;}
+ body:not(.sm-project) #week5-1-Lieb :is(h3,h4) {scroll-margin-top:120px;}
+ body:not(.sm-project) #week5-1-Lieb p {text-align:left;}
+ body:not(.sm-project) #week5-1-Lieb .sm-boltzmann-equation mjx-container {max-width:100%;}
+ body:not(.sm-project) #week5-1-Lieb .sm-boltzmann-equation svg {max-width:100%;height:auto;}
+}
 .sm-enhanced .sm-classroom {display:none;}
 .sm-footer {display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid #ccc;padding:20px 0;margin:30px 0;}
 .sm-count {font-size:14px;text-align:center;}
@@ -2367,14 +2403,13 @@ Section 6. The Theory of Gravitation
 <p>1953 年毕业于麻省理工学院，1956 年在伯明翰大学获博士学位，随后赴京都大学访问。1975 年加入普林斯顿大学，长期在数学与物理两门学科任教。</p>
 <h4>主要奖项与获奖原因</h4>
 <ul>
-<li><strong>1998 年，玻尔兹曼奖章（Boltzmann Medal）：</strong>表彰他对经典与量子统计物理基本问题的杰出数学研究，包括对多种具有重要应用的模型给出精确解。这项荣誉与本课程联系最直接；获奖理由涵盖他的统计物理贡献，并非只针对物质稳定性这一项工作。</li>
-<li><strong>2022 年，高斯奖（Carl Friedrich Gauss Prize）：</strong>表彰他广泛而深刻的数学贡献，对量子力学、统计力学、计算化学和量子信息理论产生重要影响。</li>
-<li><strong>2023 年，京都奖基础科学奖（Kyoto Prize in Basic Sciences）：</strong>表彰他以多体物理为基础，在物理、化学和量子信息科学中开创性的数学研究。</li>
+<li>1998 年，玻尔兹曼奖章（Boltzmann Medal）：表彰他对经典与量子统计物理基本问题的杰出数学研究，包括对多种具有重要应用的模型给出精确解。这项荣誉与本课程联系最直接；获奖理由涵盖他的统计物理贡献，并非只针对物质稳定性这一项工作。</li>
+<li>2022 年，高斯奖（Carl Friedrich Gauss Prize）：表彰他广泛而深刻的数学贡献，对量子力学、统计力学、计算化学和量子信息理论产生重要影响。</li>
+<li>2023 年，京都奖基础科学奖（Kyoto Prize in Basic Sciences）：表彰他以多体物理为基础，在物理、化学和量子信息科学中开创性的数学研究。</li>
 </ul>
 <h4>从业余无线电到物理</h4>
 <p>少年时，他喜欢电子技术和业余无线电，学会摩尔斯电码并取得电台执照。进入大学时原想学电气工程，第一学期的物理课却使他转向物理。后来，他把对“事物怎样运作”的好奇带进了严格的数学物理研究。</p>
 </section>
-<p><strong>阅读导引：</strong>本节先读“配分函数”“物质稳定性”和“热力学极限”，理解从微观模型得到宏观热力学需要哪些条件。后面的代表工作供拓展阅读，可根据兴趣选择；其中方冰模型最直接对应微观态计数，第二定律对应熵与广延性。</p>
 <h3>与本节的联系：从“怎样计算”到“计算为什么成立”</h3>
 <p>本节把对微观态的求和改写成相空间积分。对三维、相同的无内部自由度粒子，在稀薄的经典极限下，正则配分函数是</p>
 <div class="sm-boltzmann-equation"><math id="sm-lieb-formula-partition" xmlns="http://www.w3.org/1998/Math/MathML" display="block" data-tex="Z_N=\frac{1}{N!h^{3N}}\int d^{3N}q\,d^{3N}p\,e^{-\beta H(q,p)}"><mtext>Z_N=\frac{1}{N!h^{3N}}\int d^{3N}q\,d^{3N}p\,e^{-\beta H(q,p)}</mtext></math></div>
@@ -2479,7 +2514,6 @@ Section 6. The Theory of Gravitation
 <div class="sm-boltzmann-equation"><math id="sm-lieb-formula-concavity" xmlns="http://www.w3.org/1998/Math/MathML" display="block" data-tex="\Phi_p(A,B)=\operatorname{Tr}\!\left(K^\dagger A^p K B^{1-p}\right),\qquad 0&lt;p&lt;1"><mtext>\Phi_p(A,B)=\operatorname{Tr}\!\left(K^\dagger A^p K B^{1-p}\right),\qquad 0&lt;p&lt;1</mtext></math></div>
 <p>1973 年的 Lieb 凹性定理指出：对固定矩阵 \(K\) 和 \(0&lt;p&lt;1\)，上述函数关于两个正矩阵 \(A,B\) 联合凹。这意味着同时混合两组输入时，函数值不小于原来两个函数值的相应加权平均；这是证明量子熵不等式的重要数学工具。这里的 \(A,B\) 是矩阵，与前面强次可加性中的子系统标签不同。</p>
 <p>他与布拉斯坎普（Herm Jan Brascamp）关于积分不等式及最优常数的研究，以及对 Hardy–Littlewood–Sobolev 不等式在对称指数情形下最优常数的确定，同样为控制卷积、相互作用能和函数的大小提供了严格工具。这些内容适合作为进阶阅读，不要求本节课掌握证明。</p>
-<p><strong>阅读建议：</strong>先掌握本节主线“微观状态数 → 配分函数与自由能 → 物质稳定性及热力学极限”，再把上述工作当作这条主线向量子气体、磁性、量子信息和热力学基础的延伸。它们分别回答不同的问题，不必在一次课上全部推导。</p>
 <h3>资料与进一步阅读</h3><ul>
 <li>玻尔兹曼奖章及授奖词：<a href="https://archive.iupap.org/commissions/c3/reports/ga-99.html" target="_blank" rel="noopener noreferrer">国际纯粹与应用物理联合会（IUPAP），统计物理委员会报告</a>。</li>
 <li>高斯奖及授奖词：<a href="https://www.mathunion.org/imu-awards/carl-friedrich-gauss-prize/carl-friedrich-gauss-prize-2022" target="_blank" rel="noopener noreferrer">国际数学联盟（IMU），2022 年高斯奖</a>。</li>
