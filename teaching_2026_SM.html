@@ -32,7 +32,6 @@ window.SM_RELEASE_CONFIG = { scheduleThrough: SCHEDULE_THROUGH, storyThrough: ST
  function load(el) {
   // Attendance is governed only by the original Beijing-time scheduler.
   if (el.closest('.sm-attendance')) return;
-  if ((el.closest('#sm-dos-class-reading') || el.closest('.sm-page-dos-class')) && !window.smDosClassActive?.()) return;
   if (el.tagName === 'IMG') {
    if (el.dataset.src && !el.getAttribute('src')) {
     el.loading = 'eager';
@@ -756,13 +755,16 @@ var _hmt = _hmt || [];
 #sm-directory > h2 {font:inherit;color:rgba(34,110,147,1);margin:0 0 12px;}
 #sm-original-materials > summary {cursor:pointer;color:rgba(34,110,147,1);}
 .sm-table-scroll {max-width:100%;overflow-x:auto;}
-#sm-directory table {min-width:740px;}
+#sm-directory table {min-width:820px;table-layout:fixed;}
+#sm-directory td:last-child a {white-space:nowrap;}
+.sm-schedule-mobile-hint {display:none;}
+@media(max-width:760px) {.sm-schedule-mobile-hint {display:block;}}
 /* Current course and person plans stay black; previous plans remain visible in gray. */
 .sm-course-current, .sm-person-current {color:#000;}
 .sm-course-previous, .sm-person-previous {display:block;color:#777;margin-top:0.35em;}
 tr[data-sm-release] :is(.sm-course-previous, .sm-person-previous) {display:none;}
 .sm-schedule-key-previous {color:#777;}
-#sm-schedule-note {margin:0 0 12px;color:#000;}
+#sm-schedule-note {margin:0 0 12px;color:#555;font-size:15px;line-height:1.6;}
 :is(#sm-story-09-16, #sm-story-09-21, #sm-story-09-23, .sm-story-expanded) .sm-boltzmann-equation {font-size:1.5em;margin:20px 0;overflow-x:auto;}
 /* Reading equations stay close to body text size; slides retain their own sizes. */
 body:not(.sm-project) #sm-stories .sm-boltzmann-equation {font-size:1.15em;}
@@ -1881,37 +1883,38 @@ Section 6. The Theory of Gravitation
 
 <!-- BEGIN STATMECH STORIES 2026 -->
 <section id="sm-stories">
+<p id="sm-schedule-note">课表与人物材料当前展示至 2026 年 10 月 28 日。<span class="sm-schedule-mobile-hint">手机上可左右滑动查看完整表格。</span></p>
 <span id="sm-story-index" hidden></span>
-<table><thead><tr><th scope="col">周次与日期</th><th scope="col">上课内容</th><th scope="col">人物与材料</th></tr></thead><tbody>
-<tr data-sm-release="2026-09-14" hidden><td>第 1 周周一，9 月 14 日</td><td><a href="teaching/2026F_SM/intro.pdf" target="_blank" rel="noopener noreferrer">统计力学导论</a></td><td></td></tr>
-<tr data-sm-release="2026-09-16" hidden><td>第 1 周周三，9 月 16 日</td><td>微观态与统计平均；微正则系综与等概率假设；Boltzmann 熵与热力学第二定律</td><td>Ludwig Eduard Boltzmann<br><a href="#week1-2-Boltzmann">课后阅读</a> / <a href="#week1-2-Boltzmann-story" data-sm-project>全屏投影</a></td></tr>
-<tr data-sm-release="2026-09-21" hidden><td>第 2 周周一，9 月 21 日</td><td>温度、热容与热力学稳定性；二能级系统与负温度</td><td>Rudolf Julius Emanuel Clausius<br><a href="#week2-1-Clausius">课后阅读</a> / <a href="#week2-1-Clausius-story" data-sm-project>全屏投影</a></td></tr>
-<tr data-sm-release="2026-09-23" hidden><td>第 2 周周三，9 月 23 日</td><td>压强与热力学第一定律；正则系综、Boltzmann 分布、配分函数与能量涨落；二能级系统</td><td>Josiah Willard Gibbs<br><a href="#week2-2-Gibbs">课后阅读</a> / <a href="#week2-2-Gibbs-story" data-sm-project>全屏投影</a></td></tr>
-<tr data-sm-release="2026-09-28" hidden><td>第 3 周周一，9 月 28 日</td><td>Gibbs 熵及其推广；自由能与 Legendre 变换；系综等价与最大熵原理</td><td>John Joseph Hopfield<br>Geoffrey Everest Hinton<br><a href="#week3-1-Hopfield-Hinton">课后阅读</a> / <a href="#week3-1-Hopfield-Hinton-story" data-sm-project>全屏投影</a></td></tr>
-<tr data-sm-release="2026-09-30" hidden><td>第 3 周周三，9 月 30 日</td><td>化学势与粒子交换平衡；巨正则系综与粒子数涨落；巨热力学势与 Euler 关系</td><td>Ryogo Kubo<br><a href="#week3-2-Kubo">课后阅读</a> / <a href="#week3-2-Kubo-story" data-sm-project>全屏投影</a></td></tr>
-<tr data-sm-release="2026-10-05" hidden><td>第 4 周周一，10 月 5 日</td><td>国庆假期，停课</td><td></td></tr>
-<tr data-sm-release="2026-10-07" hidden><td>第 4 周周三，10 月 7 日</td><td>国庆假期，停课</td><td></td></tr>
-<tr data-sm-release="2026-10-12" hidden><td>第 5 周周一，10 月 12 日</td><td>相空间态计数与经典配分函数；理想气体与能均分定理</td><td>Elliott Hershel Lieb<br><a href="#week5-1-Lieb">课后阅读</a> / <a href="#week5-1-Lieb-story" data-sm-project>全屏投影</a></td></tr>
-<tr data-sm-release="2026-10-14" hidden><td>第 5 周周三，10 月 14 日</td><td>理想气体熵、Gibbs 佯谬与混合熵；巨正则理想气体、化学势与粒子数涨落；Maxwell–Boltzmann 速率分布</td><td>James Clerk Maxwell<br><a href="#week5-2-Maxwell">课后阅读</a> / <a href="#week5-2-Maxwell-story" data-sm-project>全屏投影</a></td></tr>
-<tr data-sm-release="2026-10-19" hidden><td>第 6 周周一，10 月 19 日</td><td><div class="sm-course-current">Maxwell 的分布推导；分子运动论与气体压强；双原子气体的转动、振动与热容</div></td><td><div class="sm-person-current">Paul Ehrenfest<br>Tatyana Afanasyeva-Ehrenfest<br><a href="#week6-1-Ehrenfest-Afanasyeva-Ehrenfest">课后阅读</a> / <a href="#week6-1-Ehrenfest-Afanasyeva-Ehrenfest-story" data-sm-project>全屏投影</a></div></td></tr>
-<tr data-sm-release="2026-10-21" hidden><td>第 6 周周三，10 月 21 日</td><td><div class="sm-course-current">相互作用气体与分子间势；Mayer \(f\) 函数、第二维里系数与 van der Waals 状态方程</div></td><td><div class="sm-person-current">Johannes Diderik van der Waals<br><a href="#week7-2-van-der-Waals">课后阅读</a> / <a href="#week7-2-van-der-Waals-story" data-sm-project>全屏投影</a></div></td></tr>
-<tr data-sm-release="2026-10-26" hidden><td>第 7 周周一，10 月 26 日</td><td><div class="sm-course-current">Debye–Hückel 屏蔽；量子气体、态密度与求和变积分；非相对论与相对论粒子的态密度</div><div class="sm-course-previous" hidden style="display:none">调整前：簇展开、逸度与巨正则处理；由簇积分得到维里系数</div><div class="sm-course-previous" hidden style="display:none">原计划：相互作用气体导论；Mayer 函数与维里展开</div></td><td><div class="sm-person-current">Paul Adrien Maurice Dirac<br><a href="#week10-1-Dirac">课后阅读</a> / <a href="#week10-1-Dirac-story" data-sm-project>全屏投影</a></div><div class="sm-person-previous" hidden style="display:none">原计划：杨振宁、李政道</div></td></tr>
-<tr data-sm-release="2026-10-28" hidden><td>第 7 周周三，10 月 28 日</td><td><div class="sm-course-current">光子气、黑体辐射与 Planck 分布；Wien 位移律和 Stefan–Boltzmann 定律；光子气热力学与宇宙微波背景</div><div class="sm-course-previous">调整前：Debye 屏蔽；量子气体、态密度与求和变积分；非相对论与相对论粒子的态密度</div><div class="sm-course-previous">原计划：van der Waals 修正与真实气体状态方程</div></td><td><div class="sm-person-current">Max Karl Ernst Ludwig Planck<br><a href="#week10-2-Planck">课后阅读</a> / <a href="#week10-2-Planck-story" data-sm-project>全屏投影</a></div><div class="sm-person-previous">原计划：Paul Adrien Maurice Dirac</div></td></tr>
+<table id="sm-course-schedule"><colgroup><col style="width:24%"><col style="width:52%"><col style="width:24%"></colgroup><thead><tr><th scope="col">周次与日期</th><th scope="col">上课内容</th><th scope="col">人物与材料</th></tr></thead><tbody>
+<tr data-sm-release="2026-09-14"><td>第 1 周周一，9 月 14 日</td><td><a href="teaching/2026F_SM/intro.pdf" target="_blank" rel="noopener noreferrer">统计力学导论</a></td><td></td></tr>
+<tr data-sm-release="2026-09-16"><td>第 1 周周三，9 月 16 日</td><td>微观态与统计平均；微正则系综与等概率假设；Boltzmann 熵与热力学第二定律</td><td>Ludwig Eduard Boltzmann<br><a href="#week1-2-Boltzmann">课后阅读</a> / <a href="#week1-2-Boltzmann-story" data-sm-project>全屏投影</a></td></tr>
+<tr data-sm-release="2026-09-21"><td>第 2 周周一，9 月 21 日</td><td>温度与热平衡；热容与热力学稳定性；二能级系统、Stirling 近似与负温度</td><td>Rudolf Julius Emanuel Clausius<br><a href="#week2-1-Clausius">课后阅读</a> / <a href="#week2-1-Clausius-story" data-sm-project>全屏投影</a></td></tr>
+<tr data-sm-release="2026-09-23"><td>第 2 周周三，9 月 23 日</td><td>压强、体积与热力学第一定律；正则系综、Boltzmann 分布与配分函数；能量涨落、系综等价与二能级系统</td><td>Josiah Willard Gibbs<br><a href="#week2-2-Gibbs">课后阅读</a> / <a href="#week2-2-Gibbs-story" data-sm-project>全屏投影</a></td></tr>
+<tr data-sm-release="2026-09-28"><td>第 3 周周一，9 月 28 日</td><td>Gibbs 熵及 Shannon、von Neumann、Rényi 熵；自由能与 Legendre 变换；系综等价与最大熵原理</td><td>John Joseph Hopfield<br>Geoffrey Everest Hinton<br><a href="#week3-1-Hopfield-Hinton">课后阅读</a> / <a href="#week3-1-Hopfield-Hinton-story" data-sm-project>全屏投影</a></td></tr>
+<tr data-sm-release="2026-09-30"><td>第 3 周周三，9 月 30 日</td><td>化学势与粒子交换平衡；巨正则系综与巨配分函数；粒子数涨落与巨热力学势；广延量与 Euler 关系</td><td>Ryogo Kubo<br><a href="#week3-2-Kubo">课后阅读</a> / <a href="#week3-2-Kubo-story" data-sm-project>全屏投影</a></td></tr>
+<tr data-sm-release="2026-10-05"><td>第 4 周周一，10 月 5 日</td><td>国庆假期，停课</td><td></td></tr>
+<tr data-sm-release="2026-10-07"><td>第 4 周周三，10 月 7 日</td><td>国庆假期，停课</td><td></td></tr>
+<tr data-sm-release="2026-10-12"><td>第 5 周周一，10 月 12 日</td><td>经典相空间态计数与配分函数；热德布罗意波长；理想气体状态方程与能量均分定理</td><td>Elliott Hershel Lieb<br><a href="#week5-1-Lieb">课后阅读</a> / <a href="#week5-1-Lieb-story" data-sm-project>全屏投影</a></td></tr>
+<tr data-sm-release="2026-10-14"><td>第 5 周周三，10 月 14 日</td><td>理想气体熵、不可分辨性与 Gibbs 佯谬；混合熵；巨正则理想气体、化学势与粒子数涨落；Maxwell–Boltzmann 速率分布</td><td>James Clerk Maxwell<br><a href="#week5-2-Maxwell">课后阅读</a> / <a href="#week5-2-Maxwell-story" data-sm-project>全屏投影</a></td></tr>
+<tr data-sm-release="2026-10-19"><td>第 6 周周一，10 月 19 日</td><td><div class="sm-course-current">Maxwell 的分布推导；分子运动论与气体压强；双原子气体的经典平动、转动、振动与热容；自由度冻结问题</div></td><td><div class="sm-person-current">Paul Ehrenfest<br>Tatyana Afanasyeva-Ehrenfest<br><a href="#week6-1-Ehrenfest-Afanasyeva-Ehrenfest">课后阅读</a> / <a href="#week6-1-Ehrenfest-Afanasyeva-Ehrenfest-story" data-sm-project>全屏投影</a></div></td></tr>
+<tr data-sm-release="2026-10-21"><td>第 6 周周三，10 月 21 日</td><td><div class="sm-course-current">相互作用气体与维里展开；Lennard–Jones 势、硬核与吸引势；Mayer \(f\) 函数、第二维里系数与 van der Waals 状态方程</div></td><td><div class="sm-person-current">Johannes Diderik van der Waals<br><a href="#week7-2-van-der-Waals">课后阅读</a> / <a href="#week7-2-van-der-Waals-story" data-sm-project>全屏投影</a></div></td></tr>
+<tr data-sm-release="2026-10-26"><td>第 7 周周一，10 月 26 日</td><td><div class="sm-course-current">Debye–Hückel 屏蔽与 Debye 长度；量子态计数、求和变积分；三维非相对论与相对论粒子的态密度</div><div class="sm-course-previous" hidden style="display:none">调整前：簇展开、逸度与巨正则处理；由簇积分得到维里系数</div><div class="sm-course-previous" hidden style="display:none">原计划：相互作用气体导论；Mayer 函数与维里展开</div></td><td><div class="sm-person-current">Paul Adrien Maurice Dirac<br><a href="#week10-1-Dirac">课后阅读</a> / <a href="#week10-1-Dirac-story" data-sm-project>全屏投影</a></div><div class="sm-person-previous" hidden style="display:none">原计划：杨振宁、李政道</div></td></tr>
+<tr data-sm-release="2026-10-28"><td>第 7 周周三，10 月 28 日</td><td><div class="sm-course-current">一、二、三维态密度；光子气与 Planck 分布；Wien 位移律与 Stefan–Boltzmann 定律；光子气热力学；Rayleigh–Jeans 定律与紫外灾难；太阳光谱与宇宙微波背景</div><div class="sm-course-previous">调整前：Debye 屏蔽；量子气体、态密度与求和变积分；非相对论与相对论粒子的态密度</div><div class="sm-course-previous">原计划：van der Waals 修正与真实气体状态方程</div></td><td><div class="sm-person-current">Max Karl Ernst Ludwig Planck<br><a href="#week10-2-Planck">课后阅读</a> / <a href="#week10-2-Planck-story" data-sm-project>全屏投影</a></div><div class="sm-person-previous">原计划：Paul Adrien Maurice Dirac</div></td></tr>
 <tr data-sm-release="2026-11-02" hidden><td>第 8 周周一，11 月 2 日</td><td><div class="sm-course-current">声子与 Debye 模型；固体热容的高温极限与低温 \(T^3\) 定律</div><div class="sm-course-previous">调整前：光子气与 Planck 分布；黑体辐射与 Stefan–Boltzmann 定律</div><div class="sm-course-previous">原计划：簇展开、逸度与巨正则处理</div></td><td><div class="sm-person-current">Peter Joseph William Debye<br><a href="#week8-2-Debye">课后阅读</a> / <a href="#week8-2-Debye-story" data-sm-project>全屏投影</a></div><div class="sm-person-previous">原计划：Max Karl Ernst Ludwig Planck</div></td></tr>
 <tr data-sm-release="2026-11-04" hidden><td>第 8 周周三，11 月 4 日</td><td><div class="sm-course-current">双原子气体的量子理论：转动、振动能级与自由度冻结；热容随温度的变化；前半学期小结</div><div class="sm-course-previous">调整前：Debye 模型、声子与固体低温热容</div><div class="sm-course-previous">原计划：Debye 屏蔽</div></td><td><div class="sm-person-current">Albert Einstein<br><a href="#week9-2-Einstein">课后阅读</a> / <a href="#week9-2-Einstein-story" data-sm-project>全屏投影</a></div><div class="sm-person-previous">原计划：Peter Joseph William Debye</div></td></tr>
 <tr data-sm-release="2026-11-09" hidden><td>第 9 周周一，11 月 9 日</td><td>期中考试</td><td></td></tr>
 <tr data-sm-release="2026-11-11" hidden><td>第 9 周周三，11 月 11 日</td><td><div class="sm-course-current">期中讲评；理想 Bose 气体与 Bose–Einstein 分布；高温经典极限</div><div class="sm-course-previous">调整前：转动与振动自由度、冻结效应与双原子分子热容</div><div class="sm-course-previous">原计划：量子气体、态密度与求和变积分</div></td><td><div class="sm-person-current">Satyendra Nath Bose<br><a href="#week12-1-Bose">课后阅读</a> / <a href="#week12-1-Bose-story" data-sm-project>全屏投影</a></div><div class="sm-person-previous">原计划：Albert Einstein</div></td></tr>
 <tr data-sm-release="2026-11-16" hidden><td>第 10 周周一，11 月 16 日</td><td><div class="sm-course-current">Bose–Einstein 凝聚；临界温度、凝聚比例与热容；凝聚内容结束后介绍 Bogoliubov 的超流与准粒子工作</div><div class="sm-course-previous">调整前：理想 Bose 气体与 Bose–Einstein 分布；高温经典极限</div><div class="sm-course-previous">原计划：非相对论与相对论粒子的态密度</div></td><td><div class="sm-person-current">Nikolay Nikolayevich Bogoliubov<br><a href="#week10-2-Bogoliubov">课后阅读</a> / <a href="#week10-2-Bogoliubov-story" data-sm-project>全屏投影</a></div><div class="sm-person-previous">原计划：Satyendra Nath Bose</div></td></tr>
-<tr data-sm-release="2026-11-18" hidden><td>第 10 周周三，11 月 18 日</td><td><div class="sm-course-current">Fermi–Dirac 分布与理想 Fermi 气体；零温极限与费米能</div><div class="sm-course-previous">调整前：Bose–Einstein 凝聚；临界温度、凝聚比例与热容；凝聚内容结束后介绍 Bogoliubov 的超流与准粒子工作</div><div class="sm-course-previous">原计划：光子气、黑体辐射与 Stefan–Boltzmann 定律</div></td><td><div class="sm-person-current">Enrico Fermi<br><a href="#week12-2-Fermi">课后阅读</a> / <a href="#week12-2-Fermi-story" data-sm-project>全屏投影</a></div><div class="sm-person-previous">原计划：Nikolay Nikolayevich Bogoliubov</div></td></tr>
+<tr data-sm-release="2026-11-18" hidden><td>第 10 周周三，11 月 18 日</td><td><div class="sm-course-current">Fermi–Dirac 分布与理想 Fermi 气体；零温极限、费米能与费米面</div><div class="sm-course-previous">调整前：Bose–Einstein 凝聚；临界温度、凝聚比例与热容；凝聚内容结束后介绍 Bogoliubov 的超流与准粒子工作</div><div class="sm-course-previous">原计划：光子气、黑体辐射与 Stefan–Boltzmann 定律</div></td><td><div class="sm-person-current">Enrico Fermi<br><a href="#week12-2-Fermi">课后阅读</a> / <a href="#week12-2-Fermi-story" data-sm-project>全屏投影</a></div><div class="sm-person-previous">原计划：Nikolay Nikolayevich Bogoliubov</div></td></tr>
 <tr data-sm-release="2026-11-23" hidden><td>第 11 周周一，11 月 23 日</td><td><div class="sm-course-current">低温 Fermi 气体、Sommerfeld 展开、热容与简并压</div><div class="sm-course-previous">调整前：Fermi–Dirac 分布与理想 Fermi 气体；零温极限与费米能</div><div class="sm-course-previous">原计划：Debye 模型、声子与固体低温热容</div></td><td><div class="sm-person-current">Philip Warren Anderson<br><a href="#week13-2-Anderson">课后阅读</a> / <a href="#week13-2-Anderson-story" data-sm-project>全屏投影</a></div><div class="sm-person-previous">原计划：Enrico Fermi</div></td></tr>
 <tr data-sm-release="2026-11-25" hidden><td>第 11 周周三，11 月 25 日</td><td><div class="sm-course-current">白矮星、Chandrasekhar 极限与 Pauli 顺磁性</div><div class="sm-course-previous">调整前：低温 Fermi 气体、热容与简并压</div><div class="sm-course-previous">原计划：转动与振动自由度、冻结效应、双原子分子热容</div></td><td><div class="sm-person-current">Wolfgang Ernst Friedrich Pauli<br><a href="#week9-2-Pauli">课后阅读</a> / <a href="#week9-2-Pauli-story" data-sm-project>全屏投影</a></div><div class="sm-person-previous">原计划：Philip Warren Anderson</div></td></tr>
 <tr data-sm-release="2026-11-30" hidden><td>第 12 周周一，11 月 30 日</td><td><div class="sm-course-current">Landau 能级、轨道抗磁性与磁场中的电子</div><div class="sm-course-previous">调整前：白矮星、Chandrasekhar 极限与 Pauli 顺磁性</div><div class="sm-course-previous">原计划：理想 Bose 气体、Bose–Einstein 分布与凝聚</div></td><td><div class="sm-person-current">Lev Davidovich Landau<br><a href="#week13-1-Landau">课后阅读</a> / <a href="#week13-1-Landau-story" data-sm-project>全屏投影</a></div><div class="sm-person-previous">原计划：Wolfgang Ernst Friedrich Pauli</div></td></tr>
-<tr data-sm-release="2026-12-02" hidden><td>第 12 周周三，12 月 2 日</td><td><div class="sm-course-current">Carnot 循环、第二定律与热力学势；Maxwell 关系与第三定律</div><div class="sm-course-previous">调整前：Landau 能级、轨道抗磁性与磁场中的电子</div><div class="sm-course-previous">原计划：Fermi–Dirac 分布与理想 Fermi 气体</div></td><td><div class="sm-person-current">Nicolas Léonard Sadi Carnot<br><a href="#week14-2-Carnot">课后阅读</a> / <a href="#week14-2-Carnot-story" data-sm-project>全屏投影</a></div><div class="sm-person-previous">原计划：Lev Davidovich Landau</div></td></tr>
+<tr data-sm-release="2026-12-02" hidden><td>第 12 周周三，12 月 2 日</td><td><div class="sm-course-current">热力学第零、第一与第二定律；Carnot 循环与热力学温标；热力学势、Maxwell 关系与第三定律</div><div class="sm-course-previous">调整前：Landau 能级、轨道抗磁性与磁场中的电子</div><div class="sm-course-previous">原计划：Fermi–Dirac 分布与理想 Fermi 气体</div></td><td><div class="sm-person-current">Nicolas Léonard Sadi Carnot<br><a href="#week14-2-Carnot">课后阅读</a> / <a href="#week14-2-Carnot-story" data-sm-project>全屏投影</a></div><div class="sm-person-previous">原计划：Lev Davidovich Landau</div></td></tr>
 <tr data-sm-release="2026-12-07" hidden><td>第 13 周周一，12 月 7 日</td><td><div class="sm-course-current">液–气相平衡、Maxwell 等面积构造、Clapeyron 关系与临界点</div><div class="sm-course-previous">调整前：Carnot 循环、第二定律与热力学势</div><div class="sm-course-previous">原计划：低温 Fermi 气体、费米能、热容与简并压</div></td><td><div class="sm-person-current">Michael Ellis Fisher<br><a href="#week7-1-Fisher">课后阅读</a> / <a href="#week7-1-Fisher-story" data-sm-project>全屏投影</a></div><div class="sm-person-previous">原计划：Nicolas Léonard Sadi Carnot</div></td></tr>
-<tr data-sm-release="2026-12-09" hidden><td>第 13 周周三，12 月 9 日</td><td><div class="sm-course-current">相变与临界现象；Ising 模型与平均场理论</div><div class="sm-course-previous">调整前：液–气相平衡、Clapeyron 关系与热力学应用</div><div class="sm-course-previous">原计划：白矮星、Chandrasekhar 极限与 Pauli 顺磁性</div></td><td><div class="sm-person-current">Giorgio Parisi<br><a href="#week15-1-Parisi">课后阅读</a> / <a href="#week15-1-Parisi-story" data-sm-project>全屏投影</a></div><div class="sm-person-previous">原计划：Michael Ellis Fisher</div></td></tr>
+<tr data-sm-release="2026-12-09" hidden><td>第 13 周周三，12 月 9 日</td><td><div class="sm-course-current">Ising 模型与平均场理论；临界指数与平均场近似的适用范围</div><div class="sm-course-previous">调整前：液–气相平衡、Clapeyron 关系与热力学应用</div><div class="sm-course-previous">原计划：白矮星、Chandrasekhar 极限与 Pauli 顺磁性</div></td><td><div class="sm-person-current">Giorgio Parisi<br><a href="#week15-1-Parisi">课后阅读</a> / <a href="#week15-1-Parisi-story" data-sm-project>全屏投影</a></div><div class="sm-person-previous">原计划：Michael Ellis Fisher</div></td></tr>
 <tr data-sm-release="2026-12-14" hidden><td>第 14 周周一，12 月 14 日</td><td><div class="sm-course-current">补充：一维近邻 Ising 模型的转移矩阵解与有限温度下无相变</div><div class="sm-course-previous">调整前：相变与临界现象；Ising 模型与平均场理论</div><div class="sm-course-previous">原计划：Landau 能级、轨道抗磁性与磁场中的电子</div></td><td><div class="sm-person-current">Rodney James Baxter<br><a href="#week6-1-Baxter">课后阅读</a> / <a href="#week6-1-Baxter-story" data-sm-project>全屏投影</a></div><div class="sm-person-previous">原计划：Giorgio Parisi</div></td></tr>
 <tr data-sm-release="2026-12-16" hidden><td>第 14 周周三，12 月 16 日</td><td><div class="sm-course-current">补充：二维 Ising 模型；Peierls 论证、Kramers-Wannier 对偶与临界温度</div><div class="sm-course-previous">调整前：Landau 理论、序参量、临界指数与普适性</div><div class="sm-course-previous">原计划：Carnot 循环、第二定律与热力学势</div></td><td><div class="sm-person-current">Lars Onsager<br><a href="#week14-1-Onsager">课后阅读</a> / <a href="#week14-1-Onsager-story" data-sm-project>全屏投影</a></div><div class="sm-person-previous">原计划：Leo Philip Kadanoff</div></td></tr>
-<tr data-sm-release="2026-12-21" hidden><td>第 15 周周一，12 月 21 日</td><td><div class="sm-course-current">Landau 理论、序参量、临界指数与普适性</div><div class="sm-course-previous">调整前：补充：一维近邻 Ising 模型的转移矩阵解与有限温度下无相变</div><div class="sm-course-previous">原计划：相平衡、Clapeyron 关系与热力学应用</div></td><td><div class="sm-person-current">Leo Philip Kadanoff<br><a href="#week15-2-Kadanoff">课后阅读</a> / <a href="#week15-2-Kadanoff-story" data-sm-project>全屏投影</a></div><div class="sm-person-previous">原计划：Rodney James Baxter</div></td></tr>
+<tr data-sm-release="2026-12-21" hidden><td>第 15 周周一，12 月 21 日</td><td><div class="sm-course-current">Landau 理论与序参量；一级、二级相变与临界指数；普适性</div><div class="sm-course-previous">调整前：补充：一维近邻 Ising 模型的转移矩阵解与有限温度下无相变</div><div class="sm-course-previous">原计划：相平衡、Clapeyron 关系与热力学应用</div></td><td><div class="sm-person-current">Leo Philip Kadanoff<br><a href="#week15-2-Kadanoff">课后阅读</a> / <a href="#week15-2-Kadanoff-story" data-sm-project>全屏投影</a></div><div class="sm-person-previous">原计划：Rodney James Baxter</div></td></tr>
 <tr data-sm-release="2026-12-23" hidden><td>第 15 周周三，12 月 23 日</td><td><div class="sm-course-current">相变与配分函数的解析性；热力学极限与 Lee–Yang 零点</div><div class="sm-course-previous">调整前：补充：二维 Ising 模型；Peierls 论证、Kramers-Wannier 对偶与临界温度</div><div class="sm-course-previous">原计划：相变、临界现象；Ising 模型与平均场理论</div></td><td><div class="sm-person-current">杨振宁、李政道<br><a href="#week8-1-Yang-Lee">课后阅读</a> / <a href="#week8-1-Yang-Lee-story" data-sm-project>全屏投影</a></div><div class="sm-person-previous">原计划：Lars Onsager</div></td></tr>
 <tr data-sm-release="2026-12-28" hidden><td>第 16 周周一，12 月 28 日</td><td><div class="sm-course-current">补充：Landau-Ginzburg 理论、关联长度与临界涨落</div><div class="sm-course-previous">原计划：Landau 理论、序参量、临界指数与普适性</div></td><td><div class="sm-person-current">Kenneth Geddes Wilson<br><a href="#week16-1-Wilson">课后阅读</a> / <a href="#week16-1-Wilson-story" data-sm-project>全屏投影</a></div></td></tr>
 <tr data-sm-release="2026-12-30" hidden><td>第 16 周周三，12 月 30 日</td><td><div class="sm-course-current">课程总结与期末复习；综合题、答疑与机动补讲</div><div class="sm-course-previous">原计划：拓展专题</div></td><td><div class="sm-person-current">Vadim Lvovich Berezinskii<br>John Michael Kosterlitz<br>David James Thouless<br><a href="#week16-2-Berezinskii-Kosterlitz-Thouless">课后阅读</a> / <a href="#week16-2-Berezinskii-Kosterlitz-Thouless-story" data-sm-project>全屏投影</a></div></td></tr>
@@ -6026,34 +6029,34 @@ window.SM_STORY_ANCHOR_ALIASES = {"#week3-1-Pockels": "#week3-1-Hopfield-Hinton"
 <script id="sm-dos-class-window">
 (function () {
  'use strict';
- const start=Date.parse('2026-10-27T00:00:00+08:00');
- const end=Date.parse('2026-10-29T00:00:00+08:00');
- const active=()=>Date.now()>=start&&Date.now()<end;
- window.smDosClassActive=active;
- const initial=active();
- // Reload at both boundaries so an already-open reading/projector follows the same window.
- const refresh=()=>{if(active()!==initial)location.reload();};
- [start,end].forEach(time=>{if(time>Date.now())setTimeout(refresh,time-Date.now()+25);});
- document.addEventListener('visibilitychange',()=>{if(!document.hidden)refresh();});
- if(!initial)return;
+ // Classroom supplements remain available with the Planck reading.
  const reading=document.getElementById('week10-2-Planck');
  if(!reading)return;
  const figures=[
   {src:'teaching/2026F_SM/figures/one-dimensional-dos.svg',title:'一维态密度',alt:'一维自由粒子：离散允许态与态密度；两个等宽黄色窗口分别有 14、6 个态',width:2592,height:1536},
   {src:'teaching/2026F_SM/figures/two-dimensional-dos.svg',title:'二维态密度',alt:'二维自由粒子：动量圆环与态密度；两个等宽黄色窗口各有 40 个态',width:2673,height:1561},
   {src:'teaching/2026F_SM/figures/three-dimensional-dos.svg',title:'三维态密度',alt:'三维自由粒子：动量球壳与态密度；两个等宽黄色窗口分别有 90、156 个态',width:2544,height:1561},
-  {src:'teaching/2026F_SM/figures/planck-cmb-comparison.svg',title:'Planck 分布与宇宙微波背景辐射',alt:'Planck 能量谱的低频和高频极限、峰值表达式，与 NASA 宇宙微波背景辐射实验图对照',width:3017,height:1268,source:'https://asd.gsfc.nasa.gov/archive/arcade/cmb_intensity.html'}
+  {src:'teaching/2026F_SM/figures/planck-cmb-comparison.svg',title:'Planck 分布与宇宙微波背景辐射',alt:'Planck 能量谱的低频和高频极限、峰值表达式，与 NASA 宇宙微波背景辐射实验图对照',width:3017,height:1268,source:'https://asd.gsfc.nasa.gov/archive/arcade/cmb_intensity.html'},
+  {src:'teaching/2026F_SM/figures/blackbody-temperatures.png',title:'不同温度的黑体辐射谱',alt:'3000 至 6000 K 黑体的波长谱，温度升高时峰值向短波长移动',width:1444,height:828,source:'https://www.cdeep.iitb.ac.in/slides/S20/EN301/EN301-L5.pdf#page=21',sourceLabel:'同图出处：C. S. Solanki，IIT Bombay，EN 301 Lecture 05，第 21 页',sourceNote:'课程：Introduction to Renewable Energy Technologies。原课件该页注明图片参考 khadley.com；原始制图者尚未确认。'},
+  {src:'teaching/2026F_SM/figures/solar-blackbody-comparison.svg',title:'太阳光谱与黑体辐射',alt:'太阳 ASTM E490 参考谱与 5800 K 黑体波长谱对比；两者归一到相同总辐照度',width:1913,height:1201,source:'https://www.nlr.gov/grid/solar-resource/spectra-astm-e490',sourceLabel:'太阳参考光谱：ASTM E490（AM0，NLR）',dataSource:'https://github.com/pytroll/pyspectral/blob/main/pyspectral/data/e490_00a.dat',dataSourceLabel:'作图数据镜像：pyspectral',sourceNote:'AM0 为大气层外参考谱，由观测与模型合成。黑体曲线按 5800 K 的 Planck 谱计算，总辐照度归一为 1366.1 W/m²。'}
  ];
  window.smDosClassFigures=figures;
  const section=document.createElement('section');section.id='sm-dos-class-reading';
- figures.forEach(item=>{
-  const heading=document.createElement('h3');heading.textContent='课堂补充：'+item.title;
+ const title=document.createElement('h3');title.textContent='课堂补充';section.append(title);
+ figures.forEach((item,index)=>{
+  const heading=document.createElement('h4');heading.textContent=String(index+1)+'. '+item.title;
   const gallery=document.createElement('div');gallery.className='sm-reading-gallery';
   const figure=document.createElement('figure');
   const img=document.createElement('img');img.dataset.src=item.src;img.alt=item.alt;
   img.width=item.width;img.height=item.height;img.decoding='async';
   figure.append(img);
-  if(item.source){const caption=document.createElement('figcaption');const link=document.createElement('a');link.href=item.source;link.textContent='实验图来源：NASA / GSFC';link.target='_blank';link.rel='noopener noreferrer';caption.append(link);figure.append(caption);}
+  if(item.source){
+   const caption=document.createElement('figcaption');const link=document.createElement('a');
+   link.href=item.source;link.textContent=item.sourceLabel||'实验图来源：NASA / GSFC';link.target='_blank';link.rel='noopener noreferrer';caption.append(link);
+   if(item.dataSource){const dataLink=document.createElement('a');dataLink.href=item.dataSource;dataLink.textContent=item.dataSourceLabel||'作图数据';dataLink.target='_blank';dataLink.rel='noopener noreferrer';caption.append(document.createTextNode(' · '),dataLink);}
+   if(item.sourceNote)caption.append(document.createElement('br'),document.createTextNode(item.sourceNote));
+   figure.append(caption);
+  }
   gallery.append(figure);section.append(heading,gallery);
  });
  const refs=Array.from(reading.children).find(node=>node.textContent==='资料与进一步阅读');
