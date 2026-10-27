@@ -6041,7 +6041,8 @@ window.SM_STORY_ANCHOR_ALIASES = {"#week3-1-Pockels": "#week3-1-Hopfield-Hinton"
  const figures=[
   {src:'teaching/2026F_SM/figures/one-dimensional-dos.svg',title:'一维态密度',alt:'一维自由粒子：离散允许态与态密度；两个等宽黄色窗口分别有 14、6 个态',width:2592,height:1536},
   {src:'teaching/2026F_SM/figures/two-dimensional-dos.svg',title:'二维态密度',alt:'二维自由粒子：动量圆环与态密度；两个等宽黄色窗口各有 40 个态',width:2673,height:1561},
-  {src:'teaching/2026F_SM/figures/three-dimensional-dos.svg',title:'三维态密度',alt:'三维自由粒子：动量球壳与态密度；两个等宽黄色窗口分别有 90、156 个态',width:2544,height:1561}
+  {src:'teaching/2026F_SM/figures/three-dimensional-dos.svg',title:'三维态密度',alt:'三维自由粒子：动量球壳与态密度；两个等宽黄色窗口分别有 90、156 个态',width:2544,height:1561},
+  {src:'teaching/2026F_SM/figures/planck-cmb-comparison.svg',title:'Planck 分布与宇宙微波背景辐射',alt:'Planck 能量谱的低频和高频极限、峰值表达式，与 NASA 宇宙微波背景辐射实验图对照',width:3017,height:1268,source:'https://asd.gsfc.nasa.gov/archive/arcade/cmb_intensity.html'}
  ];
  window.smDosClassFigures=figures;
  const section=document.createElement('section');section.id='sm-dos-class-reading';
@@ -6051,7 +6052,9 @@ window.SM_STORY_ANCHOR_ALIASES = {"#week3-1-Pockels": "#week3-1-Hopfield-Hinton"
   const figure=document.createElement('figure');
   const img=document.createElement('img');img.dataset.src=item.src;img.alt=item.alt;
   img.width=item.width;img.height=item.height;img.decoding='async';
-  figure.append(img);gallery.append(figure);section.append(heading,gallery);
+  figure.append(img);
+  if(item.source){const caption=document.createElement('figcaption');const link=document.createElement('a');link.href=item.source;link.textContent='实验图来源：NASA / GSFC';link.target='_blank';link.rel='noopener noreferrer';caption.append(link);figure.append(caption);}
+  gallery.append(figure);section.append(heading,gallery);
  });
  const refs=Array.from(reading.children).find(node=>node.textContent==='资料与进一步阅读');
  if(refs?.nextElementSibling)refs.nextElementSibling.after(section);else reading.append(section);
