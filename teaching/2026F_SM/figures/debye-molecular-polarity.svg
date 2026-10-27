@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="560" viewBox="0 0 760 560" role="img" aria-labelledby="title desc">
+<title id="title">分子对称性与永久偶极矩</title><desc id="desc">直线二氧化碳中两侧的键极性相消，弯曲水分子的永久偶极不为零。电荷和尺寸为定性示意。</desc>
+<rect width="760" height="560" fill="white"/>
+<g font-family="Arial, PingFang SC, sans-serif" text-anchor="middle" fill="#222">
+<text x="380" y="44" font-size="30" fill="#226e93">CO₂：直线形</text>
+<g stroke="#777" stroke-width="7"><path d="M230 124H345M415 124H530"/></g>
+<circle cx="200" cy="124" r="38" fill="#bc5548"/><circle cx="380" cy="124" r="33" fill="#666"/><circle cx="560" cy="124" r="38" fill="#bc5548"/>
+<g fill="white" font-size="30"><text x="200" y="135">O</text><text x="380" y="135">C</text><text x="560" y="135">O</text></g>
+<g font-size="26"><text x="200" y="194">δ−</text><text x="380" y="194">δ+</text><text x="560" y="194">δ−</text></g>
+<text x="380" y="239" font-size="30">两侧贡献相消，p = 0</text>
+<path d="M90 270H670" stroke="#ddd"/>
+<text x="380" y="317" font-size="30" fill="#226e93">H₂O：弯曲形</text>
+<g stroke="#777" stroke-width="7"><path d="M350 381L276 438M410 381L484 438"/></g>
+<circle cx="380" cy="359" r="38" fill="#bc5548"/><circle cx="253" cy="452" r="27" fill="#ddd"/><circle cx="507" cy="452" r="27" fill="#ddd"/>
+<text x="380" y="370" font-size="30" fill="white">O</text><text x="253" y="462" font-size="28">H</text><text x="507" y="462" font-size="28">H</text>
+<g font-size="25"><text x="446" y="362">δ−</text><text x="210" y="428">δ+</text><text x="550" y="428">δ+</text></g>
+<text x="380" y="532" font-size="30">两侧贡献未完全相消，p ≠ 0</text>
+</g></svg>

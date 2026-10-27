@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+<title id="title">粉末散射与衍射环</title><desc id="desc">随机取向的微晶有不同朝向，满足布拉格条件的晶粒使散射方向形成圆锥；用平面探测器垂直截取便出现衍射环。这不是历史实验照片。</desc>
+<rect width="900" height="560" fill="white"/>
+<g font-family="Arial, PingFang SC, sans-serif" fill="#222" text-anchor="middle">
+<text x="245" y="58" font-size="29" fill="#226e93">散射方向形成圆锥</text><text x="710" y="58" font-size="29" fill="#226e93">探测器正面</text>
+<path d="M73 272H450" stroke="#888" stroke-width="3" stroke-dasharray="9 7"/>
+<path d="M73 272H195" stroke="#226e93" stroke-width="8"/><path d="M183 259L203 272L183 285" fill="none" stroke="#226e93" stroke-width="6"/>
+<path d="M235 272L450 151V393Z" fill="#eef6fa" stroke="#226e93" stroke-width="3"/>
+<ellipse cx="450" cy="272" rx="32" ry="121" fill="#eef6fa" stroke="#226e93" stroke-width="3"/>
+<path d="M235 272L450 205M235 272L450 339" stroke="#72a7bf" stroke-width="3"/>
+<g fill="#666"><rect x="207" y="243" width="18" height="15" transform="rotate(25 216 250)"/><rect x="229" y="257" width="18" height="15" transform="rotate(-18 238 264)"/><rect x="211" y="280" width="18" height="15" transform="rotate(58 220 287)"/><rect x="240" y="285" width="18" height="15" transform="rotate(13 249 292)"/></g>
+<text x="122" y="327" font-size="26">X 射线</text><text x="228" y="373" font-size="26">微晶粉末</text>
+<rect x="539" y="104" width="320" height="320" fill="#fbfbfb" stroke="#bbb" stroke-width="2"/>
+<g fill="none" stroke="#226e93" stroke-width="4"><circle cx="699" cy="264" r="56"/><circle cx="699" cy="264" r="102"/><circle cx="699" cy="264" r="143"/></g><circle cx="699" cy="264" r="7" fill="#777"/>
+<text x="699" y="467" font-size="26">不同散射角对应不同环半径</text>
+<text x="450" y="530" font-size="27" fill="#555">随机取向微晶中，总有一部分满足 Bragg 条件</text>
+</g></svg>
