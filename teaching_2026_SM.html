@@ -4,13 +4,13 @@
 <head>
 
 <meta charset="utf-8">
-<!-- 教师开关：课表、人物正文和投影展示至 11 月 4 日；隐藏表格中的灰色旧安排。 -->
+<!-- 教师开关：课表、人物正文和投影展示至 11 月 11 日；隐藏表格中的灰色旧安排。 -->
 <script id="sm-release-config">
 const SHOW_ALL_CONTENT = true;
 // 固定展示范围；故事日期键沿用原材料 ID，与当前课表日期分别管理。
-const SCHEDULE_THROUGH = "2026-11-04";
-const STORY_THROUGH = "2026-11-04";
-const VISIBLE_STORY_DATES = ["09-16", "09-21", "09-23", "09-28", "09-30", "10-12", "10-14", "11-25", "10-28", "11-16", "11-18", "11-04", "11-23"];
+const SCHEDULE_THROUGH = "2026-11-11";
+const STORY_THROUGH = "2026-11-11";
+const VISIBLE_STORY_DATES = ["09-16", "09-21", "09-23", "09-28", "09-30", "10-12", "10-14", "11-25", "10-28", "11-16", "11-18", "11-04", "11-23", "11-30"];
 const HIDDEN_STORY_DATES = [];
 const EARLY_STORY_DATES = [];
 window.SM_RELEASE_CONFIG = { scheduleThrough: SCHEDULE_THROUGH, storyThrough: STORY_THROUGH, earlyStoryDates: EARLY_STORY_DATES, showAll: SHOW_ALL_CONTENT, visibleStoryDates: VISIBLE_STORY_DATES, hiddenStoryDates: HIDDEN_STORY_DATES, timeZone: 'Asia/Shanghai' };
@@ -1007,6 +1007,8 @@ html.sm-wide-screen {background:#151515;overflow:hidden;}
 .sm-page-biography .sm-page-media[data-count="1"] img {height:320px;}
 .sm-page-media[data-count="2"] img,.sm-page-media[data-count="3"] img {height:260px;}
 .sm-page-media figcaption {font-size:13px;line-height:1.4;margin:8px 0 0;overflow-wrap:anywhere;}
+.sm-wide-screen #sm-story-11-30 .sm-page-bose-postcard .sm-page-media img {width:auto;max-width:100%;height:400px;margin:0 auto;}
+#sm-story-11-30 .sm-page-bose-postcard .sm-page-media figcaption {text-align:center;}
 /* Wide screenshots get their own slide so the original text remains legible. */
 .sm-project .sm-story-page.sm-page-wide-image {grid-template-columns:minmax(0,1fr);gap:24px;}
 #sm-story-09-21 .sm-page-wide-image .sm-story-lead {font-weight:400;}
@@ -1886,7 +1888,7 @@ Section 6. The Theory of Gravitation
 
 <!-- BEGIN STATMECH STORIES 2026 -->
 <section id="sm-stories">
-<p id="sm-schedule-note">课表、人物故事与投影当前开放至 2026 年 11 月 4 日。<span class="sm-schedule-mobile-hint">手机上可左右滑动查看完整表格。</span></p>
+<p id="sm-schedule-note">课表、人物故事与投影当前开放至 2026 年 11 月 11 日。<span class="sm-schedule-mobile-hint">手机上可左右滑动查看完整表格。</span></p>
 <span id="sm-story-index" hidden></span>
 <table id="sm-course-schedule"><colgroup><col style="width:24%"><col style="width:52%"><col style="width:24%"></colgroup><thead><tr><th scope="col">周次与日期</th><th scope="col">上课内容</th><th scope="col">人物与材料</th></tr></thead><tbody>
 <tr data-sm-release="2026-09-14"><td>第 1 周周一，9 月 14 日</td><td><a href="teaching/2026F_SM/intro.pdf" target="_blank" rel="noopener noreferrer">统计力学导论</a></td><td></td></tr>
@@ -1906,7 +1908,7 @@ Section 6. The Theory of Gravitation
 <tr data-sm-release="2026-11-02"><td>第 8 周周一，11 月 2 日</td><td><div class="sm-course-current">Einstein 与 Debye 模型；声子态密度与 Debye 温度；固体热容的高温经典极限与低温 \(T^3\) 定律</div><div class="sm-course-previous">调整前：光子气与 Planck 分布；黑体辐射与 Stefan–Boltzmann 定律</div><div class="sm-course-previous">原计划：簇展开、逸度与巨正则处理</div></td><td><div class="sm-person-current">Peter Joseph William Debye<br><a href="#week8-2-Debye">课后阅读</a> / <a href="#week8-2-Debye-story" data-sm-project>全屏投影</a></div><div class="sm-person-previous">原计划：Max Karl Ernst Ludwig Planck</div></td></tr>
 <tr data-sm-release="2026-11-04"><td>第 8 周周三，11 月 4 日</td><td><div class="sm-course-current">双原子气体的量子转动与振动；自由度冻结</div><div class="sm-course-previous">调整前：Debye 模型、声子与固体低温热容</div><div class="sm-course-previous">原计划：Debye 屏蔽</div></td><td><div class="sm-person-current">Albert Einstein<br><a href="#week9-2-Einstein">课后阅读</a> / <a href="#week9-2-Einstein-story" data-sm-project>全屏投影</a></div><div class="sm-person-previous">原计划：Peter Joseph William Debye</div></td></tr>
 <tr data-sm-release="2026-11-09"><td>第 9 周周一，11 月 9 日</td><td>期中考试</td><td></td></tr>
-<tr data-sm-release="2026-11-11"><td>第 9 周周三，11 月 11 日</td><td><div class="sm-course-current">期中讲评；理想 Bose 气体与 Bose–Einstein 分布；高温经典极限</div><div class="sm-course-previous">调整前：转动与振动自由度、冻结效应与双原子分子热容</div><div class="sm-course-previous">原计划：量子气体、态密度与求和变积分</div></td><td><div class="sm-person-current">Satyendra Nath Bose<br><a href="#week12-1-Bose">课后阅读</a> / <a href="#week12-1-Bose-story" data-sm-project>全屏投影</a></div><div class="sm-person-previous">原计划：Albert Einstein</div></td></tr>
+<tr data-sm-release="2026-11-11"><td>第 9 周周三，11 月 11 日</td><td><div class="sm-course-current">全同粒子的交换对称性与自旋–统计关系；巨配分函数、逸度与 Bose–Einstein 分布；理想 Bose 气体的粒子数、内能与压强</div><div class="sm-course-previous">调整前：转动与振动自由度、冻结效应与双原子分子热容</div><div class="sm-course-previous">原计划：量子气体、态密度与求和变积分</div></td><td><div class="sm-person-current">Satyendra Nath Bose<br><a href="#week12-1-Bose">课后阅读</a> / <a href="#week12-1-Bose-story" data-sm-project>全屏投影</a></div><div class="sm-person-previous">原计划：Albert Einstein</div></td></tr>
 <tr data-sm-release="2026-11-16"><td>第 10 周周一，11 月 16 日</td><td><div class="sm-course-current">Bose–Einstein 凝聚；临界温度、凝聚比例与热容</div><div class="sm-course-previous">调整前：理想 Bose 气体与 Bose–Einstein 分布；高温经典极限</div><div class="sm-course-previous">原计划：非相对论与相对论粒子的态密度</div></td><td><div class="sm-person-current">Nikolay Nikolayevich Bogoliubov<br><a href="#week10-2-Bogoliubov">课后阅读</a> / <a href="#week10-2-Bogoliubov-story" data-sm-project>全屏投影</a></div><div class="sm-person-previous">原计划：Satyendra Nath Bose</div></td></tr>
 <tr data-sm-release="2026-11-18"><td>第 10 周周三，11 月 18 日</td><td><div class="sm-course-current">Fermi–Dirac 分布与理想 Fermi 气体；零温极限、费米能与费米面</div><div class="sm-course-previous">调整前：Bose–Einstein 凝聚；临界温度、凝聚比例与热容；凝聚内容结束后介绍 Bogoliubov 的超流与准粒子工作</div><div class="sm-course-previous">原计划：光子气、黑体辐射与 Stefan–Boltzmann 定律</div></td><td><div class="sm-person-current">Enrico Fermi<br><a href="#week12-2-Fermi">课后阅读</a> / <a href="#week12-2-Fermi-story" data-sm-project>全屏投影</a></div><div class="sm-person-previous">原计划：Nikolay Nikolayevich Bogoliubov</div></td></tr>
 <tr data-sm-release="2026-11-23"><td>第 11 周周一，11 月 23 日</td><td><div class="sm-course-current">低温 Fermi 气体、Sommerfeld 展开、热容与简并压</div><div class="sm-course-previous">调整前：Fermi–Dirac 分布与理想 Fermi 气体；零温极限与费米能</div><div class="sm-course-previous">原计划：Debye 模型、声子与固体低温热容</div></td><td><div class="sm-person-current">Philip Warren Anderson<br><a href="#week13-2-Anderson">课后阅读</a> / <a href="#week13-2-Anderson-story" data-sm-project>全屏投影</a></div><div class="sm-person-previous">原计划：Enrico Fermi</div></td></tr>
@@ -4278,10 +4280,19 @@ Section 6. The Theory of Gravitation
 <p>1948 年 1 月，Bose 参与创立 Bangiya Vijnan Parishad，并创办孟加拉语科学月刊《Jnan O Vijnan》（知识与科学）。杂志介绍能源、农业、水资源和工业等问题，同时出版科学读物。</p>
 <p>这项工作延续了他在大学中的教学和研究组织活动：在 Dhaka 建实验研究条件，回到 Calcutta 后又把科学知识带到本地语言的读者中。</p>
 
+<h3>泰戈尔把一本科普书献给 Bose</h3>
+<p>1937 年，泰戈尔出版孟加拉语科普书《Visva-Parichay》，把书献给 Bose。他还在前言里感谢 Bose 的学生 Pramathanath Sengupta。泰戈尔最初把写书的任务交给这位在 Santiniketan 教科学的老师，后来自己接过了写作，但特意说明，是 Sengupta 先动笔并给了他帮助和鼓励。</p>
+<p class="sm-story-source"><strong>故事出处：</strong><a href="https://www.bose.res.in/Prof.S.N.Bose-Archive/objects/Life%2C%20Lectures%20and%20Addresses%2C%20Miscellaneous%20Pieces.pdf" target="_blank" rel="noopener noreferrer">Bose 中心档案，《Bose, Tagore and Visva-Bharati》，第 88–89 页，收录泰戈尔前言摘译</a>。</p>
+
 <h3>1924 年 6 月 4 日的来信</h3>
 <p>Bose 在 Dhaka 研究黑体辐射时，尝试直接从光量子的状态计数得到 Planck 定律。论文投稿遇到困难后，他在 1924 年 6 月 4 日写信给 Einstein，附上稿件，请对方判断并帮助发表。原信保存在 S. N. Bose 国家基础科学中心的档案中。</p>
 <p>Einstein 把论文译成德文，送交《Zeitschrift für Physik》。论文没有沿用给粒子逐一贴标签的经典计数，而是处理相同光量子如何分配到可用状态。</p>
 <p>Einstein 随后在自己的论文中把方法推广到粒子数固定的物质气体，1924–1925 年预言凝聚。因此，本课的 Bose 分布从光子计数发展而来，下一次课的凝聚则是推广后的结果。</p>
+
+<h3>Einstein 回了一张明信片</h3>
+<p>1924 年 7 月 2 日，Einstein 在德文明信片上告诉 Bose，他已经把论文译好并交给《Zeitschrift für Physik》，还称这项工作向前迈出了重要一步。四年前，Bose 和 Saha 曾合作出版 Einstein 与 Minkowski 的相对论论文英译本。这一回，轮到 Einstein 替 Bose 翻译。</p>
+<div class="sm-reading-gallery"><figure style="--sm-image-width:450px"><a href="teaching/2026F_SM/figures/bose-einstein-postcard-1924.jpg" target="_blank" rel="noopener noreferrer"><img width="850" height="1205" loading="lazy" data-src="teaching/2026F_SM/figures/bose-einstein-postcard-1924-web.webp" alt="Einstein 于 1924 年 7 月 2 日写给 Bose 的德文明信片手稿"></a><figcaption>Einstein 给 Bose 的回信，1924 年 7 月 2 日<span class="sm-media-credit">点击图片查看原尺寸扫描 · <a href="https://www2.bose.res.in/Prof.S.N.Bose-Archive/objects/0038.jpg" target="_blank" rel="noopener noreferrer">S. N. Bose 中心档案</a></span></figcaption></figure></div>
+<p class="sm-story-source"><strong>故事出处：</strong><a href="https://www2.bose.res.in/Prof.S.N.Bose-Archive/objects/0038.jpg" target="_blank" rel="noopener noreferrer">Einstein 的明信片原件扫描</a> · <a href="https://archive.org/details/theprincipleofre00einsuoft" target="_blank" rel="noopener noreferrer">Calcutta 大学出版社 1920 年《The Principle of Relativity》英译本</a>。</p>
 
 <h3>“玻色子”中的名字</h3>
 <p>后来把服从 Bose 统计的一类粒子称为 bosons，中文译为“玻色子”。这个命名纪念的是统计方法的开创性贡献，不意味着 Bose 发现了今天列举的所有玻色粒子。</p>
@@ -4296,6 +4307,10 @@ Section 6. The Theory of Gravitation
 <p>印度国家科学院的纪念传记记下，Bose 到 Paris 后希望在 Marie Curie 的实验室学习。Curie 强调先掌握法语；生性拘谨的 Bose 却没能及时说明，自己已经有一定法语基础。</p>
 <p>这一片段来自传记和回忆材料。它给那位敢于写信给 Einstein 的年轻人添了另一面：面对著名实验室的主人，他也会不好意思开口。</p>
 <p class="sm-story-source"><strong>故事出处：</strong><a href="https://www.insaindia.res.in/BM/BM7_8307.pdf" target="_blank" rel="noopener noreferrer">印度国家科学院，Bose 纪念传记，Paris 经历</a>。</p>
+
+<h3>后来，他给另一位 Curie 当场口译</h3>
+<p>还是那篇纪念传记记载，Bose 后来在 Saha 核物理研究所主持 Frédéric Joliot-Curie 的讲座。讲者问有没有人能把他的法语译成英语，现场没人应声。原本坐着闭目听讲的 Bose 睁开眼，站起来一句一句地译给听众。年轻时没来得及向 Marie Curie 说明自己会法语的人，这回在讲座上当起了译员。</p>
+<p class="sm-story-source"><strong>故事出处：</strong><a href="https://www.insaindia.res.in/BM/BM7_8307.pdf" target="_blank" rel="noopener noreferrer">S. D. Chatterjee，印度国家科学院 Bose 纪念传记，第 77 页</a>。</p>
 
 <h3>公式之外，他还拉 esraj</h3>
 <p>Bose 中心档案保存了他演奏 esraj 的照片，包括在 Mahalanobis 家庭纪念活动中的演奏。esraj 是一种弓弦乐器，不能把它直接写成西方小提琴。</p>
@@ -7007,8 +7022,8 @@ Section 6. The Theory of Gravitation
       },
       {
         "src": "teaching/2025F_SM/BEC.png",
-        "name": "Bose–Einstein 凝聚的原课程图",
-        "alt": "Bose–Einstein 凝聚的原课程图",
+        "name": "1995 年稀薄铷原子气体的凝聚图像",
+        "alt": "1995 年稀薄铷原子气体的凝聚图像",
         "credit": "原课程材料"
       }
     ]
@@ -7042,53 +7057,35 @@ Section 6. The Theory of Gravitation
     ]
   },
   {
-    "title": "一封写于 1924 年 6 月 4 日的信",
-    "layout": "overview",
+    "title": "Einstein 回了一张明信片",
+    "layout": "bose-postcard",
     "kind": "story",
     "lines": [
-      "在 Dhaka 完成论文后，Bose 把稿件寄给 Einstein。",
-      "Einstein 将论文译成德文，协助发表于《Zeitschrift für Physik》。",
-      "Einstein 随后的气体论文预言凝聚；两人的工作前后衔接。"
+      "1924 年 6 月 4 日，Bose 把论文寄给 Einstein。",
+      "7 月 2 日，Einstein 回信说，德译稿已送交期刊。",
+      "1920 年，Bose 和 Saha 合译过相对论论文。四年后，轮到 Einstein 替 Bose 翻译。",
+      "Einstein 随后把计数方法推广到物质气体，并预言了凝聚。"
     ],
     "incremental": false,
-    "lead": "原信仍保存在 Bose 中心档案中。",
-    "sources": [
+    "images": [
       {
-        "label": "Letter archive",
-        "url": "https://newweb.bose.res.in/Prof.S.N.Bose-Archive/"
-      }
-    ]
-  },
-  {
-    "title": "汽车座位与一次语言误会",
-    "lead": "同一辆车，前后两排怎么会遵守不同的统计？",
-    "layout": "overview",
-    "kind": "story",
-    "incremental": true,
-    "blocks": [
-      {
-        "heading": "汽车里的占据规则",
-        "lines": [
-          "据 Chatterjee 经 Dwarka N. Bose 转述：Bose 等三人挤前排，Dirac 夫妇坐后排。",
-          "有人打趣前排是 Bose–Einstein 统计、后排是 Fermi–Dirac 统计；不把台词硬归给某一人。"
-        ]
-      },
-      {
-        "heading": "Paris 的拘谨访客",
-        "lines": [
-          "Curie 建议先学好法语；Bose 没能及时说明自己已有一些基础。",
-          "这是传记中的生活片段；汽车的比喻也只用于帮助记住占据规则。"
-        ]
+        "src": "teaching/2026F_SM/figures/bose-einstein-postcard-1924-web.webp",
+        "name": "Einstein 给 Bose 的德文回信，1924 年 7 月 2 日",
+        "alt": "Einstein 于 1924 年 7 月 2 日写给 Bose 的德文明信片手稿",
+        "source": "https://www2.bose.res.in/Prof.S.N.Bose-Archive/objects/0038.jpg",
+        "sourceLabel": "S. N. Bose 中心档案原件",
+        "width": 850,
+        "height": 1205
       }
     ],
     "sources": [
       {
-        "label": "Bose 的故事与统计",
-        "url": "https://physicstoday.aip.org/letters/stories-and-statistics-of-bose"
+        "label": "Einstein 的明信片原件扫描",
+        "url": "https://www2.bose.res.in/Prof.S.N.Bose-Archive/objects/0038.jpg"
       },
       {
-        "label": "INSA，Bose 传记",
-        "url": "https://www.insaindia.res.in/BM/BM7_8307.pdf"
+        "label": "1920 年相对论论文英译本",
+        "url": "https://archive.org/details/theprincipleofre00einsuoft"
       }
     ]
   }
