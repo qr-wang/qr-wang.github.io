@@ -7525,8 +7525,9 @@ Section 6. The Theory of Gravitation
     "kind": "story",
     "lead": "1953 年春，Dyson 拿着介子–质子散射的计算结果去见费米，计算曲线和实验数据吻合得很好。费米问他用了几个可以任意选择的参数。Dyson 想了想采用的截断处理，答「四个」。费米就转述了朋友 von Neumann 的玩笑：「四个参数能拟合一头大象，五个就能让它摇鼻子。」",
     "leadHeading": "Fermi 怎样看一条漂亮的拟合曲线？",
+    "openingAttribution": "费米认为，",
     "lines": [
-      "费米认为，理论计算要有清楚的物理图像，或者有精确、自洽的数学形式。"
+      "理论计算要么有清楚的物理图像，要么有精确、自洽的数学形式。"
     ],
     "revealAfterLead": true,
     "blocks": [
@@ -9376,7 +9377,13 @@ window.SM_STORY_ANCHOR_ALIASES = {"#week3-1-Pockels": "#week3-1-Hopfield-Hinton"
     const lead=copy.querySelector(':scope > .sm-story-lead');
     const opening=$('div','sm-slide-opening');
     if(page.leadHeading)opening.append($('h4','sm-slide-block-title',page.leadHeading));
-    opening.append(copy.querySelector(':scope > .sm-story-beats'),lead);
+    const beats=copy.querySelector(':scope > .sm-story-beats');
+    if(page.openingAttribution){
+     const statement=beats.querySelector('p');
+     const emphasis=$('strong','',statement.textContent);
+     statement.replaceChildren(document.createTextNode(page.openingAttribution),emphasis);
+    }
+    opening.append(beats,lead);
     const group=$('div','sm-slide-reveal-group');
     group.append(...panel.children);
     panel.append(opening,group);
