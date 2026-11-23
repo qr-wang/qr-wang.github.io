@@ -1356,7 +1356,7 @@ section.sm-attendance.sm-attendance-compact img {left:-34.375%;top:-48.4375%;wid
 <style id="sm-debye-heat-capacity-style">
 #sm-debye-heat-capacity-supplement .sm-reading-gallery {max-width:920px;}
 #sm-low-temperature-heat-capacity, #sm-anderson-classroom-supplement > h3 {color:#000;}
-#sm-low-temperature-heat-capacity .sm-reading-gallery {max-width:920px;}
+#sm-low-temperature-heat-capacity .sm-reading-gallery, #sm-fermi-bose-occupations .sm-reading-gallery {max-width:920px;}
 #sm-fermi-integrals .sm-gallery-pair {max-width:1120px;}
 .sm-project #sm-anderson-classroom-supplement {display:none;}
 #sm-debye-heat-capacity-supplement .sm-reading-gallery img {max-height:none;object-fit:contain;}
@@ -4705,6 +4705,13 @@ Section 6. The Theory of Gravitation
 <figcaption><strong>玻色积分 \(g_s(z)\)。</strong>当 \(z\to1^-\) 时，\(s=\tfrac12,1\) 的两条虚线发散，其余三条曲线趋于有限值。</figcaption>
 </figure>
 </div>
+</section>
+<section id="sm-fermi-bose-occupations" aria-labelledby="sm-fermi-bose-occupations-title">
+<h4 id="sm-fermi-bose-occupations-title">不同温度下的费米–狄拉克与玻色–爱因斯坦分布</h4>
+<div class="sm-reading-gallery"><figure>
+<a href="teaching/2026F_SM/figures/fermi-bose-occupations-blue.png" target="_blank" rel="noopener noreferrer" aria-label="打开费米与玻色占据数对照图"><img data-src="teaching/2026F_SM/figures/fermi-bose-occupations-blue.png" width="2736" height="1412" loading="lazy" decoding="async" alt="上图是费米–狄拉克占据数，下图是玻色–爱因斯坦激发态占据数。两图对比四个温度，使用相同的能量横轴。下图单独标出零能基态的凝聚比例。"></a>
+<figcaption>两种气体取相同的粒子质量和每个自旋态的粒子密度 \(N/[(2s+1)V]\)，两图共用费米气体的能量与温度标度 \(E_F\) 和 \(T_F\)。玻色气体的临界温度为 \(T_c\simeq0.436\,T_F\)，基态凝聚比例在下图单独标出。</figcaption>
+</figure></div>
 </section>
 <section id="sm-low-temperature-heat-capacity" aria-labelledby="sm-low-temperature-heat-capacity-title">
 <h4 id="sm-low-temperature-heat-capacity-title">实测低温热容</h4>
@@ -9769,7 +9776,7 @@ window.SM_STORY_ANCHOR_ALIASES = {"#week3-1-Pockels": "#week3-1-Hopfield-Hinton"
   update();cards[current].scrollTop=0;
  }
  function readHash(){const alias=(window.SM_STORY_ANCHOR_ALIASES||{})[location.hash];if(alias)history.replaceState(null,'',alias);const old=location.hash.match(/^#sm-(reading|story|classroom)-(\d\d-\d\d)$/);const legacyCard=old?cards.find(card=>card.id==='sm-story-'+old[2]):location.hash==='#Clausius'?cards.find(card=>card.id==='sm-story-09-21'):null;if(legacyCard)history.replaceState(null,'','#'+legacyCard.querySelector(old&&old[1]!=='reading'?'.sm-classroom':'.sm-reading').id);const hash=location.hash;const i=cards.findIndex(card=>['.sm-reading','.sm-classroom'].some(selector=>'#'+card.querySelector(selector).id===hash));if(i>=0){mode=hash==='#'+cards[i].querySelector('.sm-reading').id?'read':'project';choose(i,false);return;}
-  if(['#sm-fermi-bose-gas-supplement','#sm-superfluid-helium-video','#sm-low-temperature-heat-capacity','#sm-anderson-classroom-supplement','#sm-fermi-integrals'].includes(hash)){
+  if(['#sm-fermi-bose-gas-supplement','#sm-superfluid-helium-video','#sm-low-temperature-heat-capacity','#sm-anderson-classroom-supplement','#sm-fermi-integrals','#sm-fermi-bose-occupations'].includes(hash)){
    const target=document.getElementById(hash.slice(1));
    const index=cards.indexOf(target?.closest('.sm-story'));
    if(index>=0){
