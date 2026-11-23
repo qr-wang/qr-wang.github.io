@@ -4,13 +4,13 @@
 <head>
 
 <meta charset="utf-8">
-<!-- 教师开关：课表展示至 11 月 23 日。人物正文和投影展示至 11 月 18 日。 -->
+<!-- 教师开关：课表、人物正文和投影展示至 11 月 23 日；隐藏表格中的灰色旧安排。 -->
 <script id="sm-release-config">
 const SHOW_ALL_CONTENT = true;
 // 固定展示范围；故事日期键沿用原材料 ID，与当前课表日期分别管理。
 const SCHEDULE_THROUGH = "2026-11-23";
-const STORY_THROUGH = "2026-11-18";
-const VISIBLE_STORY_DATES = ["09-16", "09-21", "09-23", "09-28", "09-30", "10-12", "10-14", "11-25", "10-28", "11-16", "11-18", "11-04", "11-23", "11-30", "10-21", "12-02"];
+const STORY_THROUGH = "2026-11-23";
+const VISIBLE_STORY_DATES = ["09-16", "09-21", "09-23", "09-28", "09-30", "10-12", "10-14", "11-25", "10-28", "11-16", "11-18", "11-04", "11-23", "11-30", "10-21", "12-02", "12-09"];
 const HIDDEN_STORY_DATES = [];
 const EARLY_STORY_DATES = [];
 window.SM_RELEASE_CONFIG = { scheduleThrough: SCHEDULE_THROUGH, storyThrough: STORY_THROUGH, earlyStoryDates: EARLY_STORY_DATES, showAll: SHOW_ALL_CONTENT, visibleStoryDates: VISIBLE_STORY_DATES, hiddenStoryDates: HIDDEN_STORY_DATES, timeZone: 'Asia/Shanghai' };
@@ -1010,6 +1010,8 @@ html.sm-wide-screen {background:#151515;overflow:hidden;}
 .sm-wide-screen #sm-story-11-30 .sm-page-bose-postcard .sm-page-media img {width:auto;max-width:100%;height:400px;margin:0 auto;}
 #sm-story-11-30 .sm-page-bose-postcard .sm-page-media figcaption {text-align:center;}
 .sm-wide-screen #sm-stories #sm-story-12-02 .sm-page-biography .sm-story-beats p {line-height:1.5;margin:8px 0;}
+.sm-wide-screen .sm-project #sm-story-12-09 .sm-page-biography {grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);}
+.sm-wide-screen #sm-stories #sm-story-12-09 .sm-page-biography > .sm-page-copy > .sm-story-beats p {font-size:23px;line-height:1.45;margin:7px 0;}
 #sm-stories .sm-page-fermi-sea .sm-boltzmann-equation mjx-container[jax="SVG"] svg {max-width:100%;height:auto;}
 #sm-stories .sm-page-fermi-elephant .sm-slide-blocks {grid-template-columns:minmax(0,1fr);gap:12px;}
 #sm-stories .sm-page-fermi-elephant .sm-slide-block-title {font-size:21px;margin:0 0 4px;}
@@ -1916,7 +1918,7 @@ Section 6. The Theory of Gravitation
 
 <!-- BEGIN STATMECH STORIES 2026 -->
 <section id="sm-stories">
-<p id="sm-schedule-note">课表开放至 2026 年 11 月 23 日。人物故事与投影开放至 11 月 18 日。<span class="sm-schedule-mobile-hint">手机上可左右滑动查看完整表格。</span></p>
+<p id="sm-schedule-note">课表、人物故事与投影当前开放至 2026 年 11 月 23 日。<span class="sm-schedule-mobile-hint">手机上可左右滑动查看完整表格。</span></p>
 <span id="sm-story-index" hidden></span>
 <table id="sm-course-schedule"><colgroup><col style="width:24%"><col style="width:52%"><col style="width:24%"></colgroup><thead><tr><th scope="col">周次与日期</th><th scope="col">上课内容</th><th scope="col">人物与材料</th></tr></thead><tbody>
 <tr data-sm-release="2026-09-14"><td>第 1 周周一，9 月 14 日</td><td><a href="teaching/2026F_SM/intro.pdf" target="_blank" rel="noopener noreferrer">统计力学导论</a></td><td></td></tr>
@@ -7808,13 +7810,14 @@ Section 6. The Theory of Gravitation
     "layout": "biography",
     "kind": "biography",
     "lines": [
-      "1949：Harvard 博士，导师 John H. Van Vleck。",
-      "1949–1984：Bell Laboratories。",
+      "二战期间在美国海军研究实验室参与天线研究。",
+      "1949：获 Harvard 博士学位，研究气体压强如何使谱线展宽。",
+      "1949–1984：在贝尔实验室工作，最初加入 Shockley 的固体物理组。",
       "1967–1975：兼任 Cambridge 教职。",
-      "1975 年起在 Princeton；1984 年转全职，1996 年荣休。"
+      "1975 年起任教于 Princeton，1984 年转为全职，1996 年荣休。"
     ],
     "incremental": false,
-    "lead": "凝聚态物理学家，1977 年获奖工作涉及磁性与无序电子结构。",
+    "lead": "1977 年与 Mott 和导师 Van Vleck 分享诺贝尔物理学奖。",
     "images": [
       {
         "src": "teaching/2026F_SM/portraits/philip-w-anderson.jpg",
@@ -7828,161 +7831,367 @@ Section 6. The Theory of Gravitation
     ],
     "sources": [
       {
+        "label": "诺贝尔奖官网：1977 年获奖理由",
+        "url": "https://www.nobelprize.org/prizes/physics/1977/anderson/facts/"
+      },
+      {
         "label": "Princeton profile",
         "url": "https://www.princeton.edu/news/2013/12/18/lifetime-contributions-physics-philip-anderson"
+      },
+      {
+        "label": "Princeton 校方纪念文章",
+        "url": "https://www.princeton.edu/news/2020/03/30/nobel-laureate-and-princeton-physicist-philip-anderson-dies-age-96"
+      },
+      {
+        "label": "导师、博士课题和贝尔实验室经历",
+        "url": "https://www.nature.com/articles/d41586-020-01318-4"
+      },
+      {
+        "label": "Anderson 本人诺贝尔演讲（1977）",
+        "url": "https://www.nobelprize.org/uploads/2018/06/anderson-lecture-1.pdf"
       }
-    ]
-  },
-  {
-    "title": "1958：无序能否阻止传播？",
-    "layout": "overview",
-    "kind": "contributions",
-    "lines": [
-      "\\(\\xi\\) 为局域长度，\\(\\mathbf r_0\\) 为局域中心。",
-      "局域态包络随距离衰减；无序并不在所有条件下都使系统绝缘。",
-      "当天的理想费米气体提供参照；这里进一步加入随机环境。"
     ],
-    "incremental": false,
-    "formulaSource": "sm-anderson-formula-1"
-  },
-  {
-    "title": "局域磁矩与带电凝聚体",
-    "layout": "overview",
-    "kind": "contributions",
-    "lines": [],
-    "incremental": false,
+    "emphasizeDates": true,
     "blocks": [
       {
-        "heading": "Anderson 杂质模型（1961）",
+        "heading": "获奖工作里的两个问题",
         "lines": [
-          "局域能级与导带杂化，同时具有局域电子相互作用。",
-          "可研究磁矩形成，是 Kondo 与强关联研究的基本模型。",
-          "poor man’s scaling 继续追踪 Kondo 耦合的尺度变化；弱耦合方法有适用边界。"
-        ]
-      },
-      {
-        "heading": "规范场与能隙（1963）",
-        "lines": [
-          "在超导、等离子体等环境中讨论集体模和规范场的能隙。",
-          "这项工作影响了后来的粒子物理质量机制研究。"
-        ]
-      }
-    ]
-  },
-  {
-    "title": "自旋玻璃与共振价键",
-    "layout": "overview",
-    "kind": "contributions",
-    "lines": [],
-    "incremental": false,
-    "blocks": [
-      {
-        "heading": "Edwards–Anderson（1975）",
-        "lines": [
-          "\\([\\cdot]_{\\rm dis}\\) 为无序平均；热平均须在适当选态意义下理解。"
+          "金属里的杂质为什么会带磁矩？随机环境又怎样困住电子？他在诺贝尔演讲里用这两个例子介绍获奖的研究。"
         ],
-        "formulaSource": "sm-anderson-formula-3"
+        "wide": true
+      }
+    ]
+  },
+  {
+    "title": "1. 无序怎样困住电子？",
+    "layout": "contributions",
+    "kind": "contributions",
+    "incremental": false,
+    "lead": "今天的理想费米气体里，电子可以自由传播。加上随机势会怎样？",
+    "formulaSource": "sm-anderson-formula-1",
+    "lines": [
+      "1958：电子仍能在格点间跃迁。无序足够强时，不同路径的量子干涉却能阻止扩散。",
+      "波函数从局域中心 \\(\\mathbf r_0\\) 向外指数衰减，\\(\\xi\\) 是局域长度。",
+      "1979：他与合作者追问电导随样品尺寸怎样变化，发展出局域化的标度理论。"
+    ],
+    "sources": [
+      {
+        "label": "局域化原始论文（1958）",
+        "url": "https://doi.org/10.1103/PhysRev.109.1492"
       },
       {
-        "heading": "RVB：1973 与 1987",
+        "label": "Abrahams 等，局域化的标度理论（1979）",
+        "url": "https://doi.org/10.1103/PhysRevLett.42.673"
+      },
+      {
+        "label": "Billy 等，冷原子中的局域化实验（2008）",
+        "url": "https://doi.org/10.1038/nature07000"
+      }
+    ],
+    "blocks": [
+      {
+        "heading": "怎么判断它还导不导电？",
         "lines": [
-          "从受挫自旋系统的共振价键，发展到掺杂 Mott 绝缘体与高温超导。",
-          "这是一条重要理论路线，铜氧化物的机制仍需具体检验。"
+          "当费米能附近的电子态都局域时，在这个无相互作用模型里，把样品做得更长，零温电导会很快变小。"
+        ]
+      },
+      {
+        "heading": "2008 年，冷原子把局域化拍了下来",
+        "lines": [
+          "研究者用激光散斑制造随机势，让原子云沿一维展开。云团后来停止扩展，密度留下指数衰减的尾巴。"
         ]
       }
     ]
   },
   {
-    "title": "磁耦合与多体响应",
+    "title": "2. 电子怎样形成磁矩，又怎样彼此耦合？",
     "layout": "overview",
     "kind": "contributions",
     "incremental": false,
     "blocks": [
       {
-        "heading": "1950：超交换",
+        "heading": "金属中的局域磁矩（1961）",
         "lines": [
-          "电子经中间离子虚跃迁，产生有效磁相互作用。",
-          "耦合符号受轨道和占据等条件影响。"
+          "杂质能级可以和导带交换电子，同一能级上的两个电子又彼此排斥。",
+          "排斥足够强、能级位置合适时，杂质能级倾向于只被一个电子占据，因而留下一个自旋。",
+          "该模型是研究 Kondo 效应的起点之一。他后来也发展了逐步消去高能态的标度方法。"
         ]
       },
       {
-        "heading": "1967：正交灾难",
+        "heading": "绝缘体里的超交换（1950）",
         "lines": [
-          "局域散射势可以让宏观多体基态的重叠趋零。",
-          "局部改动很小，不等于多体波函数的总变化也很小。"
+          "两个磁离子之间即使隔着非磁性的氧离子，电子也能经由氧发生虚跃迁。",
+          "虚跃迁产生有效磁耦合，在许多氧化物中使相邻自旋倾向于反向排列。"
         ]
       },
       {
-        "heading": "1972：More Is Different（多者异也）",
-        "wide": true,
+        "heading": "再降温：磁矩会怎样？",
         "lines": [
-          "知道微观定律，还要寻找不同尺度的组织原则；对称性破缺与集体激发不能省略。"
+          "在典型的 Kondo 问题里，导带电子与杂质自旋反向耦合。温度足够低时，导带电子会屏蔽这颗局域磁矩。"
+        ]
+      },
+      {
+        "heading": "课堂例子：虚跃迁为什么偏爱反向？",
+        "lines": [
+          "在最简单的单轨道模型里，反向自旋可以短暂形成虚双占据，平行自旋的这条路径被 Pauli 原理禁止。",
+          "允许虚跃迁的排布能量降得更多，因此占优。"
         ]
       }
     ],
     "sources": [
       {
-        "label": "Anderson，Antiferromagnetism. Theory of Superexchange Interaction（1950）",
+        "label": "金属中的局域磁矩（1961）",
+        "url": "https://doi.org/10.1103/PhysRev.124.41"
+      },
+      {
+        "label": "超交换理论（1950）",
         "url": "https://doi.org/10.1103/PhysRev.79.350"
       },
       {
-        "label": "Anderson，Infrared Catastrophe in Fermi Gases with Local Scattering Potentials（1967）",
+        "label": "Anderson 的 Kondo 标度方法（1970）",
+        "url": "https://doi.org/10.1088/0022-3719/3/12/008"
+      },
+      {
+        "label": "Krishna-murthy 等，Anderson 模型低温下的磁矩屏蔽",
+        "url": "https://doi.org/10.1103/PhysRevB.21.1003"
+      }
+    ]
+  },
+  {
+    "title": "3. 从超导、超流到 Higgs 机制",
+    "layout": "overview",
+    "kind": "contributions",
+    "incremental": false,
+    "blocks": [
+      {
+        "heading": "超导体里的杂质（1959）",
+        "lines": [
+          "普通的各向同性超导体中，成对电子占据互为时间反演的态。",
+          "在 Anderson 定理的条件下，非磁性杂质造成的散射几乎不改变超导转变温度。"
+        ]
+      },
+      {
+        "heading": "带电凝聚体的集体振荡（1963）",
+        "lines": [
+          "中性凝聚体的长波相位振荡可以有任意低的频率；在带电超导体中，库仑作用把它抬到等离子体频率。",
+          "这个例子说明规范场耦合后，物理激发可以出现能隙，并启发了后来的 Higgs 机制。"
+        ]
+      },
+      {
+        "heading": "把非磁性杂质换成磁性杂质",
+        "lines": [
+          "磁性杂质会产生依赖自旋的散射，能够破坏常规自旋单态的 Cooper 对。实验上，这类杂质通常会压低转变温度。"
+        ]
+      },
+      {
+        "heading": "液氦 \\(^{3}\\mathrm{He}\\) 也会配对（1973）",
+        "lines": [
+          "氦-3 原子本身是费米子，低温下可以成对进入超流。Anderson 与 Brinkman 提出，自旋涨落能帮助稳定配对具有方向性的 A 相。"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Theory of Dirty Superconductors（1959）",
+        "url": "https://doi.org/10.1016/0022-3697(59)90036-8"
+      },
+      {
+        "label": "Plasmons, Gauge Invariance, and Mass（1963）",
+        "url": "https://doi.org/10.1103/PhysRev.130.439"
+      },
+      {
+        "label": "Shiba，超导体中的磁性杂质散射（1968）",
+        "url": "https://doi.org/10.1143/PTP.40.435"
+      },
+      {
+        "label": "Anderson 与 Brinkman，解释氦-3 的各向异性超流（1973）",
+        "url": "https://doi.org/10.1103/PhysRevLett.30.1108"
+      }
+    ]
+  },
+  {
+    "title": "4. 自旋可以冻结，也可以形成量子液体",
+    "layout": "overview",
+    "kind": "contributions",
+    "incremental": false,
+    "blocks": [
+      {
+        "heading": "Edwards–Anderson 自旋玻璃（1975）",
+        "lines": [
+          "随机的磁耦合互相竞争。总磁化可以接近零，局部自旋却能各自冻结。",
+          "把各处局部磁化先平方再平均，可以刻画这种冻结。"
+        ],
+        "formulaSource": "sm-anderson-formula-3"
+      },
+      {
+        "heading": "共振价键（RVB，1973、1987）",
+        "lines": [
+          "他设想自旋可以两两配成总自旋为零的单态，许多配对方式叠加成量子态。",
+          "后来他用这个思路提出铜氧化物掺杂后产生高温超导的一种理论解释。"
+        ]
+      },
+      {
+        "heading": "受挫有多简单？三个自旋就够",
+        "lines": [
+          "把三个自旋放在三角形顶点，要求每对邻居都取相反方向。满足前两条边以后，第三条边就会留下冲突。",
+          "在自旋玻璃里，这类竞争出现在随机的磁耦合中。"
+        ]
+      },
+      {
+        "heading": "「共振」是什么意思？",
+        "lines": [
+          "想象四个自旋围成方形。可把上下两条边分别配成单态，也可沿左右两条边配对。",
+          "RVB 的意思是把不同配对构型作量子叠加。"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Edwards–Anderson 自旋玻璃模型（1975）",
+        "url": "https://doi.org/10.1088/0305-4608/5/5/017"
+      },
+      {
+        "label": "共振价键与铜氧化物超导（1987）",
+        "url": "https://doi.org/10.1126/science.235.4793.1196"
+      }
+    ]
+  },
+  {
+    "title": "5. 从一个电子到一整个系统",
+    "layout": "overview",
+    "kind": "contributions",
+    "incremental": false,
+    "blocks": [
+      {
+        "heading": "正交灾难（1967）",
+        "lines": [
+          "在费米海里加一个局域散射势，单个电子态的微小变化会在整个费米海里累积。",
+          "系统趋于无穷大时，加杂质前后两个多体基态的重叠可以趋于零。"
+        ]
+      },
+      {
+        "heading": "《More Is Different》（1972）",
+        "lines": [
+          "微观定律可以允许磁化指向任意方向，铁磁体形成后却会自发选定一个方向。",
+          "描述宏观物质，需要磁化这样的集体变量和自发对称性破缺这样的概念。"
+        ]
+      },
+      {
+        "heading": "怎样在实验里看见费米海的响应？",
+        "lines": [
+          "X 射线可以激发金属的内层电子，留下一个局域空穴。空穴突然改变导带电子所见的势，整个费米海会作出响应。",
+          "这种多体响应会改变吸收谱刚开始出现时的形状。"
+        ]
+      },
+      {
+        "heading": "他在原文里举了氨分子的例子",
+        "lines": [
+          "氮原子可以隧穿到三个氢原子所在平面的另一边，把小金字塔翻面。分子能在两种构型间跃迁。",
+          "这个例子引出他的问题：宏观系统为何能稳定地选定一种构型？"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "正交灾难原始论文（1967）",
         "url": "https://doi.org/10.1103/PhysRevLett.18.1049"
       },
       {
         "label": "More Is Different（1972）",
         "url": "https://doi.org/10.1126/science.177.4047.393"
-      }
-    ]
-  },
-  {
-    "title": "1956：磁共振实验里的传播难题",
-    "layout": "overview",
-    "kind": "story",
-    "lines": [
-      "Bell 理论组讨论 Feher 在硅中杂质上的低温磁共振实验。",
-      "Anderson、Pines、Abrahams 研究磁性弛豫与激发传播。",
-      "随机环境能否阻止扩散，成为 1958 年随机格点论文的核心问题。"
-    ],
-    "incremental": false,
-    "lead": "经过由 Anderson 本人的诺贝尔演讲记录。",
-    "sources": [
+      },
       {
-        "label": "Anderson Nobel lecture",
-        "url": "https://www.nobelprize.org/uploads/2018/06/anderson-lecture-1.pdf"
+        "label": "Nozières 与 De Dominicis，金属的 X 射线吸收边（1969）",
+        "url": "https://doi.org/10.1103/PhysRev.178.1097"
       }
     ]
   },
   {
-    "title": "日本的一盘围棋与实验室的传播问题",
-    "lead": "一个多体物理学家，会把什么游戏下成终身爱好？",
+    "title": "一篇起初没多少人信的论文",
     "layout": "overview",
     "kind": "story",
-    "incremental": true,
+    "incremental": false,
     "blocks": [
       {
-        "heading": "1953–1954 年的日本访问",
+        "heading": "一个磁共振实验留下的问题",
         "lines": [
-          "Anderson 与久保等研究者交流，也开始长期下围棋。",
-          "同事纪念文记载其业余初段水平；围棋是兴趣，不能当作物理模型的证明。"
+          "1956 年，Feher 的低温磁共振实验引出一个问题：硅里的一个自旋被激发后，能把激发传给多远的邻居？",
+          "他和 David Pines、Elihu Abrahams 一起讨论这些实验数据。",
+          "Anderson 开始追问，随机环境能不能让传播彻底停下来？这成了 1958 年论文的核心问题。"
         ]
       },
       {
-        "heading": "Bell 的磁共振问题",
+        "heading": "作者自己也低估了它",
         "lines": [
-          "硅中杂质的实验，引出随机环境能否阻止传播的提问。",
-          "1958 年他把这个问题发展成可单独计算的随机格点模型。"
+          "1977 年领奖时，Anderson 回忆，起初很少有人相信局域化，更少人看出它的重要性。",
+          "他把自己也算在一开始没看懂的人里，并把理论逐渐得到认可主要归功于 Mott 的推动。"
+        ]
+      },
+      {
+        "heading": "他把问题做成了怎样的模型？",
+        "lines": [
+          "给每个格点一个随机能量，只保留格点之间的跃迁。这样就可以单独问：只靠量子力学，粒子究竟还能不能扩散？"
+        ]
+      },
+      {
+        "heading": "Mott 为什么关心这个结果？",
+        "lines": [
+          "他用这种思路理解非晶半导体。能谱中可以同时有局域态和延展态，分开两者的能量叫作迁移率边。"
         ]
       }
     ],
     "sources": [
       {
-        "label": "同行纪念文",
+        "label": "Anderson 本人诺贝尔演讲（1977）",
+        "url": "https://www.nobelprize.org/uploads/2018/06/anderson-lecture-1.pdf"
+      },
+      {
+        "label": "Mott 诺贝尔演讲中的非晶半导体与迁移率边",
+        "url": "https://www.nobelprize.org/uploads/2018/06/mott-lecture.pdf"
+      }
+    ]
+  },
+  {
+    "title": "围棋初段与「四成实验物理学家」",
+    "layout": "overview",
+    "kind": "story",
+    "incremental": false,
+    "blocks": [
+      {
+        "heading": "到日本做访问，回来多了个爱好",
+        "lines": [
+          "1953–1954 年，他到日本和久保亮五等人交流，也在那里开始下围棋。",
+          "后来他下到业余初段。2007 年，日本棋院还给了他终身成就表彰。"
+        ]
+      },
+      {
+        "heading": "一个理论物理学家的自我介绍",
+        "lines": [
+          "他给自己算过比例：六成理论物理学家，四成实验物理学家。",
+          "据采访者回忆，他没亲手做过实验，却爱追问实验是怎么做的，还喜欢自己看原始数据。"
+        ]
+      },
+      {
+        "heading": "周六见面，火车上做计算",
+        "lines": [
+          "1974 年，安德森和 Sam Edwards 常在周六见面。Edwards 本来研究橡胶，想到可以把处理随机聚合物网络的数学方法试到自旋玻璃上。",
+          "安德森当场提出难点。Edwards 利用往返伦敦的通勤时间推了几轮代数，下个周六再碰头。两人的讨论最终成了 1975 年的自旋玻璃论文。"
+        ],
+        "wide": true
+      }
+    ],
+    "sources": [
+      {
+        "label": "Brinkman、Ong 与 Lee 的同行纪念文",
         "url": "https://physicstoday.aip.org/obituaries/philip-warren-anderson"
       },
       {
-        "label": "本人诺贝尔演讲",
-        "url": "https://www.nobelprize.org/uploads/2018/06/anderson-lecture-1.pdf"
+        "label": "AIP 口述史采访者的回忆",
+        "url": "https://physicstoday.aip.org/features/philip-anderson-virtuoso-of-condensed-matter"
+      },
+      {
+        "label": "Sam Edwards 回忆自旋玻璃论文的来历（1985）",
+        "url": "https://garfield.library.upenn.edu/classics1985/A1985APZ5700001.pdf"
       }
     ]
   }
