@@ -4713,6 +4713,36 @@ Section 6. The Theory of Gravitation
 <figcaption>两种气体取相同的粒子质量和每个自旋态的粒子密度 \(N/[(2s+1)V]\)，两图共用费米气体的能量与温度标度 \(E_F\) 和 \(T_F\)。玻色气体的临界温度为 \(T_c\simeq0.436\,T_F\)，基态凝聚比例在下图单独标出。</figcaption>
 </figure></div>
 </section>
+<section id="sm-fermi-gas-original-figures" aria-labelledby="sm-fermi-gas-original-figures-title">
+<h4 id="sm-fermi-gas-original-figures-title">费米面、电子分布与低温热容</h4>
+<div class="sm-reading-gallery sm-gallery-pair">
+<figure>
+<a href="teaching/2025F_SM/FermiSurfaceCopper.jpeg" target="_blank" rel="noopener noreferrer" aria-label="打开原图：铜的费米面"><img data-src="teaching/2025F_SM/FermiSurfaceCopper.jpeg" width="1142" height="1160" loading="lazy" decoding="async" alt="铜的费米面"></a>
+<figcaption><strong>铜的费米面。</strong>表面接近球形，在第一布里渊区边界处形成细颈。</figcaption>
+</figure>
+<figure>
+<a href="teaching/2025F_SM/DOS.jpeg" target="_blank" rel="noopener noreferrer" aria-label="打开原图：电子气的能量分布"><img data-src="teaching/2025F_SM/DOS.jpeg" width="770" height="972" loading="lazy" decoding="async" alt="电子气的能量分布"></a>
+<figcaption><strong>电子气的能量分布。</strong>图示 \(g(E)f(E)\)。零温时在 \(E_F\) 处截断，升温后突变在约 \(k_BT\) 的能量范围内变平滑。</figcaption>
+</figure>
+</div>
+<div class="sm-reading-gallery">
+<figure>
+<a href="teaching/2025F_SM/FD.jpeg" target="_blank" rel="noopener noreferrer" aria-label="打开原图：不同温度下的 Fermi–Dirac 占据数"><img data-src="teaching/2025F_SM/FD.jpeg" width="968" height="460" loading="lazy" decoding="async" alt="不同温度下的 Fermi–Dirac 占据数"></a>
+<figcaption><strong>不同温度下的 Fermi–Dirac 占据数。</strong>各温度共用同一个化学势，单态占据数 \(f(E)\) 在该能量处都取 \(1/2\)。</figcaption>
+</figure>
+</div>
+<div class="sm-reading-gallery sm-gallery-pair">
+<figure>
+<a href="teaching/2025F_SM/C_V.jpeg" target="_blank" rel="noopener noreferrer" aria-label="打开原图：钠的低温热容"><img data-src="teaching/2025F_SM/C_V.jpeg" width="1534" height="1208" loading="lazy" decoding="async" alt="钠的低温热容"></a>
+<figcaption><strong>钠的低温热容。</strong>图中对比了实测热容、电子项和晶格项。</figcaption>
+</figure>
+<figure>
+<a href="teaching/2025F_SM/C_Vcopper.jpeg" target="_blank" rel="noopener noreferrer" aria-label="打开原图：铜的低温热容"><img data-src="teaching/2025F_SM/C_Vcopper.jpeg" width="1186" height="1232" loading="lazy" decoding="async" alt="铜的低温热容"></a>
+<figcaption><strong>铜的低温热容。</strong>将 \(C/T\) 对 \(T^2\) 作图，纵截距给出电子热容系数。</figcaption>
+</figure>
+</div>
+<p>图源见 <a href="teaching_2025_SM.html#:~:text=Fermi%E2%80%93Dirac%20Distribution">2025 年课程网页的 Fermi–Dirac Distribution 一节</a>。</p>
+</section>
 <section id="sm-low-temperature-heat-capacity" aria-labelledby="sm-low-temperature-heat-capacity-title">
 <h4 id="sm-low-temperature-heat-capacity-title">实测低温热容</h4>
 <div class="sm-reading-gallery">
@@ -9776,7 +9806,7 @@ window.SM_STORY_ANCHOR_ALIASES = {"#week3-1-Pockels": "#week3-1-Hopfield-Hinton"
   update();cards[current].scrollTop=0;
  }
  function readHash(){const alias=(window.SM_STORY_ANCHOR_ALIASES||{})[location.hash];if(alias)history.replaceState(null,'',alias);const old=location.hash.match(/^#sm-(reading|story|classroom)-(\d\d-\d\d)$/);const legacyCard=old?cards.find(card=>card.id==='sm-story-'+old[2]):location.hash==='#Clausius'?cards.find(card=>card.id==='sm-story-09-21'):null;if(legacyCard)history.replaceState(null,'','#'+legacyCard.querySelector(old&&old[1]!=='reading'?'.sm-classroom':'.sm-reading').id);const hash=location.hash;const i=cards.findIndex(card=>['.sm-reading','.sm-classroom'].some(selector=>'#'+card.querySelector(selector).id===hash));if(i>=0){mode=hash==='#'+cards[i].querySelector('.sm-reading').id?'read':'project';choose(i,false);return;}
-  if(['#sm-fermi-bose-gas-supplement','#sm-superfluid-helium-video','#sm-low-temperature-heat-capacity','#sm-anderson-classroom-supplement','#sm-fermi-integrals','#sm-fermi-bose-occupations'].includes(hash)){
+  if(['#sm-fermi-bose-gas-supplement','#sm-superfluid-helium-video','#sm-low-temperature-heat-capacity','#sm-anderson-classroom-supplement','#sm-fermi-integrals','#sm-fermi-bose-occupations','#sm-fermi-gas-original-figures'].includes(hash)){
    const target=document.getElementById(hash.slice(1));
    const index=cards.indexOf(target?.closest('.sm-story'));
    if(index>=0){
